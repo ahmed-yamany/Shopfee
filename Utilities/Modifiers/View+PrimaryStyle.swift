@@ -8,9 +8,11 @@
 import SwiftUI
 
 struct PrimaryStyle: ViewModifier {
+    let alignment: Alignment
+    
     func body(content: Content) -> some View {
         content
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: alignment)
             .background(Color.neutralLight)
             .tint(Color.brand)
             .onTapGesture {
@@ -30,8 +32,8 @@ struct PrimaryStyle: ViewModifier {
 
 extension View {
     @ViewBuilder
-    func applyPrimaryStyle() -> some View {
-        modifier(PrimaryStyle())
+    func applyPrimaryStyle(alignment: Alignment = .center) -> some View {
+        modifier(PrimaryStyle(alignment: alignment))
         
     }
 }

@@ -8,6 +8,7 @@
 import Foundation
 
 protocol OnboardingCoordinatorProtocol: Coordinator {
+    func showRegister()
 }
 
 final class OnboardingCoordinator: OnboardingCoordinatorProtocol {
@@ -22,5 +23,9 @@ final class OnboardingCoordinator: OnboardingCoordinatorProtocol {
         let viewModel = OnboardingViewModel(coordinator: self, useCase: useCase)
         let controller = OnboardingViewController(viewModel: viewModel)
         router.setViewController(controller, animated: false)
+    }
+    
+    func showRegister() {
+        
     }
 }

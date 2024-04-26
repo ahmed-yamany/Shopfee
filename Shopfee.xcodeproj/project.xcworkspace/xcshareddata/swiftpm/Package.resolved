@@ -1,0 +1,15 @@
+{
+  "originHash" : "8169b3b86c76cdae52052a09f58afbcbbc0a6cd7b87088adc2bcb9b05615a977",
+  "pins" : [
+    {
+      "identity" : "swiftuimodifiers",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/ahmed-yamany/SwiftUIModifiers",
+      "state" : {
+        "branch" : "main",
+        "revision" : "53ed8a9aa5eaef2a4f967b2ce8db34712801f36b"
+      }
+    }
+  ],
+  "version" : 3
+}

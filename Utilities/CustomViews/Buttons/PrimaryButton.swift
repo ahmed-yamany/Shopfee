@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SwiftUIModifiers
 
 enum ShopfeeButtonSize {
     case normal
@@ -63,17 +64,20 @@ struct PrimaryButton<Style: ShopfeeButtonStyle>: ButtonStyle {
     
     func makeBody(configuration: Configuration) -> some View {
         configuration.label
-            .foregroundStyle(style.foregroundColor)
+            .foregroundStyle(foregroundColor(configuration))
             .frame(height: style.height)
-            .frame(maxWidth: .infinity)
-            .background(backgroundColor(configuration))
-            .clipShape(RoundedRectangle(cornerRadius: 16))
-            .background {
-                RoundedRectangle(cornerRadius: 16)
-                    .stroke(lineWidth: 1)
-                    .fill(style.borderColor)
-            }
             .font(.custom(size: 14, weight: .medium))
+            .onCondition(style.height != nil) {
+                $0
+                    .frame(maxWidth: .infinity)
+                    .background(backgroundColor(configuration))
+                    .clipShape(RoundedRectangle(cornerRadius: 16))
+                    .background {
+                        RoundedRectangle(cornerRadius: 16)
+                            .stroke(lineWidth: 1)
+                            .fill(style.borderColor)
+                    }
+            }
     }
     
     func backgroundColor(_ configuration: Configuration) -> Color {
@@ -86,6 +90,18 @@ struct PrimaryButton<Style: ShopfeeButtonStyle>: ButtonStyle {
         }
         
         return style.background
+    }
+    
+    func foregroundColor(_ configuration: Configuration) -> Color {
+        if configuration.isPressed {
+            return Color.textNonActive
+        }
+        
+        if !isEnabled {
+            return Color.textNonActive
+        }
+        
+        return style.foregroundColor
     }
 }
 
