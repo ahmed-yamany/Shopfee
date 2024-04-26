@@ -2,20 +2,6 @@ import UIKit
 
 // swiftlint: disable all
 public extension UIFont {
-    
-    static func body(size: CGFloat, weight: UIFont.Weight) -> UIFont {
-        .custom(size: size, weight: weight)
-    }
-    
-    static func title(size: CGFloat, weight: UIFont.Weight) -> UIFont {
-        .custom(size: size, weight: weight)
-    }
-    
-    static func heading(size: CGFloat, weight: UIFont.Weight) -> UIFont {
-        .custom(size: size, weight: weight)
-    }
-    
-    
     /// Returns a custom font with the specified size and weight.
     ///
     /// - Parameters:

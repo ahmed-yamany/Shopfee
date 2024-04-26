@@ -33,6 +33,7 @@
 		EEE8D5222BDBFBEE0037F668 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE8D5212BDBFBEE0037F668 /* OnboardingViewController.swift */; };
 		EEE8D5242BDBFCAA0037F668 /* OnboardingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE8D5232BDBFCAA0037F668 /* OnboardingCoordinator.swift */; };
 		EEE8D5262BDBFDF20037F668 /* OnboardingUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE8D5252BDBFDF20037F668 /* OnboardingUseCase.swift */; };
+		EEE8D52B2BDC03700037F668 /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE8D52A2BDC03700037F668 /* PrimaryButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +85,7 @@
 		EEE8D5212BDBFBEE0037F668 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		EEE8D5232BDBFCAA0037F668 /* OnboardingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCoordinator.swift; sourceTree = "<group>"; };
 		EEE8D5252BDBFDF20037F668 /* OnboardingUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingUseCase.swift; sourceTree = "<group>"; };
+		EEE8D52A2BDC03700037F668 /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,8 +141,8 @@
 			children = (
 				EEE8D5272BDBFE7C0037F668 /* Coordinator */,
 				EEE8D4E92BDBE3800037F668 /* Scenes */,
-				EE2DDD662BDBCB7B00361413 /* AppDelegate.swift */,
 				EE2DDD682BDBCB7B00361413 /* SceneDelegate.swift */,
+				EE2DDD662BDBCB7B00361413 /* AppDelegate.swift */,
 				EE2DDD742BDBCB7D00361413 /* Info.plist */,
 			);
 			path = Shopfee;
@@ -214,6 +216,7 @@
 		EEE8D4D72BDBD4B60037F668 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				EEE8D5282BDC030B0037F668 /* CustomViews */,
 				EEE8D4DC2BDBD83F0037F668 /* Coordinator */,
 				EEE8D4D82BDBD4D60037F668 /* Extensionts */,
 				EEE8D4E62BDBD9530037F668 /* TypeAliases */,
@@ -297,6 +300,22 @@
 				EEE8D4DF2BDBD8750037F668 /* ShopfeeCoordinator.swift */,
 			);
 			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		EEE8D5282BDC030B0037F668 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				EEE8D5292BDC031B0037F668 /* Buttons */,
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		EEE8D5292BDC031B0037F668 /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				EEE8D52A2BDC03700037F668 /* PrimaryButton.swift */,
+			);
+			path = Buttons;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -473,6 +492,7 @@
 				EEE8D5222BDBFBEE0037F668 /* OnboardingViewController.swift in Sources */,
 				EEE8D5262BDBFDF20037F668 /* OnboardingUseCase.swift in Sources */,
 				EEE8D5162BDBF0D70037F668 /* Font+Style.swift in Sources */,
+				EEE8D52B2BDC03700037F668 /* PrimaryButton.swift in Sources */,
 				EE2DDD692BDBCB7B00361413 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
