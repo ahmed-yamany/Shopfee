@@ -10,12 +10,20 @@
 		EE2DDD672BDBCB7B00361413 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE2DDD662BDBCB7B00361413 /* AppDelegate.swift */; };
 		EE2DDD692BDBCB7B00361413 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE2DDD682BDBCB7B00361413 /* SceneDelegate.swift */; };
 		EE2DDD6B2BDBCB7B00361413 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE2DDD6A2BDBCB7B00361413 /* ViewController.swift */; };
-		EE2DDD6E2BDBCB7B00361413 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = EE2DDD6D2BDBCB7B00361413 /* Base */; };
 		EE2DDD702BDBCB7D00361413 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE2DDD6F2BDBCB7D00361413 /* Assets.xcassets */; };
 		EE2DDD732BDBCB7D00361413 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = EE2DDD722BDBCB7D00361413 /* Base */; };
 		EE2DDD7E2BDBCB7E00361413 /* ShopfeeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE2DDD7D2BDBCB7E00361413 /* ShopfeeTests.swift */; };
 		EE2DDD882BDBCB7E00361413 /* ShopfeeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE2DDD872BDBCB7E00361413 /* ShopfeeUITests.swift */; };
 		EE2DDD8A2BDBCB7E00361413 /* ShopfeeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE2DDD892BDBCB7E00361413 /* ShopfeeUITestsLaunchTests.swift */; };
+		EE2DDD992BDBCD7700361413 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = EE2DDD972BDBCD7700361413 /* .swiftlint.yml */; };
+		EE2DDD9F2BDBCE7600361413 /* Shopfee.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = EE2DDD9E2BDBCE7600361413 /* Shopfee.xcstrings */; };
+		EEE8D4D02BDBCF780037F668 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EEE8D4CF2BDBCF780037F668 /* Colors.xcassets */; };
+		EEE8D4DB2BDBD4FA0037F668 /* String+localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE8D4DA2BDBD4FA0037F668 /* String+localized.swift */; };
+		EEE8D4E02BDBD8750037F668 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE8D4DE2BDBD8750037F668 /* Coordinator.swift */; };
+		EEE8D4E12BDBD8750037F668 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE8D4DF2BDBD8750037F668 /* AppCoordinator.swift */; };
+		EEE8D4E42BDBD87D0037F668 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE8D4E22BDBD87D0037F668 /* AppRouter.swift */; };
+		EEE8D4E52BDBD87D0037F668 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE8D4E32BDBD87D0037F668 /* Router.swift */; };
+		EEE8D4E82BDBD9620037F668 /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE8D4E72BDBD9620037F668 /* Action.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,7 +48,6 @@
 		EE2DDD662BDBCB7B00361413 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EE2DDD682BDBCB7B00361413 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		EE2DDD6A2BDBCB7B00361413 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		EE2DDD6D2BDBCB7B00361413 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EE2DDD6F2BDBCB7D00361413 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EE2DDD722BDBCB7D00361413 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EE2DDD742BDBCB7D00361413 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +56,16 @@
 		EE2DDD832BDBCB7E00361413 /* ShopfeeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShopfeeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE2DDD872BDBCB7E00361413 /* ShopfeeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopfeeUITests.swift; sourceTree = "<group>"; };
 		EE2DDD892BDBCB7E00361413 /* ShopfeeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopfeeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		EE2DDD972BDBCD7700361413 /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
+		EE2DDD9E2BDBCE7600361413 /* Shopfee.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Shopfee.xcstrings; sourceTree = "<group>"; };
+		EEE8D4CF2BDBCF780037F668 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		EEE8D4D32BDBCFBC0037F668 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		EEE8D4DA2BDBD4FA0037F668 /* String+localized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+localized.swift"; sourceTree = "<group>"; };
+		EEE8D4DE2BDBD8750037F668 /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		EEE8D4DF2BDBD8750037F668 /* AppCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		EEE8D4E22BDBD87D0037F668 /* AppRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
+		EEE8D4E32BDBD87D0037F668 /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		EEE8D4E72BDBD9620037F668 /* Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Action.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,7 +96,10 @@
 		EE2DDD5A2BDBCB7B00361413 = {
 			isa = PBXGroup;
 			children = (
+				EE2DDD972BDBCD7700361413 /* .swiftlint.yml */,
 				EE2DDD652BDBCB7B00361413 /* Shopfee */,
+				EEE8D4D72BDBD4B60037F668 /* Utilities */,
+				EE2DDD9C2BDBCE2800361413 /* Resources */,
 				EE2DDD7C2BDBCB7E00361413 /* ShopfeeTests */,
 				EE2DDD862BDBCB7E00361413 /* ShopfeeUITests */,
 				EE2DDD642BDBCB7B00361413 /* Products */,
@@ -99,12 +119,10 @@
 		EE2DDD652BDBCB7B00361413 /* Shopfee */ = {
 			isa = PBXGroup;
 			children = (
+				EEE8D4E92BDBE3800037F668 /* Scenes */,
 				EE2DDD662BDBCB7B00361413 /* AppDelegate.swift */,
 				EE2DDD682BDBCB7B00361413 /* SceneDelegate.swift */,
 				EE2DDD6A2BDBCB7B00361413 /* ViewController.swift */,
-				EE2DDD6C2BDBCB7B00361413 /* Main.storyboard */,
-				EE2DDD6F2BDBCB7D00361413 /* Assets.xcassets */,
-				EE2DDD712BDBCB7D00361413 /* LaunchScreen.storyboard */,
 				EE2DDD742BDBCB7D00361413 /* Info.plist */,
 			);
 			path = Shopfee;
@@ -127,6 +145,109 @@
 			path = ShopfeeUITests;
 			sourceTree = "<group>";
 		};
+		EE2DDD9C2BDBCE2800361413 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				EEE8D4D22BDBCF830037F668 /* LaunchScreen */,
+				EEE8D4D12BDBCF7F0037F668 /* Fonts */,
+				EE2DDD9D2BDBCE4400361413 /* Localization */,
+				EEE8D4CE2BDBCF670037F668 /* Assets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		EE2DDD9D2BDBCE4400361413 /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				EE2DDD9E2BDBCE7600361413 /* Shopfee.xcstrings */,
+			);
+			path = Localization;
+			sourceTree = "<group>";
+		};
+		EEE8D4CE2BDBCF670037F668 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				EE2DDD6F2BDBCB7D00361413 /* Assets.xcassets */,
+				EEE8D4CF2BDBCF780037F668 /* Colors.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		EEE8D4D12BDBCF7F0037F668 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		EEE8D4D22BDBCF830037F668 /* LaunchScreen */ = {
+			isa = PBXGroup;
+			children = (
+				EE2DDD712BDBCB7D00361413 /* LaunchScreen.storyboard */,
+			);
+			path = LaunchScreen;
+			sourceTree = "<group>";
+		};
+		EEE8D4D72BDBD4B60037F668 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				EEE8D4DC2BDBD83F0037F668 /* Coordinator */,
+				EEE8D4D82BDBD4D60037F668 /* Extensionts */,
+				EEE8D4E62BDBD9530037F668 /* TypeAliases */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		EEE8D4D82BDBD4D60037F668 /* Extensionts */ = {
+			isa = PBXGroup;
+			children = (
+				EEE8D4D92BDBD4DC0037F668 /* String */,
+			);
+			path = Extensionts;
+			sourceTree = "<group>";
+		};
+		EEE8D4D92BDBD4DC0037F668 /* String */ = {
+			isa = PBXGroup;
+			children = (
+				EEE8D4DA2BDBD4FA0037F668 /* String+localized.swift */,
+			);
+			path = String;
+			sourceTree = "<group>";
+		};
+		EEE8D4DC2BDBD83F0037F668 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				EEE8D4DF2BDBD8750037F668 /* AppCoordinator.swift */,
+				EEE8D4DE2BDBD8750037F668 /* Coordinator.swift */,
+				EEE8D4DD2BDBD84F0037F668 /* Router */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		EEE8D4DD2BDBD84F0037F668 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				EEE8D4E22BDBD87D0037F668 /* AppRouter.swift */,
+				EEE8D4E32BDBD87D0037F668 /* Router.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		EEE8D4E62BDBD9530037F668 /* TypeAliases */ = {
+			isa = PBXGroup;
+			children = (
+				EEE8D4E72BDBD9620037F668 /* Action.swift */,
+			);
+			path = TypeAliases;
+			sourceTree = "<group>";
+		};
+		EEE8D4E92BDBE3800037F668 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -134,6 +255,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EE2DDD8D2BDBCB7E00361413 /* Build configuration list for PBXNativeTarget "Shopfee" */;
 			buildPhases = (
+				EEE8D4D42BDBD0C70037F668 /* swiftlint */,
 				EE2DDD5F2BDBCB7B00361413 /* Sources */,
 				EE2DDD602BDBCB7B00361413 /* Frameworks */,
 				EE2DDD612BDBCB7B00361413 /* Resources */,
@@ -213,6 +335,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ar,
 			);
 			mainGroup = EE2DDD5A2BDBCB7B00361413;
 			productRefGroup = EE2DDD642BDBCB7B00361413 /* Products */;
@@ -231,9 +354,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EEE8D4D02BDBCF780037F668 /* Colors.xcassets in Resources */,
+				EE2DDD992BDBCD7700361413 /* .swiftlint.yml in Resources */,
 				EE2DDD702BDBCB7D00361413 /* Assets.xcassets in Resources */,
+				EE2DDD9F2BDBCE7600361413 /* Shopfee.xcstrings in Resources */,
 				EE2DDD732BDBCB7D00361413 /* Base in Resources */,
-				EE2DDD6E2BDBCB7B00361413 /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,13 +378,41 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		EEE8D4D42BDBD0C70037F668 /* swiftlint */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = swiftlint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export PATH=\"$PATH:/opt/homebrew/bin\"\nif which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi \n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		EE2DDD5F2BDBCB7B00361413 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EEE8D4E52BDBD87D0037F668 /* Router.swift in Sources */,
+				EEE8D4E82BDBD9620037F668 /* Action.swift in Sources */,
+				EEE8D4E12BDBD8750037F668 /* AppCoordinator.swift in Sources */,
 				EE2DDD6B2BDBCB7B00361413 /* ViewController.swift in Sources */,
 				EE2DDD672BDBCB7B00361413 /* AppDelegate.swift in Sources */,
+				EEE8D4E02BDBD8750037F668 /* Coordinator.swift in Sources */,
+				EEE8D4E42BDBD87D0037F668 /* AppRouter.swift in Sources */,
+				EEE8D4DB2BDBD4FA0037F668 /* String+localized.swift in Sources */,
 				EE2DDD692BDBCB7B00361413 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -297,18 +450,11 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		EE2DDD6C2BDBCB7B00361413 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				EE2DDD6D2BDBCB7B00361413 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		EE2DDD712BDBCB7D00361413 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				EE2DDD722BDBCB7D00361413 /* Base */,
+				EEE8D4D32BDBCFBC0037F668 /* ar */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -321,6 +467,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -353,7 +500,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -368,7 +515,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -384,6 +531,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -416,7 +564,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -425,7 +573,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -447,15 +595,15 @@
 				INFOPLIST_FILE = Shopfee/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.yamany.shopfee.Shopfee;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yamany.shopfee;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -475,15 +623,15 @@
 				INFOPLIST_FILE = Shopfee/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.yamany.shopfee.Shopfee;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yamany.shopfee;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -502,7 +650,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.yamany.shopfee.ShopfeeTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yamany.shopfeeTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
@@ -522,7 +670,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.yamany.shopfee.ShopfeeTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yamany.shopfeeTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
@@ -540,7 +688,7 @@
 				DEVELOPMENT_TEAM = 4U8DMJ33ZN;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.yamany.shopfee.ShopfeeUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yamany.shopfeeUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
@@ -558,7 +706,7 @@
 				DEVELOPMENT_TEAM = 4U8DMJ33ZN;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.yamany.shopfee.ShopfeeUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yamany.shopfeeUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;

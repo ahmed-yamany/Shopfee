@@ -1,0 +1,81 @@
+# By default, SwiftLint uses a set of sensible default rules you can adjust:
+disabled_rules: # rule identifiers turned on by default to exclude from running
+  # TODOs and FIXMEs should be resolved.
+  - class_delegate_protocol
+  - trailing_whitespace
+  - switch_case_alignment
+
+  
+# some rules are turned off by default, so you need to opt-in
+opt_in_rules:
+  # Prefer checking isEmpty over comparing count to zero
+  - empty_count
+  
+  # Force casts should be avoided
+  - force_cast
+  
+  # Force unwrapping should be avoided
+  - force_unwrapping
+  
+  # Header comments should be consistent with project patterns.
+  - file_header
+  
+  # MARK comment should be in valid format. e.g. ‘// MARK: …’ or ‘// MARK: - …’
+  - mark
+  
+  # Function parameters should be aligned vertically if they’re in multiple lines in a method call
+  - vertical_parameter_alignment_on_call
+
+# Rules run by `swiftlint analyze`
+analyzer_rules:
+  - explicit_self
+
+# paths to ignore during linting. Takes precedence over `included`.
+excluded:
+  - Carthage
+  - Pods
+
+# If true, SwiftLint will not fail if no lintable files are found.
+allow_zero_lintable_files: false
+
+# configurable rules can be customized from this configuration file
+# binary rules can set their severity level
+force_cast: warning
+
+force_unwrapping: error
+
+force_try:
+  severity: error
+
+line_length: 130
+
+type_body_length:
+  - 300 # warning
+  - 400 # error
+
+# or they can set both explicitly
+file_length:
+  error: 400
+  
+# naming rules can set warnings/errors for min_length and max_length
+# additionally they can set excluded names
+type_name:
+  allowed_symbols: ["_"] # these are allowed in type names
+  
+identifier_name:
+  excluded: # excluded via string array
+    - id
+    - URL
+    - GlobalAPIKey
+
+#file_header:
+#  forbidden_string: "Created by"
+
+
+excluded:
+  - Path/To/File/To/Exclude.swift
+  
+empty_count:
+    only_after_dot: true
+
+function_parameter_count: 7
