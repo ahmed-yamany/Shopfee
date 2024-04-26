@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		EE2DDD672BDBCB7B00361413 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE2DDD662BDBCB7B00361413 /* AppDelegate.swift */; };
 		EE2DDD692BDBCB7B00361413 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE2DDD682BDBCB7B00361413 /* SceneDelegate.swift */; };
-		EE2DDD6B2BDBCB7B00361413 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE2DDD6A2BDBCB7B00361413 /* ViewController.swift */; };
 		EE2DDD702BDBCB7D00361413 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE2DDD6F2BDBCB7D00361413 /* Assets.xcassets */; };
 		EE2DDD732BDBCB7D00361413 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = EE2DDD722BDBCB7D00361413 /* Base */; };
 		EE2DDD7E2BDBCB7E00361413 /* ShopfeeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE2DDD7D2BDBCB7E00361413 /* ShopfeeTests.swift */; };
@@ -20,8 +19,8 @@
 		EEE8D4D02BDBCF780037F668 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EEE8D4CF2BDBCF780037F668 /* Colors.xcassets */; };
 		EEE8D4DB2BDBD4FA0037F668 /* String+localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE8D4DA2BDBD4FA0037F668 /* String+localized.swift */; };
 		EEE8D4E02BDBD8750037F668 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE8D4DE2BDBD8750037F668 /* Coordinator.swift */; };
-		EEE8D4E12BDBD8750037F668 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE8D4DF2BDBD8750037F668 /* AppCoordinator.swift */; };
-		EEE8D4E42BDBD87D0037F668 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE8D4E22BDBD87D0037F668 /* AppRouter.swift */; };
+		EEE8D4E12BDBD8750037F668 /* ShopfeeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE8D4DF2BDBD8750037F668 /* ShopfeeCoordinator.swift */; };
+		EEE8D4E42BDBD87D0037F668 /* ShopfeeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE8D4E22BDBD87D0037F668 /* ShopfeeRouter.swift */; };
 		EEE8D4E52BDBD87D0037F668 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE8D4E32BDBD87D0037F668 /* Router.swift */; };
 		EEE8D4E82BDBD9620037F668 /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE8D4E72BDBD9620037F668 /* Action.swift */; };
 		EEE8D5042BDBF0780037F668 /* Poppins-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EEE8D4F12BDBF0770037F668 /* Poppins-Medium.ttf */; };
@@ -29,6 +28,11 @@
 		EEE8D50D2BDBF0780037F668 /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EEE8D4FA2BDBF0770037F668 /* Poppins-Bold.ttf */; };
 		EEE8D5162BDBF0D70037F668 /* Font+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE8D5142BDBF0D70037F668 /* Font+Style.swift */; };
 		EEE8D5172BDBF0D70037F668 /* UIFont+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE8D5152BDBF0D70037F668 /* UIFont+Style.swift */; };
+		EEE8D51D2BDBFB5C0037F668 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE8D51B2BDBFB5C0037F668 /* OnboardingView.swift */; };
+		EEE8D51E2BDBFB5C0037F668 /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE8D51C2BDBFB5C0037F668 /* OnboardingViewModel.swift */; };
+		EEE8D5222BDBFBEE0037F668 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE8D5212BDBFBEE0037F668 /* OnboardingViewController.swift */; };
+		EEE8D5242BDBFCAA0037F668 /* OnboardingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE8D5232BDBFCAA0037F668 /* OnboardingCoordinator.swift */; };
+		EEE8D5262BDBFDF20037F668 /* OnboardingUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE8D5252BDBFDF20037F668 /* OnboardingUseCase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,7 +56,6 @@
 		EE2DDD632BDBCB7B00361413 /* Shopfee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Shopfee.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE2DDD662BDBCB7B00361413 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EE2DDD682BDBCB7B00361413 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		EE2DDD6A2BDBCB7B00361413 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		EE2DDD6F2BDBCB7D00361413 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EE2DDD722BDBCB7D00361413 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EE2DDD742BDBCB7D00361413 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -67,8 +70,8 @@
 		EEE8D4D32BDBCFBC0037F668 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		EEE8D4DA2BDBD4FA0037F668 /* String+localized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+localized.swift"; sourceTree = "<group>"; };
 		EEE8D4DE2BDBD8750037F668 /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
-		EEE8D4DF2BDBD8750037F668 /* AppCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
-		EEE8D4E22BDBD87D0037F668 /* AppRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
+		EEE8D4DF2BDBD8750037F668 /* ShopfeeCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopfeeCoordinator.swift; sourceTree = "<group>"; };
+		EEE8D4E22BDBD87D0037F668 /* ShopfeeRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopfeeRouter.swift; sourceTree = "<group>"; };
 		EEE8D4E32BDBD87D0037F668 /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		EEE8D4E72BDBD9620037F668 /* Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Action.swift; sourceTree = "<group>"; };
 		EEE8D4F12BDBF0770037F668 /* Poppins-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Medium.ttf"; sourceTree = "<group>"; };
@@ -76,6 +79,11 @@
 		EEE8D4FA2BDBF0770037F668 /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
 		EEE8D5142BDBF0D70037F668 /* Font+Style.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Font+Style.swift"; sourceTree = "<group>"; };
 		EEE8D5152BDBF0D70037F668 /* UIFont+Style.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+Style.swift"; sourceTree = "<group>"; };
+		EEE8D51B2BDBFB5C0037F668 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		EEE8D51C2BDBFB5C0037F668 /* OnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
+		EEE8D5212BDBFBEE0037F668 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		EEE8D5232BDBFCAA0037F668 /* OnboardingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCoordinator.swift; sourceTree = "<group>"; };
+		EEE8D5252BDBFDF20037F668 /* OnboardingUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingUseCase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,10 +137,10 @@
 		EE2DDD652BDBCB7B00361413 /* Shopfee */ = {
 			isa = PBXGroup;
 			children = (
+				EEE8D5272BDBFE7C0037F668 /* Coordinator */,
 				EEE8D4E92BDBE3800037F668 /* Scenes */,
 				EE2DDD662BDBCB7B00361413 /* AppDelegate.swift */,
 				EE2DDD682BDBCB7B00361413 /* SceneDelegate.swift */,
-				EE2DDD6A2BDBCB7B00361413 /* ViewController.swift */,
 				EE2DDD742BDBCB7D00361413 /* Info.plist */,
 			);
 			path = Shopfee;
@@ -232,20 +240,10 @@
 		EEE8D4DC2BDBD83F0037F668 /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
-				EEE8D4DF2BDBD8750037F668 /* AppCoordinator.swift */,
+				EEE8D4E32BDBD87D0037F668 /* Router.swift */,
 				EEE8D4DE2BDBD8750037F668 /* Coordinator.swift */,
-				EEE8D4DD2BDBD84F0037F668 /* Router */,
 			);
 			path = Coordinator;
-			sourceTree = "<group>";
-		};
-		EEE8D4DD2BDBD84F0037F668 /* Router */ = {
-			isa = PBXGroup;
-			children = (
-				EEE8D4E22BDBD87D0037F668 /* AppRouter.swift */,
-				EEE8D4E32BDBD87D0037F668 /* Router.swift */,
-			);
-			path = Router;
 			sourceTree = "<group>";
 		};
 		EEE8D4E62BDBD9530037F668 /* TypeAliases */ = {
@@ -259,8 +257,46 @@
 		EEE8D4E92BDBE3800037F668 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				EEE8D5182BDBFB290037F668 /* Onboarding */,
 			);
 			path = Scenes;
+			sourceTree = "<group>";
+		};
+		EEE8D5182BDBFB290037F668 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				EEE8D51A2BDBFB470037F668 /* Domain */,
+				EEE8D5192BDBFB420037F668 /* Presentation */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		EEE8D5192BDBFB420037F668 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				EEE8D51B2BDBFB5C0037F668 /* OnboardingView.swift */,
+				EEE8D51C2BDBFB5C0037F668 /* OnboardingViewModel.swift */,
+				EEE8D5212BDBFBEE0037F668 /* OnboardingViewController.swift */,
+				EEE8D5232BDBFCAA0037F668 /* OnboardingCoordinator.swift */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		EEE8D51A2BDBFB470037F668 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				EEE8D5252BDBFDF20037F668 /* OnboardingUseCase.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		EEE8D5272BDBFE7C0037F668 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				EEE8D4E22BDBD87D0037F668 /* ShopfeeRouter.swift */,
+				EEE8D4DF2BDBD8750037F668 /* ShopfeeCoordinator.swift */,
+			);
+			path = Coordinator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -425,13 +461,17 @@
 			files = (
 				EEE8D4E52BDBD87D0037F668 /* Router.swift in Sources */,
 				EEE8D4E82BDBD9620037F668 /* Action.swift in Sources */,
-				EEE8D4E12BDBD8750037F668 /* AppCoordinator.swift in Sources */,
-				EE2DDD6B2BDBCB7B00361413 /* ViewController.swift in Sources */,
+				EEE8D4E12BDBD8750037F668 /* ShopfeeCoordinator.swift in Sources */,
+				EEE8D5242BDBFCAA0037F668 /* OnboardingCoordinator.swift in Sources */,
 				EE2DDD672BDBCB7B00361413 /* AppDelegate.swift in Sources */,
 				EEE8D4E02BDBD8750037F668 /* Coordinator.swift in Sources */,
 				EEE8D5172BDBF0D70037F668 /* UIFont+Style.swift in Sources */,
-				EEE8D4E42BDBD87D0037F668 /* AppRouter.swift in Sources */,
+				EEE8D4E42BDBD87D0037F668 /* ShopfeeRouter.swift in Sources */,
+				EEE8D51D2BDBFB5C0037F668 /* OnboardingView.swift in Sources */,
+				EEE8D51E2BDBFB5C0037F668 /* OnboardingViewModel.swift in Sources */,
 				EEE8D4DB2BDBD4FA0037F668 /* String+localized.swift in Sources */,
+				EEE8D5222BDBFBEE0037F668 /* OnboardingViewController.swift in Sources */,
+				EEE8D5262BDBFDF20037F668 /* OnboardingUseCase.swift in Sources */,
 				EEE8D5162BDBF0D70037F668 /* Font+Style.swift in Sources */,
 				EE2DDD692BDBCB7B00361413 /* SceneDelegate.swift in Sources */,
 			);

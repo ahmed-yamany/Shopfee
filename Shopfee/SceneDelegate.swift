@@ -17,6 +17,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         options connectionOptions: UIScene.ConnectionOptions
     ) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
-        AppCoordinator.shared.makeWindow(from: windowScene)
+        ShopfeeCoordinator.shared.makeWindow(from: windowScene)
     }
 }

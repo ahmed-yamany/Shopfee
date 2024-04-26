@@ -1,9 +1,8 @@
 //
 //  Router.swift
-//  Grocer
+//  Shopfee
 //
-//  Created by Ahmed Yamany on 01/1/2023.
-//
+//  Created by Ahmed Yamany on 26/04/2024.
 
 import UIKit
 
@@ -50,7 +49,7 @@ public extension Router {
         }
     }
     
-    func reset(completion: @escaping () -> Void) {
+    func reset(completion: @escaping () -> Void = {}) {
         DispatchQueue.main.async { [weak self] in
             guard let self = self else { return }
             navigationController.dismiss(animated: false)

@@ -1,9 +1,3 @@
-//
-//  Font+Style.swift
-//
-//  Created by Ahmed Yamany on 30/01/2024.
-//
-
 import UIKit
 
 // swiftlint: disable all

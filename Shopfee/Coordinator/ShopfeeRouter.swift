@@ -1,13 +1,12 @@
 //
-//  AppRouter.swift
-//  Grocer
+//  ShopfeeRouter.swift
+//  Shopfee
 //
-//  Created by Ahmed Yamany on 01/1/2023.
-//
+//  Created by Ahmed Yamany on 26/04/2024.
 
 import UIKit
 
-final public class AppRouter: Router {
+final public class ShopfeeRouter: Router {
     public let navigationController: UINavigationController
     
     public required init(navigationController: UINavigationController) {
