@@ -24,6 +24,11 @@
 		EEE8D4E42BDBD87D0037F668 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE8D4E22BDBD87D0037F668 /* AppRouter.swift */; };
 		EEE8D4E52BDBD87D0037F668 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE8D4E32BDBD87D0037F668 /* Router.swift */; };
 		EEE8D4E82BDBD9620037F668 /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE8D4E72BDBD9620037F668 /* Action.swift */; };
+		EEE8D5042BDBF0780037F668 /* Poppins-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EEE8D4F12BDBF0770037F668 /* Poppins-Medium.ttf */; };
+		EEE8D5072BDBF0780037F668 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EEE8D4F42BDBF0770037F668 /* Poppins-Regular.ttf */; };
+		EEE8D50D2BDBF0780037F668 /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EEE8D4FA2BDBF0770037F668 /* Poppins-Bold.ttf */; };
+		EEE8D5162BDBF0D70037F668 /* Font+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE8D5142BDBF0D70037F668 /* Font+Style.swift */; };
+		EEE8D5172BDBF0D70037F668 /* UIFont+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE8D5152BDBF0D70037F668 /* UIFont+Style.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +71,11 @@
 		EEE8D4E22BDBD87D0037F668 /* AppRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
 		EEE8D4E32BDBD87D0037F668 /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		EEE8D4E72BDBD9620037F668 /* Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Action.swift; sourceTree = "<group>"; };
+		EEE8D4F12BDBF0770037F668 /* Poppins-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Medium.ttf"; sourceTree = "<group>"; };
+		EEE8D4F42BDBF0770037F668 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
+		EEE8D4FA2BDBF0770037F668 /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
+		EEE8D5142BDBF0D70037F668 /* Font+Style.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Font+Style.swift"; sourceTree = "<group>"; };
+		EEE8D5152BDBF0D70037F668 /* UIFont+Style.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+Style.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,6 +186,11 @@
 		EEE8D4D12BDBCF7F0037F668 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				EEE8D5142BDBF0D70037F668 /* Font+Style.swift */,
+				EEE8D5152BDBF0D70037F668 /* UIFont+Style.swift */,
+				EEE8D4FA2BDBF0770037F668 /* Poppins-Bold.ttf */,
+				EEE8D4F12BDBF0770037F668 /* Poppins-Medium.ttf */,
+				EEE8D4F42BDBF0770037F668 /* Poppins-Regular.ttf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -354,9 +369,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EEE8D50D2BDBF0780037F668 /* Poppins-Bold.ttf in Resources */,
 				EEE8D4D02BDBCF780037F668 /* Colors.xcassets in Resources */,
+				EEE8D5072BDBF0780037F668 /* Poppins-Regular.ttf in Resources */,
 				EE2DDD992BDBCD7700361413 /* .swiftlint.yml in Resources */,
 				EE2DDD702BDBCB7D00361413 /* Assets.xcassets in Resources */,
+				EEE8D5042BDBF0780037F668 /* Poppins-Medium.ttf in Resources */,
 				EE2DDD9F2BDBCE7600361413 /* Shopfee.xcstrings in Resources */,
 				EE2DDD732BDBCB7D00361413 /* Base in Resources */,
 			);
@@ -411,8 +429,10 @@
 				EE2DDD6B2BDBCB7B00361413 /* ViewController.swift in Sources */,
 				EE2DDD672BDBCB7B00361413 /* AppDelegate.swift in Sources */,
 				EEE8D4E02BDBD8750037F668 /* Coordinator.swift in Sources */,
+				EEE8D5172BDBF0D70037F668 /* UIFont+Style.swift in Sources */,
 				EEE8D4E42BDBD87D0037F668 /* AppRouter.swift in Sources */,
 				EEE8D4DB2BDBD4FA0037F668 /* String+localized.swift in Sources */,
+				EEE8D5162BDBF0D70037F668 /* Font+Style.swift in Sources */,
 				EE2DDD692BDBCB7B00361413 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
