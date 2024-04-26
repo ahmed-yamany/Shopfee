@@ -1,6 +1,6 @@
 //
 //  ShopfeeCoordinator.swift
-///  Shopfee
+//  Shopfee
 //
 //  Created by Ahmed Yamany on 26/04/2024.
 
@@ -34,7 +34,7 @@ final class ShopfeeCoordinator: ShopfeeCoordinatorProtocol {
     
     func showOnboarding() {
         router.reset()
-        let coordinator = OnboardingCoordinator(router: router)
+        let coordinator = SplashCoordinator(router: router)
         coordinator.start()
     }
 }

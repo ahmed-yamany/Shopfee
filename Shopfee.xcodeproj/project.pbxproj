@@ -34,6 +34,12 @@
 		EEE8D5242BDBFCAA0037F668 /* OnboardingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE8D5232BDBFCAA0037F668 /* OnboardingCoordinator.swift */; };
 		EEE8D5262BDBFDF20037F668 /* OnboardingUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE8D5252BDBFDF20037F668 /* OnboardingUseCase.swift */; };
 		EEE8D52B2BDC03700037F668 /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE8D52A2BDC03700037F668 /* PrimaryButton.swift */; };
+		EEE8D52F2BDC0D900037F668 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE8D52E2BDC0D900037F668 /* SplashView.swift */; };
+		EEE8D5312BDC0D9E0037F668 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE8D5302BDC0D9E0037F668 /* SplashViewController.swift */; };
+		EEE8D5342BDC14DD0037F668 /* ShopFeeText.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE8D5332BDC14DD0037F668 /* ShopFeeText.swift */; };
+		EEE8D5362BDC16370037F668 /* ShopfeeLogo.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE8D5352BDC16370037F668 /* ShopfeeLogo.swift */; };
+		EEE8D5392BDC16940037F668 /* SplashCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE8D5382BDC16940037F668 /* SplashCoordinator.swift */; };
+		EEE8D53C2BDC1A2A0037F668 /* View+PrimaryStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE8D53B2BDC1A2A0037F668 /* View+PrimaryStyle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,7 +74,6 @@
 		EE2DDD972BDBCD7700361413 /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		EE2DDD9E2BDBCE7600361413 /* Shopfee.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Shopfee.xcstrings; sourceTree = "<group>"; };
 		EEE8D4CF2BDBCF780037F668 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
-		EEE8D4D32BDBCFBC0037F668 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		EEE8D4DA2BDBD4FA0037F668 /* String+localized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+localized.swift"; sourceTree = "<group>"; };
 		EEE8D4DE2BDBD8750037F668 /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		EEE8D4DF2BDBD8750037F668 /* ShopfeeCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopfeeCoordinator.swift; sourceTree = "<group>"; };
@@ -86,6 +91,12 @@
 		EEE8D5232BDBFCAA0037F668 /* OnboardingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCoordinator.swift; sourceTree = "<group>"; };
 		EEE8D5252BDBFDF20037F668 /* OnboardingUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingUseCase.swift; sourceTree = "<group>"; };
 		EEE8D52A2BDC03700037F668 /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
+		EEE8D52E2BDC0D900037F668 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
+		EEE8D5302BDC0D9E0037F668 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		EEE8D5332BDC14DD0037F668 /* ShopFeeText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopFeeText.swift; sourceTree = "<group>"; };
+		EEE8D5352BDC16370037F668 /* ShopfeeLogo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopfeeLogo.swift; sourceTree = "<group>"; };
+		EEE8D5382BDC16940037F668 /* SplashCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashCoordinator.swift; sourceTree = "<group>"; };
+		EEE8D53B2BDC1A2A0037F668 /* View+PrimaryStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+PrimaryStyle.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -216,6 +227,7 @@
 		EEE8D4D72BDBD4B60037F668 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				EEE8D53A2BDC1A0F0037F668 /* Modifiers */,
 				EEE8D5282BDC030B0037F668 /* CustomViews */,
 				EEE8D4DC2BDBD83F0037F668 /* Coordinator */,
 				EEE8D4D82BDBD4D60037F668 /* Extensionts */,
@@ -260,6 +272,7 @@
 		EEE8D4E92BDBE3800037F668 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				EEE8D52C2BDC0D710037F668 /* Splash */,
 				EEE8D5182BDBFB290037F668 /* Onboarding */,
 			);
 			path = Scenes;
@@ -305,7 +318,9 @@
 		EEE8D5282BDC030B0037F668 /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
+				EEE8D5322BDC14CF0037F668 /* Text */,
 				EEE8D5292BDC031B0037F668 /* Buttons */,
+				EEE8D5352BDC16370037F668 /* ShopfeeLogo.swift */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -316,6 +331,40 @@
 				EEE8D52A2BDC03700037F668 /* PrimaryButton.swift */,
 			);
 			path = Buttons;
+			sourceTree = "<group>";
+		};
+		EEE8D52C2BDC0D710037F668 /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				EEE8D52D2BDC0D770037F668 /* Presentaion */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
+		EEE8D52D2BDC0D770037F668 /* Presentaion */ = {
+			isa = PBXGroup;
+			children = (
+				EEE8D52E2BDC0D900037F668 /* SplashView.swift */,
+				EEE8D5302BDC0D9E0037F668 /* SplashViewController.swift */,
+				EEE8D5382BDC16940037F668 /* SplashCoordinator.swift */,
+			);
+			path = Presentaion;
+			sourceTree = "<group>";
+		};
+		EEE8D5322BDC14CF0037F668 /* Text */ = {
+			isa = PBXGroup;
+			children = (
+				EEE8D5332BDC14DD0037F668 /* ShopFeeText.swift */,
+			);
+			path = Text;
+			sourceTree = "<group>";
+		};
+		EEE8D53A2BDC1A0F0037F668 /* Modifiers */ = {
+			isa = PBXGroup;
+			children = (
+				EEE8D53B2BDC1A2A0037F668 /* View+PrimaryStyle.swift */,
+			);
+			path = Modifiers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -480,6 +529,10 @@
 			files = (
 				EEE8D4E52BDBD87D0037F668 /* Router.swift in Sources */,
 				EEE8D4E82BDBD9620037F668 /* Action.swift in Sources */,
+				EEE8D53C2BDC1A2A0037F668 /* View+PrimaryStyle.swift in Sources */,
+				EEE8D52F2BDC0D900037F668 /* SplashView.swift in Sources */,
+				EEE8D5312BDC0D9E0037F668 /* SplashViewController.swift in Sources */,
+				EEE8D5342BDC14DD0037F668 /* ShopFeeText.swift in Sources */,
 				EEE8D4E12BDBD8750037F668 /* ShopfeeCoordinator.swift in Sources */,
 				EEE8D5242BDBFCAA0037F668 /* OnboardingCoordinator.swift in Sources */,
 				EE2DDD672BDBCB7B00361413 /* AppDelegate.swift in Sources */,
@@ -490,8 +543,10 @@
 				EEE8D51E2BDBFB5C0037F668 /* OnboardingViewModel.swift in Sources */,
 				EEE8D4DB2BDBD4FA0037F668 /* String+localized.swift in Sources */,
 				EEE8D5222BDBFBEE0037F668 /* OnboardingViewController.swift in Sources */,
+				EEE8D5362BDC16370037F668 /* ShopfeeLogo.swift in Sources */,
 				EEE8D5262BDBFDF20037F668 /* OnboardingUseCase.swift in Sources */,
 				EEE8D5162BDBF0D70037F668 /* Font+Style.swift in Sources */,
+				EEE8D5392BDC16940037F668 /* SplashCoordinator.swift in Sources */,
 				EEE8D52B2BDC03700037F668 /* PrimaryButton.swift in Sources */,
 				EE2DDD692BDBCB7B00361413 /* SceneDelegate.swift in Sources */,
 			);
@@ -534,7 +589,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				EE2DDD722BDBCB7D00361413 /* Base */,
-				EEE8D4D32BDBCFBC0037F668 /* ar */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";

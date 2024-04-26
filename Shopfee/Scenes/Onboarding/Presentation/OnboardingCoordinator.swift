@@ -21,6 +21,6 @@ final class OnboardingCoordinator: OnboardingCoordinatorProtocol {
         let useCase = OnboardingUseCase()
         let viewModel = OnboardingViewModel(coordinator: self, useCase: useCase)
         let controller = OnboardingViewController(viewModel: viewModel)
-        router.push(controller)
+        router.setViewController(controller, animated: false)
     }
 }
