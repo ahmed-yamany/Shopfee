@@ -42,7 +42,7 @@ final class OnboardingViewModel: OnboardingViewModelProtocol {
         if !isPaginationReachedEnd() {
             selectedPageIndex += 1
         } else {
-            coordinator.showRegister()
+            skip()
         }
     }
     
@@ -56,12 +56,15 @@ private extension OnboardingViewModel {
         Task {
             do {
                 let models = try await useCase.getTabViewModels()
-                DispatchQueue.main.async { [weak self] in
-                    self?.tabViewModels = models
-                }
+                await updateTabViewModels(with: models)
             } catch {
                 print(error.localizedDescription)
             }
         }
+    }
+    
+    @MainActor
+    func updateTabViewModels(with models: [OnboardingTabViewModel]) {
+        tabViewModels = models
     }
 }

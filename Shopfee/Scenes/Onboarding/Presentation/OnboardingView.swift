@@ -6,21 +6,42 @@
 //
 
 import SwiftUI
+import FoundationExtensions
 
 struct OnboardingView<ViewModel: OnboardingViewModelProtocol>: View {
     @ObservedObject var viewModel: ViewModel
+    @State var activeId: UUID?
     
     var body: some View {
         VStack {
             skipButton
-            tabView
+            Spacer()
+            
+            if #available(iOS 17.0, *) {
+                animatedSlider
+            } else {
+                tabView
+            }
+            
+            Spacer()
             paginationView
         }
-        .padding([.horizontal], .safeAreaPadding)
+        .padding([.horizontal, .bottom], .safeAreaPadding)
         .applyPrimaryStyle(alignment: .top)
         .animation(.default, value: viewModel.selectedPageIndex)
+        .animation(.default, value: activeId)
         .onAppear {
             viewModel.onAppear()
+        }
+        .onChange(of: activeId) { newValue in
+            if let index = viewModel.tabViewModels.firstIndex(where: { $0.id == newValue }) {
+                viewModel.selectedPageIndex = index
+            } else {
+                viewModel.selectedPageIndex = 0
+            }
+        }
+        .onChange(of: viewModel.selectedPageIndex) { newValue in
+            activeId = viewModel.tabViewModels[safe: newValue]?.id
         }
     }
     
@@ -44,15 +65,20 @@ struct OnboardingView<ViewModel: OnboardingViewModelProtocol>: View {
         .tabViewStyle(.page(indexDisplayMode: .never))
         .padding(.horizontal, -.safeAreaPadding)
         .padding(.vertical, .safeAreaPadding)
-        
     }
     
     @ViewBuilder
     private func tabViewItem(_ model: OnboardingTabViewModel) -> some View {
         VStack {
-            Image(model.imageResource)
-                .resizable()
-                .frame(width: 220, height: 220)
+            if #available(iOS 17.0, *) {
+                tabViewImage(model)
+                    .visualEffect { content, geometryProxy in
+                        content
+                            .offset(x: -(geometryProxy.bounds(of: .scrollView)?.minX ?? 0) * 0.7)
+                    }
+            } else {
+             tabViewImage(model)
+            }
             
             VStack(alignment: .leading, spacing: 16) {
                 Text(model.title)
@@ -62,9 +88,37 @@ struct OnboardingView<ViewModel: OnboardingViewModelProtocol>: View {
                 Text(model.subtitle)
                     .font(.custom(size: 16, weight: .medium))
                     .foregroundStyle(.textParagraph)
-            }            
+            }
         }
         .padding(.safeAreaPadding)
+    }
+    
+    @ViewBuilder
+    private func tabViewImage(_ model: OnboardingTabViewModel) -> some View {
+        Image(model.imageResource)
+            .resizable()
+            .frame(width: 220, height: 220)
+            .frame(maxWidth: .infinity)
+    }
+    
+    @available(iOS 17.0, *)
+    @ViewBuilder
+    private var animatedSlider: some View {
+        ScrollView(.horizontal) {
+            HStack {
+                ForEach(viewModel.tabViewModels) { tabViewModel in
+                    tabViewItem(tabViewModel)
+                        .tag(tabViewModel.id)
+                        .containerRelativeFrame(.horizontal)
+                        .transition(.move(edge: .trailing))
+                }
+            }
+            .scrollTargetLayout() // adding paging
+        }
+        .padding(.horizontal, -.safeAreaPadding)
+        .scrollIndicators(.never)
+        .scrollTargetBehavior(.viewAligned)
+        .scrollPosition(id: $activeId)
     }
     
     private var paginationView: some View {

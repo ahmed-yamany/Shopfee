@@ -7,13 +7,13 @@
 
 import Foundation
 
-protocol OnboardingUseCaseProtocol {
+protocol OnboardingUseCaseProtocol: AnyActor {
     func getTabViewModels() async throws -> [OnboardingTabViewModel]
 }
 
-final class OnboardingUseCase: OnboardingUseCaseProtocol {
+final actor OnboardingUseCase: OnboardingUseCaseProtocol {
     
-    func getTabViewModels() async throws -> [OnboardingTabViewModel] {
+    func getTabViewModels() throws -> [OnboardingTabViewModel] {
         [
             .init(
                 imageResource: .onbaording1,

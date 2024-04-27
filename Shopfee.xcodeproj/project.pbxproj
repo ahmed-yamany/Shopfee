@@ -16,6 +16,7 @@
 		EE2DDD8A2BDBCB7E00361413 /* ShopfeeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE2DDD892BDBCB7E00361413 /* ShopfeeUITestsLaunchTests.swift */; };
 		EE2DDD992BDBCD7700361413 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = EE2DDD972BDBCD7700361413 /* .swiftlint.yml */; };
 		EE2DDD9F2BDBCE7600361413 /* Shopfee.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = EE2DDD9E2BDBCE7600361413 /* Shopfee.xcstrings */; };
+		EED68E672BDD2EA800774A4B /* FoundationExtensions in Frameworks */ = {isa = PBXBuildFile; productRef = EED68E662BDD2EA800774A4B /* FoundationExtensions */; };
 		EEE8D4D02BDBCF780037F668 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EEE8D4CF2BDBCF780037F668 /* Colors.xcassets */; };
 		EEE8D4DB2BDBD4FA0037F668 /* String+localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE8D4DA2BDBD4FA0037F668 /* String+localized.swift */; };
 		EEE8D4E02BDBD8750037F668 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE8D4DE2BDBD8750037F668 /* Coordinator.swift */; };
@@ -118,6 +119,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EEE8D53F2BDC36270037F668 /* SwiftUIModifiers in Frameworks */,
+				EED68E672BDD2EA800774A4B /* FoundationExtensions in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -438,6 +440,7 @@
 			name = Shopfee;
 			packageProductDependencies = (
 				EEE8D53E2BDC36270037F668 /* SwiftUIModifiers */,
+				EED68E662BDD2EA800774A4B /* FoundationExtensions */,
 			);
 			productName = Shopfee;
 			productReference = EE2DDD632BDBCB7B00361413 /* Shopfee.app */;
@@ -514,6 +517,7 @@
 			mainGroup = EE2DDD5A2BDBCB7B00361413;
 			packageReferences = (
 				EEE8D53D2BDC36270037F668 /* XCRemoteSwiftPackageReference "SwiftUIModifiers" */,
+				EED68E652BDD2EA800774A4B /* XCRemoteSwiftPackageReference "FoundationExtensions" */,
 			);
 			productRefGroup = EE2DDD642BDBCB7B00361413 /* Products */;
 			projectDirPath = "";
@@ -955,6 +959,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		EED68E652BDD2EA800774A4B /* XCRemoteSwiftPackageReference "FoundationExtensions" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ahmed-yamany/FoundationExtensions";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 		EEE8D53D2BDC36270037F668 /* XCRemoteSwiftPackageReference "SwiftUIModifiers" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/ahmed-yamany/SwiftUIModifiers";
@@ -966,6 +978,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		EED68E662BDD2EA800774A4B /* FoundationExtensions */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EED68E652BDD2EA800774A4B /* XCRemoteSwiftPackageReference "FoundationExtensions" */;
+			productName = FoundationExtensions;
+		};
 		EEE8D53E2BDC36270037F668 /* SwiftUIModifiers */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = EEE8D53D2BDC36270037F668 /* XCRemoteSwiftPackageReference "SwiftUIModifiers" */;

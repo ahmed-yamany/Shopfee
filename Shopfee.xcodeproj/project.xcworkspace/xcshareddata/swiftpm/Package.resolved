@@ -1,6 +1,15 @@
 {
-  "originHash" : "8169b3b86c76cdae52052a09f58afbcbbc0a6cd7b87088adc2bcb9b05615a977",
+  "originHash" : "5ab0eb127887ab667a9490afd59cc0d7169c0b0fb785303f2b9714922591003a",
   "pins" : [
+    {
+      "identity" : "foundationextensions",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/ahmed-yamany/FoundationExtensions",
+      "state" : {
+        "branch" : "main",
+        "revision" : "b1a97680625249f67e26ac91c35c4066900a1c13"
+      }
+    },
     {
       "identity" : "swiftuimodifiers",
       "kind" : "remoteSourceControl",

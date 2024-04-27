@@ -21,8 +21,9 @@ final class SplashCoordinator: SplashCoordinatorProtocol {
     func start() {
         let controller = SplashViewController()
         router.setViewController(controller, animated: false)
-        DispatchQueue.main.asyncAfter(deadline: .now() + 4) {
-            self.showOnboarding()
+        Task.detached {
+            try? await Task.sleep(for: .seconds(4))
+            await self.showOnboarding()
         }
     }
     

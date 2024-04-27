@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+@MainActor
 struct SplashView: View {
     @State private var showAnimatedView = false
     
@@ -20,10 +21,9 @@ struct SplashView: View {
                 animatedView
             }
         }
-        .onAppear {
-            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-                showAnimatedView = true
-            }
+        .task {
+            try? await Task.sleep(for: .seconds(2))
+            showAnimatedView = true
         }
         .animation(.interpolatingSpring(duration: 1), value: showAnimatedView)
     }
