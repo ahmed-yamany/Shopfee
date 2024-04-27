@@ -17,6 +17,13 @@
 		EE2DDD992BDBCD7700361413 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = EE2DDD972BDBCD7700361413 /* .swiftlint.yml */; };
 		EE2DDD9F2BDBCE7600361413 /* Shopfee.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = EE2DDD9E2BDBCE7600361413 /* Shopfee.xcstrings */; };
 		EED68E672BDD2EA800774A4B /* FoundationExtensions in Frameworks */ = {isa = PBXBuildFile; productRef = EED68E662BDD2EA800774A4B /* FoundationExtensions */; };
+		EED68E6D2BDD40BB00774A4B /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED68E6B2BDD40BB00774A4B /* RegisterView.swift */; };
+		EED68E6E2BDD40BB00774A4B /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED68E6C2BDD40BB00774A4B /* RegisterViewModel.swift */; };
+		EED68E702BDD40C500774A4B /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED68E6F2BDD40C500774A4B /* RegisterViewController.swift */; };
+		EED68E722BDD40CD00774A4B /* RegisterCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED68E712BDD40CD00774A4B /* RegisterCoordinator.swift */; };
+		EED68E742BDD41E800774A4B /* RegisterUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED68E732BDD41E800774A4B /* RegisterUseCase.swift */; };
+		EED68E7E2BDD52FA00774A4B /* MakeConstraints in Frameworks */ = {isa = PBXBuildFile; productRef = EED68E7D2BDD52FA00774A4B /* MakeConstraints */; };
+		EED68E802BDD6FFD00774A4B /* OpenFromCenterPresentAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED68E7F2BDD6FFD00774A4B /* OpenFromCenterPresentAnimator.swift */; };
 		EEE8D4D02BDBCF780037F668 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EEE8D4CF2BDBCF780037F668 /* Colors.xcassets */; };
 		EEE8D4DB2BDBD4FA0037F668 /* String+localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE8D4DA2BDBD4FA0037F668 /* String+localized.swift */; };
 		EEE8D4E02BDBD8750037F668 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE8D4DE2BDBD8750037F668 /* Coordinator.swift */; };
@@ -81,6 +88,12 @@
 		EE2DDD892BDBCB7E00361413 /* ShopfeeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopfeeUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		EE2DDD972BDBCD7700361413 /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		EE2DDD9E2BDBCE7600361413 /* Shopfee.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Shopfee.xcstrings; sourceTree = "<group>"; };
+		EED68E6B2BDD40BB00774A4B /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
+		EED68E6C2BDD40BB00774A4B /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
+		EED68E6F2BDD40C500774A4B /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		EED68E712BDD40CD00774A4B /* RegisterCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterCoordinator.swift; sourceTree = "<group>"; };
+		EED68E732BDD41E800774A4B /* RegisterUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUseCase.swift; sourceTree = "<group>"; };
+		EED68E7F2BDD6FFD00774A4B /* OpenFromCenterPresentAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenFromCenterPresentAnimator.swift; sourceTree = "<group>"; };
 		EEE8D4CF2BDBCF780037F668 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		EEE8D4DA2BDBD4FA0037F668 /* String+localized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+localized.swift"; sourceTree = "<group>"; };
 		EEE8D4DE2BDBD8750037F668 /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
@@ -120,6 +133,7 @@
 			files = (
 				EEE8D53F2BDC36270037F668 /* SwiftUIModifiers in Frameworks */,
 				EED68E672BDD2EA800774A4B /* FoundationExtensions in Frameworks */,
+				EED68E7E2BDD52FA00774A4B /* MakeConstraints in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -211,6 +225,34 @@
 			path = Localization;
 			sourceTree = "<group>";
 		};
+		EED68E682BDD407C00774A4B /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				EED68E6A2BDD408C00774A4B /* Domain */,
+				EED68E692BDD408700774A4B /* Presentation */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
+		EED68E692BDD408700774A4B /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				EED68E6B2BDD40BB00774A4B /* RegisterView.swift */,
+				EED68E6C2BDD40BB00774A4B /* RegisterViewModel.swift */,
+				EED68E6F2BDD40C500774A4B /* RegisterViewController.swift */,
+				EED68E712BDD40CD00774A4B /* RegisterCoordinator.swift */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		EED68E6A2BDD408C00774A4B /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				EED68E732BDD41E800774A4B /* RegisterUseCase.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
 		EEE8D4CE2BDBCF670037F668 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
@@ -291,6 +333,7 @@
 			children = (
 				EEE8D52C2BDC0D710037F668 /* Splash */,
 				EEE8D5182BDBFB290037F668 /* Onboarding */,
+				EED68E682BDD407C00774A4B /* Register */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -328,6 +371,7 @@
 			children = (
 				EEE8D4E22BDBD87D0037F668 /* ShopfeeRouter.swift */,
 				EEE8D4DF2BDBD8750037F668 /* ShopfeeCoordinator.swift */,
+				EED68E7F2BDD6FFD00774A4B /* OpenFromCenterPresentAnimator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -441,6 +485,7 @@
 			packageProductDependencies = (
 				EEE8D53E2BDC36270037F668 /* SwiftUIModifiers */,
 				EED68E662BDD2EA800774A4B /* FoundationExtensions */,
+				EED68E7D2BDD52FA00774A4B /* MakeConstraints */,
 			);
 			productName = Shopfee;
 			productReference = EE2DDD632BDBCB7B00361413 /* Shopfee.app */;
@@ -518,6 +563,7 @@
 			packageReferences = (
 				EEE8D53D2BDC36270037F668 /* XCRemoteSwiftPackageReference "SwiftUIModifiers" */,
 				EED68E652BDD2EA800774A4B /* XCRemoteSwiftPackageReference "FoundationExtensions" */,
+				EED68E7C2BDD52FA00774A4B /* XCRemoteSwiftPackageReference "MakeConstraints" */,
 			);
 			productRefGroup = EE2DDD642BDBCB7B00361413 /* Products */;
 			projectDirPath = "";
@@ -597,8 +643,11 @@
 				EEE8D5312BDC0D9E0037F668 /* SplashViewController.swift in Sources */,
 				EEE8D5342BDC14DD0037F668 /* ShopFeeText.swift in Sources */,
 				EEE8D4E12BDBD8750037F668 /* ShopfeeCoordinator.swift in Sources */,
+				EED68E6D2BDD40BB00774A4B /* RegisterView.swift in Sources */,
+				EED68E6E2BDD40BB00774A4B /* RegisterViewModel.swift in Sources */,
 				EEE8D5422BDC37090037F668 /* CGFloat+Constants.swift in Sources */,
 				EEE8D5242BDBFCAA0037F668 /* OnboardingCoordinator.swift in Sources */,
+				EED68E802BDD6FFD00774A4B /* OpenFromCenterPresentAnimator.swift in Sources */,
 				EE2DDD672BDBCB7B00361413 /* AppDelegate.swift in Sources */,
 				EEE8D4E02BDBD8750037F668 /* Coordinator.swift in Sources */,
 				EEE8D5172BDBF0D70037F668 /* UIFont+Style.swift in Sources */,
@@ -608,6 +657,7 @@
 				EEE8D51E2BDBFB5C0037F668 /* OnboardingViewModel.swift in Sources */,
 				EEE8D5492BDC3A880037F668 /* CapsulePaginationStyle.swift in Sources */,
 				EEE8D4DB2BDBD4FA0037F668 /* String+localized.swift in Sources */,
+				EED68E702BDD40C500774A4B /* RegisterViewController.swift in Sources */,
 				EEE8D54B2BDC3A880037F668 /* PaginationStyle.swift in Sources */,
 				EEE8D54A2BDC3A880037F668 /* CirclePaginationStyle.swift in Sources */,
 				EEE8D5222BDBFBEE0037F668 /* OnboardingViewController.swift in Sources */,
@@ -615,6 +665,8 @@
 				EEE8D5262BDBFDF20037F668 /* OnboardingUseCase.swift in Sources */,
 				EEE8D5162BDBF0D70037F668 /* Font+Style.swift in Sources */,
 				EEE8D5392BDC16940037F668 /* SplashCoordinator.swift in Sources */,
+				EED68E722BDD40CD00774A4B /* RegisterCoordinator.swift in Sources */,
+				EED68E742BDD41E800774A4B /* RegisterUseCase.swift in Sources */,
 				EEE8D52B2BDC03700037F668 /* PrimaryButton.swift in Sources */,
 				EE2DDD692BDBCB7B00361413 /* SceneDelegate.swift in Sources */,
 			);
@@ -967,6 +1019,14 @@
 				kind = branch;
 			};
 		};
+		EED68E7C2BDD52FA00774A4B /* XCRemoteSwiftPackageReference "MakeConstraints" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ahmed-yamany/MakeConstraints";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 		EEE8D53D2BDC36270037F668 /* XCRemoteSwiftPackageReference "SwiftUIModifiers" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/ahmed-yamany/SwiftUIModifiers";
@@ -982,6 +1042,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = EED68E652BDD2EA800774A4B /* XCRemoteSwiftPackageReference "FoundationExtensions" */;
 			productName = FoundationExtensions;
+		};
+		EED68E7D2BDD52FA00774A4B /* MakeConstraints */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EED68E7C2BDD52FA00774A4B /* XCRemoteSwiftPackageReference "MakeConstraints" */;
+			productName = MakeConstraints;
 		};
 		EEE8D53E2BDC36270037F668 /* SwiftUIModifiers */ = {
 			isa = XCSwiftPackageProductDependency;

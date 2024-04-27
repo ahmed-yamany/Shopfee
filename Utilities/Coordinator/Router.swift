@@ -12,18 +12,25 @@ public protocol Router: AnyObject {
 }
 
 public extension Router {
-    func present(_ viewController: UIViewController, animated: Bool = true, completion: @escaping () -> Void = {}) {
+    func present(
+        _ viewController: UIViewController,
+        animated: Bool = true,
+        presentationStyle: UIModalPresentationStyle = .automatic,
+        transitionStyle: UIModalTransitionStyle = .coverVertical,
+        completion: @escaping () -> Void = {}
+    ) {
+        viewController.modalPresentationStyle = presentationStyle
+        viewController.modalTransitionStyle = transitionStyle
         navigationController.present(viewController, animated: animated, completion: completion)
     }
     
-    func presentFullScreen(_ viewController: UIViewController, animated: Bool = true, completion: @escaping () -> Void = {}) {
-        viewController.modalPresentationStyle = .fullScreen
-        self.present(viewController, animated: animated, completion: completion)
-    }
-    
-    func presentOverFullScreen(_ viewController: UIViewController, animated: Bool = true, completion: @escaping () -> Void = {}) {
-        viewController.modalPresentationStyle = .overFullScreen
-        self.present(viewController, animated: animated, completion: completion)
+    func present(
+        _ viewController: UIViewController,
+        transitioningDelegate: UIViewControllerTransitioningDelegate,
+        completion: @escaping () -> Void = {}
+    ) {
+        viewController.transitioningDelegate = transitioningDelegate
+        present(viewController, animated: true, presentationStyle: .currentContext)
     }
     
     func dismiss(animated: Bool = true, completion: @escaping () -> Void = {}) {
@@ -61,6 +68,7 @@ public extension Router {
     }
     
     func setViewControllers(_ viewControllers: [UIViewController], animated: Bool = true) {
+        navigationController.dismiss(animated: false)
         navigationController.setViewControllers(viewControllers, animated: animated)
     }
     
