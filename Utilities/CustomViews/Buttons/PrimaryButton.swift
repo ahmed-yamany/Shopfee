@@ -98,7 +98,7 @@ struct PrimaryButton<Style: ShopfeeButtonStyle>: ButtonStyle {
         }
         
         if !isEnabled {
-            return Color.textNonActive
+            return style.foregroundColor
         }
         
         return style.foregroundColor

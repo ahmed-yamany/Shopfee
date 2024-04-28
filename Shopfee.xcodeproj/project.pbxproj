@@ -16,6 +16,7 @@
 		EE2DDD8A2BDBCB7E00361413 /* ShopfeeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE2DDD892BDBCB7E00361413 /* ShopfeeUITestsLaunchTests.swift */; };
 		EE2DDD992BDBCD7700361413 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = EE2DDD972BDBCD7700361413 /* .swiftlint.yml */; };
 		EE2DDD9F2BDBCE7600361413 /* Shopfee.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = EE2DDD9E2BDBCE7600361413 /* Shopfee.xcstrings */; };
+		EE6B4F832BDE552300E173BC /* ShopfeeTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE6B4F822BDE552300E173BC /* ShopfeeTextField.swift */; };
 		EED68E672BDD2EA800774A4B /* FoundationExtensions in Frameworks */ = {isa = PBXBuildFile; productRef = EED68E662BDD2EA800774A4B /* FoundationExtensions */; };
 		EED68E6D2BDD40BB00774A4B /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED68E6B2BDD40BB00774A4B /* RegisterView.swift */; };
 		EED68E6E2BDD40BB00774A4B /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED68E6C2BDD40BB00774A4B /* RegisterViewModel.swift */; };
@@ -24,6 +25,7 @@
 		EED68E742BDD41E800774A4B /* RegisterUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED68E732BDD41E800774A4B /* RegisterUseCase.swift */; };
 		EED68E7E2BDD52FA00774A4B /* MakeConstraints in Frameworks */ = {isa = PBXBuildFile; productRef = EED68E7D2BDD52FA00774A4B /* MakeConstraints */; };
 		EED68E802BDD6FFD00774A4B /* OpenFromCenterPresentAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED68E7F2BDD6FFD00774A4B /* OpenFromCenterPresentAnimator.swift */; };
+		EED68E822BDD782600774A4B /* TermsAndCondition.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED68E812BDD782600774A4B /* TermsAndCondition.swift */; };
 		EEE8D4D02BDBCF780037F668 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EEE8D4CF2BDBCF780037F668 /* Colors.xcassets */; };
 		EEE8D4DB2BDBD4FA0037F668 /* String+localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE8D4DA2BDBD4FA0037F668 /* String+localized.swift */; };
 		EEE8D4E02BDBD8750037F668 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE8D4DE2BDBD8750037F668 /* Coordinator.swift */; };
@@ -88,12 +90,14 @@
 		EE2DDD892BDBCB7E00361413 /* ShopfeeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopfeeUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		EE2DDD972BDBCD7700361413 /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		EE2DDD9E2BDBCE7600361413 /* Shopfee.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Shopfee.xcstrings; sourceTree = "<group>"; };
+		EE6B4F822BDE552300E173BC /* ShopfeeTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopfeeTextField.swift; sourceTree = "<group>"; };
 		EED68E6B2BDD40BB00774A4B /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		EED68E6C2BDD40BB00774A4B /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		EED68E6F2BDD40C500774A4B /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		EED68E712BDD40CD00774A4B /* RegisterCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterCoordinator.swift; sourceTree = "<group>"; };
 		EED68E732BDD41E800774A4B /* RegisterUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUseCase.swift; sourceTree = "<group>"; };
 		EED68E7F2BDD6FFD00774A4B /* OpenFromCenterPresentAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenFromCenterPresentAnimator.swift; sourceTree = "<group>"; };
+		EED68E812BDD782600774A4B /* TermsAndCondition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsAndCondition.swift; sourceTree = "<group>"; };
 		EEE8D4CF2BDBCF780037F668 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		EEE8D4DA2BDBD4FA0037F668 /* String+localized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+localized.swift"; sourceTree = "<group>"; };
 		EEE8D4DE2BDBD8750037F668 /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
@@ -223,6 +227,14 @@
 				EE2DDD9E2BDBCE7600361413 /* Shopfee.xcstrings */,
 			);
 			path = Localization;
+			sourceTree = "<group>";
+		};
+		EE6B4F812BDE551300E173BC /* TextField */ = {
+			isa = PBXGroup;
+			children = (
+				EE6B4F822BDE552300E173BC /* ShopfeeTextField.swift */,
+			);
+			path = TextField;
 			sourceTree = "<group>";
 		};
 		EED68E682BDD407C00774A4B /* Register */ = {
@@ -379,6 +391,7 @@
 		EEE8D5282BDC030B0037F668 /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
+				EE6B4F812BDE551300E173BC /* TextField */,
 				EEE8D5482BDC3A870037F668 /* PaginationView */,
 				EEE8D5322BDC14CF0037F668 /* Text */,
 				EEE8D5292BDC031B0037F668 /* Buttons */,
@@ -417,6 +430,7 @@
 			isa = PBXGroup;
 			children = (
 				EEE8D5332BDC14DD0037F668 /* ShopFeeText.swift */,
+				EED68E812BDD782600774A4B /* TermsAndCondition.swift */,
 			);
 			path = Text;
 			sourceTree = "<group>";
@@ -643,6 +657,7 @@
 				EEE8D5312BDC0D9E0037F668 /* SplashViewController.swift in Sources */,
 				EEE8D5342BDC14DD0037F668 /* ShopFeeText.swift in Sources */,
 				EEE8D4E12BDBD8750037F668 /* ShopfeeCoordinator.swift in Sources */,
+				EE6B4F832BDE552300E173BC /* ShopfeeTextField.swift in Sources */,
 				EED68E6D2BDD40BB00774A4B /* RegisterView.swift in Sources */,
 				EED68E6E2BDD40BB00774A4B /* RegisterViewModel.swift in Sources */,
 				EEE8D5422BDC37090037F668 /* CGFloat+Constants.swift in Sources */,
@@ -666,6 +681,7 @@
 				EEE8D5162BDBF0D70037F668 /* Font+Style.swift in Sources */,
 				EEE8D5392BDC16940037F668 /* SplashCoordinator.swift in Sources */,
 				EED68E722BDD40CD00774A4B /* RegisterCoordinator.swift in Sources */,
+				EED68E822BDD782600774A4B /* TermsAndCondition.swift in Sources */,
 				EED68E742BDD41E800774A4B /* RegisterUseCase.swift in Sources */,
 				EEE8D52B2BDC03700037F668 /* PrimaryButton.swift in Sources */,
 				EE2DDD692BDBCB7B00361413 /* SceneDelegate.swift in Sources */,

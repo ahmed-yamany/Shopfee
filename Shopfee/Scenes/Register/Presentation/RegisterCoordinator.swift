@@ -7,7 +7,11 @@
 
 import Foundation
 
-protocol RegisterCoordinatorProtocol: Coordinator {}
+protocol RegisterCoordinatorProtocol: Coordinator {
+    func showLogin()
+    func showPrivacy()
+    func showTerms()
+}
 
 final class RegisterCoordinator: RegisterCoordinatorProtocol {
     let router: Router
@@ -21,5 +25,17 @@ final class RegisterCoordinator: RegisterCoordinatorProtocol {
         let viewModel = RegisterViewModel(coordinator: self, useCase: useCase)
         let controller = RegisterViewController(viewModel: viewModel)
         router.setViewController(controller)
+    }
+    
+    func showLogin() {
+        
+    }
+    
+    func showPrivacy() {
+        print("show Privacy")
+    }
+    
+    func showTerms() {
+        print("show Terms")
     }
 }
