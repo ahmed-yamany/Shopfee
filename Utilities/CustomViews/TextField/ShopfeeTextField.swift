@@ -8,19 +8,44 @@
 import SwiftUI
 import SwiftUIModifiers
 
+struct ShopfeeTextFieldShowErrorEnvironmentKey: EnvironmentKey {
+    static var defaultValue: (show: Bool, message: String) = (false, "")
+}
+
+extension EnvironmentValues {
+    var shopfeeTextFieldShowError: (show: Bool, message: String) {
+        get { self[ShopfeeTextFieldShowErrorEnvironmentKey.self] }
+        set { self[ShopfeeTextFieldShowErrorEnvironmentKey.self] = newValue }
+    }
+}
+
+extension View {
+    @ViewBuilder
+    func showShopfeeTextFieldError(_ show: Bool, message: String) -> some View {
+        environment(\.shopfeeTextFieldShowError, (show, message))
+    }
+}
+
 struct ShopfeeTextField: View {
     let title: String
     let placeholder: String
     @Binding var text: String
     
     @State private var isFocused: Bool = false
+    @Environment(\.shopfeeTextFieldShowError) private var showShopfeeTextFieldError: (show: Bool, message: String)
     
     var body: some View {
         VStack(alignment: .leading) {
             Text(title)
                 .foregroundStyle(.textHeading)
             
-            textField
+            VStack(alignment: .leading, spacing: 4) {
+                textField
+                
+                if showShopfeeTextFieldError.show {
+                    errorText
+                }
+            }
         }
         .frame(maxWidth: .infinity, alignment: .leading)
         .font(.custom(size: 12, weight: .regular))
@@ -37,9 +62,7 @@ struct ShopfeeTextField: View {
         )
         .foregroundStyle(.textHeading)
         .background {
-            if showPrompt {
-                prompt
-            }
+            if showPrompt { prompt }
         }
         .padding(.horizontal, 16)
         .padding(.vertical, 14)
@@ -50,7 +73,7 @@ struct ShopfeeTextField: View {
                 .stroke(lineWidth: 1.5)
                 .fill(borderColor)
         }
-        .shadow(color: isFocused ? .brand : .clear, radius: 3)
+        .shadow(color: shadowColor, radius: 3)
     }
     
     var prompt: some View {
@@ -60,16 +83,34 @@ struct ShopfeeTextField: View {
             .foregroundColor(.textDisabled)
     }
     
+    var errorText: some View {
+        Text(showShopfeeTextFieldError.message)
+            .foregroundStyle(.danger)
+            .font(.custom(size: 10, weight: .regular))
+    }
+    
     var showPrompt: Bool {
         text.isEmpty
     }
     
     var borderColor: Color {
-        if isFocused {
-            return .brand
+        if showShopfeeTextFieldError.show {
+            .danger
+        } else if isFocused {
+            .brand
+        } else {
+            .brand100
         }
-        
-        return .brand100
+    }
+    
+    var shadowColor: Color {
+        if showShopfeeTextFieldError.show {
+            .danger
+        } else if isFocused {
+            .brand
+        } else {
+            .clear
+        }
     }
 }
 
