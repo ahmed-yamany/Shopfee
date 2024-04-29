@@ -15,6 +15,7 @@ struct TermsAndCondition: View {
         Text(attributedString)
             .foregroundStyle(.neutralDark.opacity(0.5))
             .font(.custom(size: 12, weight: .regular))
+            .frame(minHeight: 44)
             .environment(\.openURL, OpenURLAction(handler: { url in
                 if url.absoluteString.contains("privacy") {
                     privacyAction()
