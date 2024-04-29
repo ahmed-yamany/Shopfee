@@ -7,11 +7,13 @@
 import UIKit
 
 @MainActor
-public protocol Router: AnyObject {
-    var navigationController: UINavigationController { get }
-}
-
-public extension Router {
+public class Router {
+    let navigationController: UINavigationController
+    
+    init(navigationController: UINavigationController) {
+        self.navigationController = navigationController
+    }
+    
     func present(
         _ viewController: UIViewController,
         animated: Bool = true,

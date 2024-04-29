@@ -23,6 +23,11 @@
 		EE6EFA032BDFF64500E5C2E3 /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE6EFA022BDFF64500E5C2E3 /* LoginCoordinator.swift */; };
 		EE6EFA052BDFF6F400E5C2E3 /* LoginUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE6EFA042BDFF6F400E5C2E3 /* LoginUseCase.swift */; };
 		EE6EFA0B2BE0089B00E5C2E3 /* OTPView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE6EFA092BE0089B00E5C2E3 /* OTPView.swift */; };
+		EE6EFA0C2BE0089B00E5C2E3 /* OTPViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE6EFA0A2BE0089B00E5C2E3 /* OTPViewModel.swift */; };
+		EE6EFA0E2BE008A900E5C2E3 /* OTPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE6EFA0D2BE008A900E5C2E3 /* OTPViewController.swift */; };
+		EE6EFA102BE008B600E5C2E3 /* OTPCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE6EFA0F2BE008B600E5C2E3 /* OTPCoordinator.swift */; };
+		EE6EFA122BE00A7E00E5C2E3 /* OTPUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE6EFA112BE00A7E00E5C2E3 /* OTPUseCase.swift */; };
+		EE6EFA142BE0189D00E5C2E3 /* View+navigationTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE6EFA132BE0189D00E5C2E3 /* View+navigationTitle.swift */; };
 		EED68E672BDD2EA800774A4B /* FoundationExtensions in Frameworks */ = {isa = PBXBuildFile; productRef = EED68E662BDD2EA800774A4B /* FoundationExtensions */; };
 		EED68E6D2BDD40BB00774A4B /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED68E6B2BDD40BB00774A4B /* RegisterView.swift */; };
 		EED68E6E2BDD40BB00774A4B /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED68E6C2BDD40BB00774A4B /* RegisterViewModel.swift */; };
@@ -102,6 +107,12 @@
 		EE6EFA002BDFF5B300E5C2E3 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		EE6EFA022BDFF64500E5C2E3 /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
 		EE6EFA042BDFF6F400E5C2E3 /* LoginUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUseCase.swift; sourceTree = "<group>"; };
+		EE6EFA092BE0089B00E5C2E3 /* OTPView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPView.swift; sourceTree = "<group>"; };
+		EE6EFA0A2BE0089B00E5C2E3 /* OTPViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPViewModel.swift; sourceTree = "<group>"; };
+		EE6EFA0D2BE008A900E5C2E3 /* OTPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPViewController.swift; sourceTree = "<group>"; };
+		EE6EFA0F2BE008B600E5C2E3 /* OTPCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPCoordinator.swift; sourceTree = "<group>"; };
+		EE6EFA112BE00A7E00E5C2E3 /* OTPUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPUseCase.swift; sourceTree = "<group>"; };
+		EE6EFA132BE0189D00E5C2E3 /* View+navigationTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+navigationTitle.swift"; sourceTree = "<group>"; };
 		EED68E6B2BDD40BB00774A4B /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		EED68E6C2BDD40BB00774A4B /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		EED68E6F2BDD40C500774A4B /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
@@ -276,6 +287,34 @@
 			path = Domain;
 			sourceTree = "<group>";
 		};
+		EE6EFA062BE0087E00E5C2E3 /* OTP */ = {
+			isa = PBXGroup;
+			children = (
+				EE6EFA082BE0089000E5C2E3 /* Domain */,
+				EE6EFA072BE0088900E5C2E3 /* Presentation */,
+			);
+			path = OTP;
+			sourceTree = "<group>";
+		};
+		EE6EFA072BE0088900E5C2E3 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				EE6EFA092BE0089B00E5C2E3 /* OTPView.swift */,
+				EE6EFA0A2BE0089B00E5C2E3 /* OTPViewModel.swift */,
+				EE6EFA0D2BE008A900E5C2E3 /* OTPViewController.swift */,
+				EE6EFA0F2BE008B600E5C2E3 /* OTPCoordinator.swift */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		EE6EFA082BE0089000E5C2E3 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				EE6EFA112BE00A7E00E5C2E3 /* OTPUseCase.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
 		EED68E682BDD407C00774A4B /* Register */ = {
 			isa = PBXGroup;
 			children = (
@@ -386,6 +425,7 @@
 				EEE8D5182BDBFB290037F668 /* Onboarding */,
 				EED68E682BDD407C00774A4B /* Register */,
 				EE6EF9F92BDFF49A00E5C2E3 /* Login */,
+				EE6EFA062BE0087E00E5C2E3 /* OTP */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -479,6 +519,7 @@
 			isa = PBXGroup;
 			children = (
 				EEE8D53B2BDC1A2A0037F668 /* View+PrimaryStyle.swift */,
+				EE6EFA132BE0189D00E5C2E3 /* View+navigationTitle.swift */,
 			);
 			path = Modifiers;
 			sourceTree = "<group>";
@@ -714,11 +755,17 @@
 				EE6EFA032BDFF64500E5C2E3 /* LoginCoordinator.swift in Sources */,
 				EEE8D51E2BDBFB5C0037F668 /* OnboardingViewModel.swift in Sources */,
 				EEE8D5492BDC3A880037F668 /* CapsulePaginationStyle.swift in Sources */,
+				EE6EFA122BE00A7E00E5C2E3 /* OTPUseCase.swift in Sources */,
 				EE6EFA012BDFF5B300E5C2E3 /* LoginViewController.swift in Sources */,
 				EEE8D4DB2BDBD4FA0037F668 /* String+localized.swift in Sources */,
 				EED68E702BDD40C500774A4B /* RegisterViewController.swift in Sources */,
+				EE6EFA142BE0189D00E5C2E3 /* View+navigationTitle.swift in Sources */,
+				EE6EFA0E2BE008A900E5C2E3 /* OTPViewController.swift in Sources */,
 				EEE8D54B2BDC3A880037F668 /* PaginationStyle.swift in Sources */,
 				EEE8D54A2BDC3A880037F668 /* CirclePaginationStyle.swift in Sources */,
+				EE6EFA102BE008B600E5C2E3 /* OTPCoordinator.swift in Sources */,
+				EE6EFA0B2BE0089B00E5C2E3 /* OTPView.swift in Sources */,
+				EE6EFA0C2BE0089B00E5C2E3 /* OTPViewModel.swift in Sources */,
 				EEE8D5222BDBFBEE0037F668 /* OnboardingViewController.swift in Sources */,
 				EEE8D5362BDC16370037F668 /* ShopfeeLogo.swift in Sources */,
 				EEE8D5262BDBFDF20037F668 /* OnboardingUseCase.swift in Sources */,
