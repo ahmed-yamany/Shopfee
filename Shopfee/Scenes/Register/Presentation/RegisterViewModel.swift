@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+@MainActor
 protocol RegisterViewModelProtocol: ObservableObject {
     var name: String { get set }
     var phoneNumber: String { get set }
@@ -35,7 +36,7 @@ final class RegisterViewModel: RegisterViewModelProtocol {
     }
     
     func startRegister() {
-        
+        coordinator.showOTP()
     }
     
     func navigateToLogin() {

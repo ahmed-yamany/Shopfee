@@ -15,6 +15,7 @@ struct PrimaryStyle: ViewModifier {
             .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: alignment)
             .background(Color.neutralLight)
             .tint(Color.brand)
+            .foregroundStyle(.textHeading)
             .onTapGesture {
                 hideKeyboard()
             }

@@ -12,9 +12,9 @@ protocol SplashCoordinatorProtocol: Coordinator {
 }
 
 final class SplashCoordinator: SplashCoordinatorProtocol {
-    let router: any Router
+    let router: Router
     
-    init(router: any Router) {
+    init(router: Router) {
         self.router = router
     }
     
