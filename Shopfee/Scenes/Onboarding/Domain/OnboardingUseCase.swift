@@ -20,11 +20,13 @@ final actor OnboardingUseCase: OnboardingUseCaseProtocol {
                 title: "Choose and customize your Drinks",
                 subtitle: "Customize your own drink exactly how you like it by adding any topping you like!!!"
             ),
+            //  swiftlint: disable all
             .init(
                 imageResource: .onbaording2,
                 title: "Quickly and easly",
                 subtitle: "You can place your order quickly and easly without wasting time. You can also schedule orders via your smarthphone."
             ),
+            //  swiftlint: enable all
             .init(
                 imageResource: .onbaording3,
                 title: "Get and Redeem Voucher",

@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+@MainActor
 protocol OnboardingViewModelProtocol: ObservableObject {
     var selectedPageIndex: Int { get set }
     var tabViewModels: [OnboardingTabViewModel] { get set }
@@ -56,14 +57,13 @@ private extension OnboardingViewModel {
         Task {
             do {
                 let models = try await useCase.getTabViewModels()
-                await updateTabViewModels(with: models)
+                updateTabViewModels(with: models)
             } catch {
                 print(error.localizedDescription)
             }
         }
     }
     
-    @MainActor
     func updateTabViewModels(with models: [OnboardingTabViewModel]) {
         tabViewModels = models
     }

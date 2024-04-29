@@ -17,6 +17,12 @@
 		EE2DDD992BDBCD7700361413 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = EE2DDD972BDBCD7700361413 /* .swiftlint.yml */; };
 		EE2DDD9F2BDBCE7600361413 /* Shopfee.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = EE2DDD9E2BDBCE7600361413 /* Shopfee.xcstrings */; };
 		EE6B4F832BDE552300E173BC /* ShopfeeTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE6B4F822BDE552300E173BC /* ShopfeeTextField.swift */; };
+		EE6EF9FE2BDFF4CF00E5C2E3 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE6EF9FC2BDFF4CF00E5C2E3 /* LoginView.swift */; };
+		EE6EF9FF2BDFF4CF00E5C2E3 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE6EF9FD2BDFF4CF00E5C2E3 /* LoginViewModel.swift */; };
+		EE6EFA012BDFF5B300E5C2E3 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE6EFA002BDFF5B300E5C2E3 /* LoginViewController.swift */; };
+		EE6EFA032BDFF64500E5C2E3 /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE6EFA022BDFF64500E5C2E3 /* LoginCoordinator.swift */; };
+		EE6EFA052BDFF6F400E5C2E3 /* LoginUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE6EFA042BDFF6F400E5C2E3 /* LoginUseCase.swift */; };
+		EE6EFA0B2BE0089B00E5C2E3 /* OTPView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE6EFA092BE0089B00E5C2E3 /* OTPView.swift */; };
 		EED68E672BDD2EA800774A4B /* FoundationExtensions in Frameworks */ = {isa = PBXBuildFile; productRef = EED68E662BDD2EA800774A4B /* FoundationExtensions */; };
 		EED68E6D2BDD40BB00774A4B /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED68E6B2BDD40BB00774A4B /* RegisterView.swift */; };
 		EED68E6E2BDD40BB00774A4B /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED68E6C2BDD40BB00774A4B /* RegisterViewModel.swift */; };
@@ -91,6 +97,11 @@
 		EE2DDD972BDBCD7700361413 /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		EE2DDD9E2BDBCE7600361413 /* Shopfee.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Shopfee.xcstrings; sourceTree = "<group>"; };
 		EE6B4F822BDE552300E173BC /* ShopfeeTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopfeeTextField.swift; sourceTree = "<group>"; };
+		EE6EF9FC2BDFF4CF00E5C2E3 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		EE6EF9FD2BDFF4CF00E5C2E3 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		EE6EFA002BDFF5B300E5C2E3 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		EE6EFA022BDFF64500E5C2E3 /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
+		EE6EFA042BDFF6F400E5C2E3 /* LoginUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUseCase.swift; sourceTree = "<group>"; };
 		EED68E6B2BDD40BB00774A4B /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		EED68E6C2BDD40BB00774A4B /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		EED68E6F2BDD40C500774A4B /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
@@ -237,6 +248,34 @@
 			path = TextField;
 			sourceTree = "<group>";
 		};
+		EE6EF9F92BDFF49A00E5C2E3 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				EE6EF9FB2BDFF4BF00E5C2E3 /* Domain */,
+				EE6EF9FA2BDFF4B800E5C2E3 /* Presentation */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		EE6EF9FA2BDFF4B800E5C2E3 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				EE6EF9FC2BDFF4CF00E5C2E3 /* LoginView.swift */,
+				EE6EF9FD2BDFF4CF00E5C2E3 /* LoginViewModel.swift */,
+				EE6EFA002BDFF5B300E5C2E3 /* LoginViewController.swift */,
+				EE6EFA022BDFF64500E5C2E3 /* LoginCoordinator.swift */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		EE6EF9FB2BDFF4BF00E5C2E3 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				EE6EFA042BDFF6F400E5C2E3 /* LoginUseCase.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
 		EED68E682BDD407C00774A4B /* Register */ = {
 			isa = PBXGroup;
 			children = (
@@ -346,6 +385,7 @@
 				EEE8D52C2BDC0D710037F668 /* Splash */,
 				EEE8D5182BDBFB290037F668 /* Onboarding */,
 				EED68E682BDD407C00774A4B /* Register */,
+				EE6EF9F92BDFF49A00E5C2E3 /* Login */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -654,6 +694,8 @@
 				EEE8D4E82BDBD9620037F668 /* Action.swift in Sources */,
 				EEE8D53C2BDC1A2A0037F668 /* View+PrimaryStyle.swift in Sources */,
 				EEE8D52F2BDC0D900037F668 /* SplashView.swift in Sources */,
+				EE6EF9FE2BDFF4CF00E5C2E3 /* LoginView.swift in Sources */,
+				EE6EF9FF2BDFF4CF00E5C2E3 /* LoginViewModel.swift in Sources */,
 				EEE8D5312BDC0D9E0037F668 /* SplashViewController.swift in Sources */,
 				EEE8D5342BDC14DD0037F668 /* ShopFeeText.swift in Sources */,
 				EEE8D4E12BDBD8750037F668 /* ShopfeeCoordinator.swift in Sources */,
@@ -669,8 +711,10 @@
 				EEE8D54F2BDC445B0037F668 /* OnboardingTabViewModel.swift in Sources */,
 				EEE8D4E42BDBD87D0037F668 /* ShopfeeRouter.swift in Sources */,
 				EEE8D51D2BDBFB5C0037F668 /* OnboardingView.swift in Sources */,
+				EE6EFA032BDFF64500E5C2E3 /* LoginCoordinator.swift in Sources */,
 				EEE8D51E2BDBFB5C0037F668 /* OnboardingViewModel.swift in Sources */,
 				EEE8D5492BDC3A880037F668 /* CapsulePaginationStyle.swift in Sources */,
+				EE6EFA012BDFF5B300E5C2E3 /* LoginViewController.swift in Sources */,
 				EEE8D4DB2BDBD4FA0037F668 /* String+localized.swift in Sources */,
 				EED68E702BDD40C500774A4B /* RegisterViewController.swift in Sources */,
 				EEE8D54B2BDC3A880037F668 /* PaginationStyle.swift in Sources */,
@@ -685,6 +729,7 @@
 				EED68E742BDD41E800774A4B /* RegisterUseCase.swift in Sources */,
 				EEE8D52B2BDC03700037F668 /* PrimaryButton.swift in Sources */,
 				EE2DDD692BDBCB7B00361413 /* SceneDelegate.swift in Sources */,
+				EE6EFA052BDFF6F400E5C2E3 /* LoginUseCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

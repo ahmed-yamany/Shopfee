@@ -1,6 +1,9 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    "Don’t have an account?" : {
+      "extractionState" : "manual"
+    },
     "input your name" : {
       "extractionState" : "manual"
     },
