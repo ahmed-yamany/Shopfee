@@ -1,16 +1,22 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    "Confirm" : {
+      "extractionState" : "manual"
+    },
+    "Confirm OTP code" : {
+      "extractionState" : "manual"
+    },
     "Don’t have an account?" : {
+      "extractionState" : "manual"
+    },
+    "Haven't got the confirmation code yet?" : {
       "extractionState" : "manual"
     },
     "input your name" : {
       "extractionState" : "manual"
     },
     "Input your No. Handphone" : {
-      "extractionState" : "manual"
-    },
-    "Key" : {
       "extractionState" : "manual"
     },
     "login" : {
@@ -60,6 +66,17 @@
     "No. Handphone" : {
       "extractionState" : "manual"
     },
+    "otp hint" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Enter the 5-digit OTP code that has been sent from SMS to complete your account registration"
+          }
+        }
+      }
+    },
     "privacy policy" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -81,6 +98,9 @@
           }
         }
       }
+    },
+    "Resend" : {
+      "extractionState" : "manual"
     },
     "skip" : {
       "extractionState" : "manual",

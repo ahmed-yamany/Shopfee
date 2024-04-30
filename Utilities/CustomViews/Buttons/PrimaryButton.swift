@@ -57,6 +57,13 @@ struct GhostPrimaryButtonStyle: ShopfeeButtonStyle {
     let height: CGFloat? = nil
 }
 
+struct InfoPrimaryButtonStyle: ShopfeeButtonStyle {
+    let foregroundColor: Color = .info
+    let background: Color = .clear
+    let borderColor: Color = .clear
+    let height: CGFloat? = nil
+}
+
 struct PrimaryButton<Style: ShopfeeButtonStyle>: ButtonStyle {
     let style: Style
     
@@ -120,5 +127,11 @@ extension ButtonStyle where Self == PrimaryButton<SecondaryPrimaryButtonStyle> {
 extension ButtonStyle where Self == PrimaryButton<GhostPrimaryButtonStyle> {
     static var ghost: Self {
         PrimaryButton(style: GhostPrimaryButtonStyle())
+    }
+}
+
+extension ButtonStyle where Self == PrimaryButton<InfoPrimaryButtonStyle> {
+    static var info: Self {
+        PrimaryButton(style: InfoPrimaryButtonStyle())
     }
 }

@@ -14,6 +14,7 @@ public extension View {
             ToolbarItem(placement: .topBarLeading) {
                 Text(title)
                     .font(.custom(size: 16, weight: .medium))
+                    .foregroundStyle(.textHeading)
             }
         }
     }
