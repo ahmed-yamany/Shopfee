@@ -11,7 +11,7 @@ protocol RegisterCoordinatorProtocol: Coordinator {
     func showLogin()
     func showPrivacy()
     func showTerms()
-    func showOTP()
+    func sendOtp(to phoneNumber: String)
 }
 
 final class RegisterCoordinator: RegisterCoordinatorProtocol {
@@ -40,7 +40,7 @@ final class RegisterCoordinator: RegisterCoordinatorProtocol {
         print("show Terms")
     }
     
-    func showOTP() {
-        OTPCoordinator(router: router).start()
+    func sendOtp(to phoneNumber: String) {
+        SendOTPCoordinator(router: router, to: phoneNumber).start()
     }
 }

@@ -76,7 +76,7 @@ struct PopUpView: View {
 
 #Preview {
     PopUpView(
-        OTPPopUpItem(),
+        OTPPopUpItem(phoneNumber: "0282765237"),
         onPrimaryAction: { },
         onSecondaryAction: {}
     )

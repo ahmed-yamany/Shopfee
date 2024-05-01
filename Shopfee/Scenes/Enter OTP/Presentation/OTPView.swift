@@ -60,13 +60,14 @@ struct OTPView<ViewModel: OTPViewModelProtocol>: View {
             
         }
         .buttonStyle(.primary())
+        .disabled(!viewModel.isEnabledConfirmButton())
     }
 }
 
 #Preview {
     let router = ShopfeeRouter(navigationController: .init())
-    let coordinator = OTPCoordinator(router: router)
+    let coordinator = OTPCoordinator(router: router, phoneNumber: "081234567891")
     let useCase = OTPUseCase()
-    let viewModel = OTPViewModel(coordinator: coordinator, useCase: useCase)
+    let viewModel = OTPViewModel(coordinator: coordinator, useCase: useCase, phoneNumber: "081234567891")
     return OTPView(viewModel: viewModel)
 }

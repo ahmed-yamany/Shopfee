@@ -1,6 +1,9 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    "Cancel" : {
+      "extractionState" : "manual"
+    },
     "Confirm" : {
       "extractionState" : "manual"
     },
@@ -102,6 +105,9 @@
     "Resend" : {
       "extractionState" : "manual"
     },
+    "Send OTP code" : {
+      "extractionState" : "manual"
+    },
     "skip" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -134,6 +140,9 @@
           }
         }
       }
+    },
+    "We will send the OTP code via SMS. Make sure the number 081234567891 is active" : {
+      "extractionState" : "manual"
     }
   },
   "version" : "1.0"

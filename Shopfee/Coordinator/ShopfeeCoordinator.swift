@@ -30,7 +30,6 @@ final class ShopfeeCoordinator: ShopfeeCoordinatorProtocol {
     
     func start() {
         showOnboarding()
-//        RegisterCoordinator(router: router).start()
     }
     
     func showOnboarding() {
