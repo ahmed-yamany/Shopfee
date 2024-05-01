@@ -10,7 +10,7 @@ import SwiftUI
 struct ShopfeeLogo: View {
     var body: some View {
         HStack {
-            Image(.shopfee)
+            Image(.shopfeeCup)
                 .resizable()
                 .frame(width: 92, height: 92)
             

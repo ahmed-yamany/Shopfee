@@ -30,7 +30,7 @@ struct PrimaryPrimaryButtonStyle: ShopfeeButtonStyle {
             case .normal:
                 return 48
             case .small:
-                return 3
+                return 36
         }
     }
 }
@@ -45,7 +45,7 @@ struct SecondaryPrimaryButtonStyle: ShopfeeButtonStyle {
             case .normal:
                 return 48
             case .small:
-                return 3
+                return 36
         }
     }
 }

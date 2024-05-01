@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EE0D8C5A2BE23BAE00C4E47A /* OTPPopUpItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0D8C592BE23BAE00C4E47A /* OTPPopUpItem.swift */; };
 		EE2DDD672BDBCB7B00361413 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE2DDD662BDBCB7B00361413 /* AppDelegate.swift */; };
 		EE2DDD692BDBCB7B00361413 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE2DDD682BDBCB7B00361413 /* SceneDelegate.swift */; };
 		EE2DDD702BDBCB7D00361413 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE2DDD6F2BDBCB7D00361413 /* Assets.xcassets */; };
@@ -30,6 +31,8 @@
 		EE6EFA142BE0189D00E5C2E3 /* View+navigationTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE6EFA132BE0189D00E5C2E3 /* View+navigationTitle.swift */; };
 		EEB7B54D2BE1173D00AF684F /* OTPTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB7B54C2BE1173D00AF684F /* OTPTextField.swift */; };
 		EED29DF62BE1615B00548AFE /* ShopfeeOTPTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED29DF52BE1615A00548AFE /* ShopfeeOTPTextField.swift */; };
+		EED29DF92BE16DBA00548AFE /* PopUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED29DF82BE16DBA00548AFE /* PopUpView.swift */; };
+		EED29DFB2BE1714100548AFE /* PopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED29DFA2BE1714100548AFE /* PopUpViewController.swift */; };
 		EED68E672BDD2EA800774A4B /* FoundationExtensions in Frameworks */ = {isa = PBXBuildFile; productRef = EED68E662BDD2EA800774A4B /* FoundationExtensions */; };
 		EED68E6D2BDD40BB00774A4B /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED68E6B2BDD40BB00774A4B /* RegisterView.swift */; };
 		EED68E6E2BDD40BB00774A4B /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED68E6C2BDD40BB00774A4B /* RegisterViewModel.swift */; };
@@ -90,6 +93,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EE0D8C592BE23BAE00C4E47A /* OTPPopUpItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPPopUpItem.swift; sourceTree = "<group>"; };
 		EE2DDD632BDBCB7B00361413 /* Shopfee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Shopfee.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE2DDD662BDBCB7B00361413 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EE2DDD682BDBCB7B00361413 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -117,6 +121,8 @@
 		EE6EFA132BE0189D00E5C2E3 /* View+navigationTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+navigationTitle.swift"; sourceTree = "<group>"; };
 		EEB7B54C2BE1173D00AF684F /* OTPTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPTextField.swift; sourceTree = "<group>"; };
 		EED29DF52BE1615A00548AFE /* ShopfeeOTPTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopfeeOTPTextField.swift; sourceTree = "<group>"; };
+		EED29DF82BE16DBA00548AFE /* PopUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpView.swift; sourceTree = "<group>"; };
+		EED29DFA2BE1714100548AFE /* PopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpViewController.swift; sourceTree = "<group>"; };
 		EED68E6B2BDD40BB00774A4B /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		EED68E6C2BDD40BB00774A4B /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		EED68E6F2BDD40C500774A4B /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
@@ -309,6 +315,7 @@
 				EE6EFA0A2BE0089B00E5C2E3 /* OTPViewModel.swift */,
 				EE6EFA0D2BE008A900E5C2E3 /* OTPViewController.swift */,
 				EE6EFA0F2BE008B600E5C2E3 /* OTPCoordinator.swift */,
+				EE0D8C592BE23BAE00C4E47A /* OTPPopUpItem.swift */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -319,6 +326,15 @@
 				EE6EFA112BE00A7E00E5C2E3 /* OTPUseCase.swift */,
 			);
 			path = Domain;
+			sourceTree = "<group>";
+		};
+		EED29DF72BE16D7900548AFE /* PopUp */ = {
+			isa = PBXGroup;
+			children = (
+				EED29DF82BE16DBA00548AFE /* PopUpView.swift */,
+				EED29DFA2BE1714100548AFE /* PopUpViewController.swift */,
+			);
+			path = PopUp;
 			sourceTree = "<group>";
 		};
 		EED68E682BDD407C00774A4B /* Register */ = {
@@ -477,6 +493,7 @@
 		EEE8D5282BDC030B0037F668 /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
+				EED29DF72BE16D7900548AFE /* PopUp */,
 				EE6B4F812BDE551300E173BC /* TextField */,
 				EEE8D5482BDC3A870037F668 /* PaginationView */,
 				EEE8D5322BDC14CF0037F668 /* Text */,
@@ -746,6 +763,7 @@
 				EEE8D5312BDC0D9E0037F668 /* SplashViewController.swift in Sources */,
 				EEE8D5342BDC14DD0037F668 /* ShopFeeText.swift in Sources */,
 				EEE8D4E12BDBD8750037F668 /* ShopfeeCoordinator.swift in Sources */,
+				EED29DFB2BE1714100548AFE /* PopUpViewController.swift in Sources */,
 				EE6B4F832BDE552300E173BC /* ShopfeeTextField.swift in Sources */,
 				EED29DF62BE1615B00548AFE /* ShopfeeOTPTextField.swift in Sources */,
 				EED68E6D2BDD40BB00774A4B /* RegisterView.swift in Sources */,
@@ -780,7 +798,9 @@
 				EEE8D5392BDC16940037F668 /* SplashCoordinator.swift in Sources */,
 				EEB7B54D2BE1173D00AF684F /* OTPTextField.swift in Sources */,
 				EED68E722BDD40CD00774A4B /* RegisterCoordinator.swift in Sources */,
+				EED29DF92BE16DBA00548AFE /* PopUpView.swift in Sources */,
 				EED68E822BDD782600774A4B /* TermsAndCondition.swift in Sources */,
+				EE0D8C5A2BE23BAE00C4E47A /* OTPPopUpItem.swift in Sources */,
 				EED68E742BDD41E800774A4B /* RegisterUseCase.swift in Sources */,
 				EEE8D52B2BDC03700037F668 /* PrimaryButton.swift in Sources */,
 				EE2DDD692BDBCB7B00361413 /* SceneDelegate.swift in Sources */,

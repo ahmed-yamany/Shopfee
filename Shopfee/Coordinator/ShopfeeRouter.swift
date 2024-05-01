@@ -22,7 +22,7 @@ final public class ShopfeeRouter: Router {
     }
     
     public override func push(_ viewController: UIViewController, animated: Bool = true, completion: @escaping () -> Void = {}) {
-        navigationController.visibleViewController?.navigationItem.backButtonTitle = ""
+        self.navigationController.topViewController?.navigationItem.backButtonTitle = ""
         super.push(viewController, animated: animated, completion: completion)
     }
 }

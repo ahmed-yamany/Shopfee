@@ -36,7 +36,15 @@ final class RegisterViewModel: RegisterViewModelProtocol {
     }
     
     func startRegister() {
-        coordinator.showOTP()
+        coordinator.showPopUp(
+            item: .otp,
+            onPrimaryAction: { [weak self] in
+                self?.coordinator.showOTP()
+            },
+            onSecondaryAction: { [weak self] in
+                self?.coordinator.dismiss()
+            }
+        )
     }
     
     func navigateToLogin() {
