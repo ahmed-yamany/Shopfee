@@ -27,6 +27,7 @@ struct ShopfeeOTPTextField: View {
                         .shadow(color: focused ? .brand : .clear, radius: 2)
                 }
         }
+        .keyboardType(.numberPad)
     }
 }
 

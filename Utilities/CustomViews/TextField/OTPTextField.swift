@@ -27,13 +27,11 @@ struct OTPTextField<Content: View>: View {
             focusTextField = true
         }
         .background {
-            backgroundTextField
-            
+            backgroundTextField  
         }
         .onChange(of: otp) { _ in
             limitOTPToCount()
         }
-        
     }
     
     private var backgroundTextField: some View {
@@ -43,7 +41,6 @@ struct OTPTextField<Content: View>: View {
             .accentColor(.blue)
             .foregroundColor(.blue)
             .multilineTextAlignment(.center)
-            .keyboardType(.numberPad)
             .focused($focusTextField)
     }
     

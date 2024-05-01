@@ -19,6 +19,7 @@ protocol RegisterViewModelProtocol: ObservableObject {
     func navigateToTerms()
 }
 
+@MainActor
 final class RegisterViewModel: RegisterViewModelProtocol {
     @Published var name: String = ""
     @Published var phoneNumber: String = ""
@@ -32,7 +33,7 @@ final class RegisterViewModel: RegisterViewModelProtocol {
     }
     
     func enableButton() -> Bool {
-        true
+        !name.isEmpty && !phoneNumber.isEmpty
     }
     
     func startRegister() {
@@ -40,10 +41,11 @@ final class RegisterViewModel: RegisterViewModelProtocol {
             item: .otp(to: phoneNumber),
             onPrimaryAction: { [weak self] in
                 guard let self = self else { return }
-                coordinator.sendOtp(to: phoneNumber)
+                confirmRegistration()
             },
             onSecondaryAction: { [weak self] in
-                self?.coordinator.dismiss()
+                guard let self = self else { return }
+                coordinator.dismiss()
             }
         )
     }
@@ -58,5 +60,22 @@ final class RegisterViewModel: RegisterViewModelProtocol {
     
     func navigateToTerms() {
         coordinator.showTerms()
+    }
+}
+
+private extension RegisterViewModel {
+    func confirmRegistration() {
+        Task {
+            do {
+                try await useCase.registerUser(withName: name, andPhoneNumber: phoneNumber)
+                sendOtp()
+            } catch {
+                
+            }
+        }
+    }
+    
+    func sendOtp() {
+        coordinator.sendOtp(to: phoneNumber)
     }
 }
