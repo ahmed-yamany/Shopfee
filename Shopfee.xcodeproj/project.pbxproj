@@ -29,6 +29,7 @@
 		EE6EFA102BE008B600E5C2E3 /* OTPCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE6EFA0F2BE008B600E5C2E3 /* OTPCoordinator.swift */; };
 		EE6EFA122BE00A7E00E5C2E3 /* OTPUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE6EFA112BE00A7E00E5C2E3 /* OTPUseCase.swift */; };
 		EE6EFA142BE0189D00E5C2E3 /* View+navigationTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE6EFA132BE0189D00E5C2E3 /* View+navigationTitle.swift */; };
+		EE80C4E22BE245040001A599 /* PopUpTransitioningDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE80C4E12BE245040001A599 /* PopUpTransitioningDelegate.swift */; };
 		EEB7B54D2BE1173D00AF684F /* OTPTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB7B54C2BE1173D00AF684F /* OTPTextField.swift */; };
 		EED29DF62BE1615B00548AFE /* ShopfeeOTPTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED29DF52BE1615A00548AFE /* ShopfeeOTPTextField.swift */; };
 		EED29DF92BE16DBA00548AFE /* PopUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED29DF82BE16DBA00548AFE /* PopUpView.swift */; };
@@ -119,6 +120,7 @@
 		EE6EFA0F2BE008B600E5C2E3 /* OTPCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPCoordinator.swift; sourceTree = "<group>"; };
 		EE6EFA112BE00A7E00E5C2E3 /* OTPUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPUseCase.swift; sourceTree = "<group>"; };
 		EE6EFA132BE0189D00E5C2E3 /* View+navigationTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+navigationTitle.swift"; sourceTree = "<group>"; };
+		EE80C4E12BE245040001A599 /* PopUpTransitioningDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpTransitioningDelegate.swift; sourceTree = "<group>"; };
 		EEB7B54C2BE1173D00AF684F /* OTPTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPTextField.swift; sourceTree = "<group>"; };
 		EED29DF52BE1615A00548AFE /* ShopfeeOTPTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopfeeOTPTextField.swift; sourceTree = "<group>"; };
 		EED29DF82BE16DBA00548AFE /* PopUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpView.swift; sourceTree = "<group>"; };
@@ -333,6 +335,7 @@
 			children = (
 				EED29DF82BE16DBA00548AFE /* PopUpView.swift */,
 				EED29DFA2BE1714100548AFE /* PopUpViewController.swift */,
+				EE80C4E12BE245040001A599 /* PopUpTransitioningDelegate.swift */,
 			);
 			path = PopUp;
 			sourceTree = "<group>";
@@ -757,6 +760,7 @@
 				EEE8D4E52BDBD87D0037F668 /* Router.swift in Sources */,
 				EEE8D4E82BDBD9620037F668 /* Action.swift in Sources */,
 				EEE8D53C2BDC1A2A0037F668 /* View+PrimaryStyle.swift in Sources */,
+				EE80C4E22BE245040001A599 /* PopUpTransitioningDelegate.swift in Sources */,
 				EEE8D52F2BDC0D900037F668 /* SplashView.swift in Sources */,
 				EE6EF9FE2BDFF4CF00E5C2E3 /* LoginView.swift in Sources */,
 				EE6EF9FF2BDFF4CF00E5C2E3 /* LoginViewModel.swift in Sources */,

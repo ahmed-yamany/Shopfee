@@ -32,7 +32,7 @@ public class Router {
         completion: @escaping () -> Void = {}
     ) {
         viewController.transitioningDelegate = transitioningDelegate
-        present(viewController, animated: true, presentationStyle: .currentContext)
+        present(viewController, animated: true, presentationStyle: .overFullScreen)
     }
     
     func dismiss(animated: Bool = true, completion: @escaping () -> Void = {}) {

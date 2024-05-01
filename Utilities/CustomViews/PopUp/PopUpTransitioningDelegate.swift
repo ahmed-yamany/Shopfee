@@ -1,20 +1,22 @@
 //
-//  OpenFromCenterPresentAnimator.swift
+//  PopUpTransitioningDelegate.swift
 //  Shopfee
 //
-//  Created by Ahmed Yamany on 27/04/2024.
+//  Created by Ahmed Yamany on 01/05/2024.
 //
+
+import Foundation
 
 import UIKit
 import MakeConstraints
 
-class OpenFromCenterTransitioningDelegate: NSObject, UIViewControllerTransitioningDelegate {
+class PopUpTransitioningDelegate: NSObject, UIViewControllerTransitioningDelegate {
     public func animationController(
         forPresented presented: UIViewController,
         presenting: UIViewController,
         source: UIViewController
     ) -> UIViewControllerAnimatedTransitioning? {
-        return OpenFromCenterPresentAnimator(presented: presented)
+        return PopUpPresentAnimator(presented: presented)
     }
     
     public func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
@@ -22,7 +24,7 @@ class OpenFromCenterTransitioningDelegate: NSObject, UIViewControllerTransitioni
     }
 }
 
-class OpenFromCenterPresentAnimator: NSObject, UIViewControllerAnimatedTransitioning {
+class PopUpPresentAnimator: NSObject, UIViewControllerAnimatedTransitioning {
     let presented: UIViewController
     
     init(presented: UIViewController) {
@@ -34,19 +36,16 @@ class OpenFromCenterPresentAnimator: NSObject, UIViewControllerAnimatedTransitio
     }
     
     func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
-        let fromView: UIView = presented.view
-        
         guard  let toView = transitionContext.view(forKey: .to) else {
             return
         }
-                
-        toView.frame = .init(x: UIScreen.main.bounds.width / 2, y: 0, width: 0, height: UIScreen.main.bounds.height)
-        toView.layer.masksToBounds = true
-    
+        
         transitionContext.containerView.addSubview(toView)
+        toView.frame = .init(x: 0, y: UIScreen.main.bounds.height, width: UIScreen.main.bounds.width, height: 0)
+        toView.layer.masksToBounds = true
         toView.fillSuperview()
         
-        UIView.animate(withDuration: 1) {
+        UIView.animate(withDuration: 1, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 1) {
             toView.layoutIfNeeded()
         } completion: { _ in
             transitionContext.completeTransition(true)
