@@ -8,6 +8,7 @@
 import Foundation
 
 protocol CreatePinCoordinatorProtocol: Coordinator {
+    func navigateToLogin()
 }
 
 final class CreatePinCoordinator: CreatePinCoordinatorProtocol {
@@ -22,5 +23,9 @@ final class CreatePinCoordinator: CreatePinCoordinatorProtocol {
         let viewModel = CreatePinViewModel(coordinator: self, useCase: useCase)
         let controller = PinViewController(viewModel: viewModel)
         router.push(controller)
+    }
+    
+    func navigateToLogin() {
+        LoginCoordinator(router: router).start()
     }
 }

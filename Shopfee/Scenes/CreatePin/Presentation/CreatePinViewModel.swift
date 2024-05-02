@@ -31,6 +31,6 @@ final class CreatePinViewModel: PinViewModelProtocol {
     }
     
     func confirm() {
-        
+        coordinator.navigateToLogin()
     }
 }
