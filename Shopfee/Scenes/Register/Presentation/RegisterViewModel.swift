@@ -76,6 +76,7 @@ private extension RegisterViewModel {
     }
     
     func sendOtp() {
+        coordinator.dismiss(animated: false) // dismiss pop up before showing send otp
         coordinator.sendOtp(to: phoneNumber)
     }
 }

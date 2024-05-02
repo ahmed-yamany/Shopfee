@@ -32,7 +32,7 @@ final class LoginViewModel: LoginViewModelProtocol {
     }
     
     func startLogin() {
-        
+        coordinator.enterPin()
     }
     
     func navigateToRegister() {

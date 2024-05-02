@@ -24,7 +24,6 @@ final class SendOTPCoordinator: SendOTPCoordinatorProtocol {
         let useCase = SendOTPUseCase()
         let viewModel = SendOTPViewModel(coordinator: self, useCase: useCase, phoneNumber: phoneNumber)
         let controller = SendOTPViewController(viewModel: viewModel)
-        router.dismiss(animated: false)
         router.present(controller, presentationStyle: .overFullScreen)
     }
     

@@ -57,7 +57,7 @@ struct OTPView<ViewModel: OTPViewModelProtocol>: View {
     
     private var confirmButton: some View {
         Button("Confirm".localized) {
-            
+            viewModel.confirm()
         }
         .buttonStyle(.primary())
         .disabled(!viewModel.isEnabledConfirmButton())

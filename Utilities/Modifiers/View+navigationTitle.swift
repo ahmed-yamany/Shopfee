@@ -11,7 +11,7 @@ public extension View {
     @ViewBuilder
     func navigationTitle(_ title: String) -> some View {
         toolbar {
-            ToolbarItem(placement: .topBarLeading) {
+            ToolbarItem(placement: .principal) {
                 Text(title)
                     .font(.custom(size: 16, weight: .medium))
                     .foregroundStyle(.textHeading)

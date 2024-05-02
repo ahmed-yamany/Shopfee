@@ -33,9 +33,7 @@ class OpenFromCenterPresentAnimator: NSObject, UIViewControllerAnimatedTransitio
         return 1
     }
     
-    func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
-        let fromView: UIView = presented.view
-        
+    func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {        
         guard  let toView = transitionContext.view(forKey: .to) else {
             return
         }

@@ -15,6 +15,7 @@ protocol OTPViewModelProtocol: ObservableObject {
     
     func isEnabledConfirmButton() -> Bool
     func resendOtp()
+    func confirm()
 }
 
 final class OTPViewModel: OTPViewModelProtocol {
@@ -37,5 +38,9 @@ final class OTPViewModel: OTPViewModelProtocol {
     
     func resendOtp() {
         coordinator.resend()
+    }
+    
+    func confirm() {
+        coordinator.processAccount(otp: otp)
     }
 }

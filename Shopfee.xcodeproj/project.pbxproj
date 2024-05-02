@@ -51,6 +51,20 @@
 		EED68E7E2BDD52FA00774A4B /* MakeConstraints in Frameworks */ = {isa = PBXBuildFile; productRef = EED68E7D2BDD52FA00774A4B /* MakeConstraints */; };
 		EED68E802BDD6FFD00774A4B /* OpenFromCenterPresentAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED68E7F2BDD6FFD00774A4B /* OpenFromCenterPresentAnimator.swift */; };
 		EED68E822BDD782600774A4B /* TermsAndCondition.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED68E812BDD782600774A4B /* TermsAndCondition.swift */; };
+		EEDCE16B2BE3932C003C0A24 /* ShopfeePinTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDCE16A2BE3932C003C0A24 /* ShopfeePinTextField.swift */; };
+		EEDCE1722BE3AAC4003C0A24 /* EnterPinViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDCE1712BE3AAC4003C0A24 /* EnterPinViewModel.swift */; };
+		EEDCE1742BE3AAE0003C0A24 /* EnterPinCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDCE1732BE3AAE0003C0A24 /* EnterPinCoordinator.swift */; };
+		EEDCE1772BE3AB08003C0A24 /* EnterPinUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDCE1762BE3AB08003C0A24 /* EnterPinUseCase.swift */; };
+		EEE62DA72BE3868E00937ECA /* PinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE62DA32BE3868E00937ECA /* PinView.swift */; };
+		EEE62DA82BE3868E00937ECA /* PinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE62DA42BE3868E00937ECA /* PinViewController.swift */; };
+		EEE62DA92BE3868E00937ECA /* CreatePinViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE62DA52BE3868E00937ECA /* CreatePinViewModel.swift */; };
+		EEE62DAA2BE3868E00937ECA /* CreatePinCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE62DA62BE3868E00937ECA /* CreatePinCoordinator.swift */; };
+		EEE62DAD2BE3869700937ECA /* CreatePinUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE62DAC2BE3869700937ECA /* CreatePinUseCase.swift */; };
+		EEE62DC72BE389D900937ECA /* ProcessAccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE62DC32BE389D900937ECA /* ProcessAccountViewModel.swift */; };
+		EEE62DC82BE389D900937ECA /* ProcessAccountCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE62DC42BE389D900937ECA /* ProcessAccountCoordinator.swift */; };
+		EEE62DC92BE389D900937ECA /* ProcessAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE62DC52BE389D900937ECA /* ProcessAccountView.swift */; };
+		EEE62DCA2BE389D900937ECA /* ProcessAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE62DC62BE389D900937ECA /* ProcessAccountViewController.swift */; };
+		EEE62DCC2BE389DE00937ECA /* ProcessAccountUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE62DCB2BE389DE00937ECA /* ProcessAccountUseCase.swift */; };
 		EEE8D4D02BDBCF780037F668 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EEE8D4CF2BDBCF780037F668 /* Colors.xcassets */; };
 		EEE8D4DB2BDBD4FA0037F668 /* String+localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE8D4DA2BDBD4FA0037F668 /* String+localized.swift */; };
 		EEE8D4E02BDBD8750037F668 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE8D4DE2BDBD8750037F668 /* Coordinator.swift */; };
@@ -148,6 +162,20 @@
 		EED68E732BDD41E800774A4B /* RegisterUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUseCase.swift; sourceTree = "<group>"; };
 		EED68E7F2BDD6FFD00774A4B /* OpenFromCenterPresentAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenFromCenterPresentAnimator.swift; sourceTree = "<group>"; };
 		EED68E812BDD782600774A4B /* TermsAndCondition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsAndCondition.swift; sourceTree = "<group>"; };
+		EEDCE16A2BE3932C003C0A24 /* ShopfeePinTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopfeePinTextField.swift; sourceTree = "<group>"; };
+		EEDCE1712BE3AAC4003C0A24 /* EnterPinViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterPinViewModel.swift; sourceTree = "<group>"; };
+		EEDCE1732BE3AAE0003C0A24 /* EnterPinCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterPinCoordinator.swift; sourceTree = "<group>"; };
+		EEDCE1762BE3AB08003C0A24 /* EnterPinUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterPinUseCase.swift; sourceTree = "<group>"; };
+		EEE62DA32BE3868E00937ECA /* PinView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinView.swift; sourceTree = "<group>"; };
+		EEE62DA42BE3868E00937ECA /* PinViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinViewController.swift; sourceTree = "<group>"; };
+		EEE62DA52BE3868E00937ECA /* CreatePinViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreatePinViewModel.swift; sourceTree = "<group>"; };
+		EEE62DA62BE3868E00937ECA /* CreatePinCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreatePinCoordinator.swift; sourceTree = "<group>"; };
+		EEE62DAC2BE3869700937ECA /* CreatePinUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreatePinUseCase.swift; sourceTree = "<group>"; };
+		EEE62DC32BE389D900937ECA /* ProcessAccountViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProcessAccountViewModel.swift; sourceTree = "<group>"; };
+		EEE62DC42BE389D900937ECA /* ProcessAccountCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProcessAccountCoordinator.swift; sourceTree = "<group>"; };
+		EEE62DC52BE389D900937ECA /* ProcessAccountView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProcessAccountView.swift; sourceTree = "<group>"; };
+		EEE62DC62BE389D900937ECA /* ProcessAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProcessAccountViewController.swift; sourceTree = "<group>"; };
+		EEE62DCB2BE389DE00937ECA /* ProcessAccountUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProcessAccountUseCase.swift; sourceTree = "<group>"; };
 		EEE8D4CF2BDBCF780037F668 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		EEE8D4DA2BDBD4FA0037F668 /* String+localized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+localized.swift"; sourceTree = "<group>"; };
 		EEE8D4DE2BDBD8750037F668 /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
@@ -208,6 +236,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EE1F6F512BE37DDF006D1C23 /* Pin */ = {
+			isa = PBXGroup;
+			children = (
+				EEDCE16A2BE3932C003C0A24 /* ShopfeePinTextField.swift */,
+				EEE62DA32BE3868E00937ECA /* PinView.swift */,
+				EEE62DA42BE3868E00937ECA /* PinViewController.swift */,
+			);
+			path = Pin;
+			sourceTree = "<group>";
+		};
 		EE2DDD5A2BDBCB7B00361413 = {
 			isa = PBXGroup;
 			children = (
@@ -412,6 +450,86 @@
 			path = Domain;
 			sourceTree = "<group>";
 		};
+		EEDCE16C2BE3A5EC003C0A24 /* CreatePin */ = {
+			isa = PBXGroup;
+			children = (
+				EEE62DAB2BE3869000937ECA /* Domain */,
+				EEDCE16D2BE3A603003C0A24 /* Presentation */,
+			);
+			path = CreatePin;
+			sourceTree = "<group>";
+		};
+		EEDCE16D2BE3A603003C0A24 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				EEE62DA52BE3868E00937ECA /* CreatePinViewModel.swift */,
+				EEE62DA62BE3868E00937ECA /* CreatePinCoordinator.swift */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		EEDCE16F2BE3AA96003C0A24 /* EnterPin */ = {
+			isa = PBXGroup;
+			children = (
+				EEDCE1752BE3AAFE003C0A24 /* Domain */,
+				EEDCE1702BE3AAA6003C0A24 /* Presentation */,
+			);
+			path = EnterPin;
+			sourceTree = "<group>";
+		};
+		EEDCE1702BE3AAA6003C0A24 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				EEDCE1712BE3AAC4003C0A24 /* EnterPinViewModel.swift */,
+				EEDCE1732BE3AAE0003C0A24 /* EnterPinCoordinator.swift */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		EEDCE1752BE3AAFE003C0A24 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				EEDCE1762BE3AB08003C0A24 /* EnterPinUseCase.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		EEE62DAB2BE3869000937ECA /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				EEE62DAC2BE3869700937ECA /* CreatePinUseCase.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		EEE62DAE2BE3891400937ECA /* Process Account */ = {
+			isa = PBXGroup;
+			children = (
+				EEE62DBC2BE3893C00937ECA /* Domain */,
+				EEE62DB32BE3892B00937ECA /* Presentation */,
+			);
+			path = "Process Account";
+			sourceTree = "<group>";
+		};
+		EEE62DB32BE3892B00937ECA /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				EEE62DC52BE389D900937ECA /* ProcessAccountView.swift */,
+				EEE62DC32BE389D900937ECA /* ProcessAccountViewModel.swift */,
+				EEE62DC62BE389D900937ECA /* ProcessAccountViewController.swift */,
+				EEE62DC42BE389D900937ECA /* ProcessAccountCoordinator.swift */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		EEE62DBC2BE3893C00937ECA /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				EEE62DCB2BE389DE00937ECA /* ProcessAccountUseCase.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
 		EEE8D4CE2BDBCF670037F668 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
@@ -497,6 +615,9 @@
 				EE6EF9F92BDFF49A00E5C2E3 /* Login */,
 				EE7939052BE26E19004FF13C /* Send OTP */,
 				EE6EFA062BE0087E00E5C2E3 /* Enter OTP */,
+				EEE62DAE2BE3891400937ECA /* Process Account */,
+				EEDCE16C2BE3A5EC003C0A24 /* CreatePin */,
+				EEDCE16F2BE3AA96003C0A24 /* EnterPin */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -542,6 +663,7 @@
 		EEE8D5282BDC030B0037F668 /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
+				EE1F6F512BE37DDF006D1C23 /* Pin */,
 				EED29DF72BE16D7900548AFE /* PopUp */,
 				EE6B4F812BDE551300E173BC /* TextField */,
 				EEE8D5482BDC3A870037F668 /* PaginationView */,
@@ -816,37 +938,46 @@
 				EE6EF9FE2BDFF4CF00E5C2E3 /* LoginView.swift in Sources */,
 				EE6EF9FF2BDFF4CF00E5C2E3 /* LoginViewModel.swift in Sources */,
 				EEE8D5312BDC0D9E0037F668 /* SplashViewController.swift in Sources */,
+				EEDCE1722BE3AAC4003C0A24 /* EnterPinViewModel.swift in Sources */,
 				EEE8D5342BDC14DD0037F668 /* ShopFeeText.swift in Sources */,
 				EEE8D4E12BDBD8750037F668 /* ShopfeeCoordinator.swift in Sources */,
 				EED29DFB2BE1714100548AFE /* PopUpViewController.swift in Sources */,
 				EE6B4F832BDE552300E173BC /* ShopfeeTextField.swift in Sources */,
+				EEE62DA92BE3868E00937ECA /* CreatePinViewModel.swift in Sources */,
 				EED29DF62BE1615B00548AFE /* ShopfeeOTPTextField.swift in Sources */,
 				EED68E6D2BDD40BB00774A4B /* RegisterView.swift in Sources */,
 				EED68E6E2BDD40BB00774A4B /* RegisterViewModel.swift in Sources */,
 				EEE8D5422BDC37090037F668 /* CGFloat+Constants.swift in Sources */,
+				EEE62DCA2BE389D900937ECA /* ProcessAccountViewController.swift in Sources */,
 				EEE8D5242BDBFCAA0037F668 /* OnboardingCoordinator.swift in Sources */,
 				EED68E802BDD6FFD00774A4B /* OpenFromCenterPresentAnimator.swift in Sources */,
 				EE80C4E42BE25B440001A599 /* GifView.swift in Sources */,
 				EE2DDD672BDBCB7B00361413 /* AppDelegate.swift in Sources */,
 				EE79390E2BE272E2004FF13C /* SendOTPView.swift in Sources */,
 				EE79390F2BE272E2004FF13C /* SendOTPViewModel.swift in Sources */,
+				EEE62DC72BE389D900937ECA /* ProcessAccountViewModel.swift in Sources */,
 				EEE8D4E02BDBD8750037F668 /* Coordinator.swift in Sources */,
 				EEE8D5172BDBF0D70037F668 /* UIFont+Style.swift in Sources */,
 				EEE8D54F2BDC445B0037F668 /* OnboardingTabViewModel.swift in Sources */,
+				EEE62DCC2BE389DE00937ECA /* ProcessAccountUseCase.swift in Sources */,
 				EEE8D4E42BDBD87D0037F668 /* ShopfeeRouter.swift in Sources */,
+				EEDCE1772BE3AB08003C0A24 /* EnterPinUseCase.swift in Sources */,
 				EEE8D51D2BDBFB5C0037F668 /* OnboardingView.swift in Sources */,
 				EE6EFA032BDFF64500E5C2E3 /* LoginCoordinator.swift in Sources */,
 				EEE8D51E2BDBFB5C0037F668 /* OnboardingViewModel.swift in Sources */,
 				EEE8D5492BDC3A880037F668 /* CapsulePaginationStyle.swift in Sources */,
 				EE6EFA122BE00A7E00E5C2E3 /* OTPUseCase.swift in Sources */,
+				EEDCE16B2BE3932C003C0A24 /* ShopfeePinTextField.swift in Sources */,
 				EE6EFA012BDFF5B300E5C2E3 /* LoginViewController.swift in Sources */,
 				EEE8D4DB2BDBD4FA0037F668 /* String+localized.swift in Sources */,
 				EED68E702BDD40C500774A4B /* RegisterViewController.swift in Sources */,
 				EE7939132BE274F5004FF13C /* SendOTPCoordinator.swift in Sources */,
+				EEE62DA82BE3868E00937ECA /* PinViewController.swift in Sources */,
 				EE6EFA142BE0189D00E5C2E3 /* View+navigationTitle.swift in Sources */,
 				EE6EFA0E2BE008A900E5C2E3 /* OTPViewController.swift in Sources */,
 				EEE8D54B2BDC3A880037F668 /* PaginationStyle.swift in Sources */,
 				EEE8D54A2BDC3A880037F668 /* CirclePaginationStyle.swift in Sources */,
+				EEDCE1742BE3AAE0003C0A24 /* EnterPinCoordinator.swift in Sources */,
 				EE6EFA102BE008B600E5C2E3 /* OTPCoordinator.swift in Sources */,
 				EE6EFA0B2BE0089B00E5C2E3 /* OTPView.swift in Sources */,
 				EE6EFA0C2BE0089B00E5C2E3 /* OTPViewModel.swift in Sources */,
@@ -855,15 +986,20 @@
 				EEE8D5262BDBFDF20037F668 /* OnboardingUseCase.swift in Sources */,
 				EEE8D5162BDBF0D70037F668 /* Font+Style.swift in Sources */,
 				EEE8D5392BDC16940037F668 /* SplashCoordinator.swift in Sources */,
+				EEE62DAA2BE3868E00937ECA /* CreatePinCoordinator.swift in Sources */,
 				EEB7B54D2BE1173D00AF684F /* OTPTextField.swift in Sources */,
 				EED68E722BDD40CD00774A4B /* RegisterCoordinator.swift in Sources */,
 				EE7939112BE27431004FF13C /* SendOTPViewController.swift in Sources */,
 				EED29DF92BE16DBA00548AFE /* PopUpView.swift in Sources */,
 				EED68E822BDD782600774A4B /* TermsAndCondition.swift in Sources */,
 				EE0D8C5A2BE23BAE00C4E47A /* OTPPopUpItem.swift in Sources */,
+				EEE62DA72BE3868E00937ECA /* PinView.swift in Sources */,
 				EED68E742BDD41E800774A4B /* RegisterUseCase.swift in Sources */,
 				EEE8D52B2BDC03700037F668 /* PrimaryButton.swift in Sources */,
+				EEE62DC82BE389D900937ECA /* ProcessAccountCoordinator.swift in Sources */,
 				EE2DDD692BDBCB7B00361413 /* SceneDelegate.swift in Sources */,
+				EEE62DAD2BE3869700937ECA /* CreatePinUseCase.swift in Sources */,
+				EEE62DC92BE389D900937ECA /* ProcessAccountView.swift in Sources */,
 				EE6EFA052BDFF6F400E5C2E3 /* LoginUseCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

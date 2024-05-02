@@ -35,7 +35,7 @@ struct GifView: UIViewRepresentable {
         if let request {
             webView.load(request)
         }
- 
+        webView.backgroundColor = .clear
         webView.scrollView.isScrollEnabled = false
         return webView
     }

@@ -10,6 +10,9 @@
     "Confirm OTP code" : {
       "extractionState" : "manual"
     },
+    "Create a PIN" : {
+      "extractionState" : "manual"
+    },
     "Don’t have an account?" : {
       "extractionState" : "manual"
     },

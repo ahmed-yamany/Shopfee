@@ -9,6 +9,7 @@ import Foundation
 
 protocol LoginCoordinatorProtocol: Coordinator {
     func showRegister()
+    func enterPin()
 }
 
 final class LoginCoordinator: LoginCoordinatorProtocol {
@@ -27,5 +28,9 @@ final class LoginCoordinator: LoginCoordinatorProtocol {
     
     func showRegister() {
         RegisterCoordinator(router: router).start()
+    }
+    
+    func enterPin() {
+        EnterPinCoordinator(router: router).start()
     }
 }

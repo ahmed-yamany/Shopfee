@@ -9,6 +9,7 @@ import Foundation
 
 protocol OTPCoordinatorProtocol: Coordinator {
     func resend()
+    func processAccount(otp: String)
 }
 
 final class OTPCoordinator: OTPCoordinatorProtocol {
@@ -30,5 +31,9 @@ final class OTPCoordinator: OTPCoordinatorProtocol {
     func resend() {
         dismiss()
         SendOTPCoordinator(router: router, to: phoneNumber).start()
+    }
+    
+    func processAccount( otp: String) {
+        ProcessAccountCoordinator(router: router, phoneNumber: phoneNumber, otp: otp).start()
     }
 }
