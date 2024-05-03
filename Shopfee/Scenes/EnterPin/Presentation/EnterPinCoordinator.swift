@@ -8,6 +8,7 @@
 import Foundation
 
 protocol EnterPinCoordinatorProtocol: Coordinator {
+    func navigateToTabBar()
 }
 
 final class EnterPinCoordinator: EnterPinCoordinatorProtocol {
@@ -22,5 +23,9 @@ final class EnterPinCoordinator: EnterPinCoordinatorProtocol {
         let viewModel = EnterPinViewModel(coordinator: self, useCase: useCase)
         let controller = PinViewController(viewModel: viewModel)
         router.push(controller)
+    }
+    
+    func navigateToTabBar() {
+        TabBarCoordinator(router: router).start()
     }
 }

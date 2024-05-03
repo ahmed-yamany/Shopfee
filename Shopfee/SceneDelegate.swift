@@ -7,16 +7,23 @@
 
 import UIKit
 
+@MainActor
+protocol SceneDelegateCommand {
+    func execute()
+}
+
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
-
+    
     var window: UIWindow?
-
+    
     func scene(
         _ scene: UIScene,
         willConnectTo session: UISceneSession,
         options connectionOptions: UIScene.ConnectionOptions
     ) {
-        guard let windowScene = (scene as? UIWindowScene) else { return }
-        ShopfeeCoordinator.shared.makeWindow(from: windowScene)
+        let commands: [SceneDelegateCommand] = [
+            ShopfeeCoordinatorCommand(scene: scene)
+        ]
+        commands.forEach { $0.execute() }
     }
 }

@@ -31,6 +31,6 @@ final class EnterPinViewModel: PinViewModelProtocol {
     }
     
     func confirm() {
-        
+        coordinator.navigateToTabBar()
     }
 }

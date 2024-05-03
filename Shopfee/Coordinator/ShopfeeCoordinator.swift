@@ -8,6 +8,7 @@ import UIKit
 
 protocol ShopfeeCoordinatorProtocol: Coordinator {
     func showOnboarding()
+    func showTabBar()
 }
 
 final class ShopfeeCoordinator: ShopfeeCoordinatorProtocol {
@@ -29,12 +30,16 @@ final class ShopfeeCoordinator: ShopfeeCoordinatorProtocol {
     }
     
     func start() {
-        showOnboarding()
+        showTabBar()
     }
     
     func showOnboarding() {
         router.reset()
-        let coordinator = SplashCoordinator(router: router)
-        coordinator.start()
+        SplashCoordinator(router: router).start()
+    }
+    
+    func showTabBar() {
+        router.reset()
+        TabBarCoordinator(router: router).start()
     }
 }

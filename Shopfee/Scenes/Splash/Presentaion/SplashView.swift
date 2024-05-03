@@ -30,11 +30,11 @@ struct SplashView: View {
     
     private var animatedView: some View {
         VStack { }
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(.brand)
-        .mask(RoundedRectangle(cornerRadius: 16))
-        .ignoresSafeArea()
-        .transition(.move(edge: .top))
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .background(.brand)
+            .mask(RoundedRectangle(cornerRadius: 16))
+            .ignoresSafeArea()
+            .transition(.move(edge: .top))
     }
 }
 
