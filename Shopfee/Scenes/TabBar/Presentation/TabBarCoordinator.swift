@@ -18,9 +18,11 @@ final class TabBarCoordinator: TabBarCoordinatorProtocol {
     }
     
     func start() {
-        let useCase = TabBarUseCase()
+        let tabBarItemFactory = TabBarItemFactory()
+        let useCase = TabBarUseCase(tabBarItemFactory: tabBarItemFactory)
         let viewModel = TabBarViewModel(coordinator: self, useCase: useCase)
         let controller = TabBarViewController(viewModel: viewModel)
         router.setViewController(controller)
+        router.navigationBarIsHidden = true
     }
 }

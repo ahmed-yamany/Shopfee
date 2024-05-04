@@ -70,7 +70,7 @@ struct BarItemView<ViewModel: TabBarViewModelProtocol>: View {
 #Preview {
     let router = ShopfeeRouter(navigationController: .init())
     let coordinator = TabBarCoordinator(router: router)
-    let useCase = TabBarUseCase()
+    let useCase = TabBarUseCase(tabBarItemFactory: .init())
     let viewModel = TabBarViewModel(coordinator: coordinator, useCase: useCase)
     return TabBarView(viewModel: viewModel)
 }

@@ -7,14 +7,14 @@
 
 import SwiftUI
 
-enum TabBarItemTypes: Hashable {
+enum TabBarItemType: Hashable, CaseIterable {
     case home
     case history
     case account
 }
 
 protocol TabBarItem: Identifiable {
-    var type: TabBarItemTypes { get }
+    var type: TabBarItemType { get }
     var title: String { get }
     var image: Image { get }
     var onSelectedImage: Image { get }
@@ -23,39 +23,27 @@ protocol TabBarItem: Identifiable {
 
 struct HomeTabBarItem: TabBarItem {
     var id = UUID()
-    var type: TabBarItemTypes = .home
+    var type: TabBarItemType = .home
     var title: String = "Home"
     var image: Image = Image(systemName: "house")
     var onSelectedImage: Image = Image(systemName: "house.fill")
-    var view: AnyView {
-        Text("Hello Home!").eraseToAnyView()
-    }
+    let view: AnyView
 }
 
 struct HistoryTabBarItem: TabBarItem {
     var id = UUID()
-    var type: TabBarItemTypes = .history
+    var type: TabBarItemType = .history
     var title: String = "History"
     var image: Image = Image(systemName: "doc.plaintext")
     var onSelectedImage: Image = Image(systemName: "doc.plaintext.fill")
-    var view: AnyView {
-        Text("Hello History!").eraseToAnyView()
-    }
+    let view: AnyView
 }
 
 struct AccountTabBarItem: TabBarItem {
     var id = UUID()
-    var type: TabBarItemTypes = .account
+    var type: TabBarItemType = .account
     var title: String = "Account"
     var image: Image = Image(systemName: "person")
     var onSelectedImage: Image = Image(systemName: "person.fill")
-    var view: AnyView {
-        Text("Hello Account!").eraseToAnyView()
-    }
-}
-
-extension View {
-    func eraseToAnyView() -> AnyView {
-        AnyView(self)
-    }
+    let view: AnyView
 }

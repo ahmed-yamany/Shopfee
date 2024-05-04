@@ -10,7 +10,7 @@ import SwiftUI
 @MainActor
 protocol TabBarViewModelProtocol: ObservableObject {
     var items: [any TabBarItem] { get set }
-    var selectedItem: TabBarItemTypes { get set }
+    var selectedItem: TabBarItemType { get set }
     
     func viewDidLoad()
 }
@@ -18,7 +18,7 @@ protocol TabBarViewModelProtocol: ObservableObject {
 @MainActor
 final class TabBarViewModel: TabBarViewModelProtocol {
     @Published var items: [any TabBarItem] = []
-    @Published var selectedItem: TabBarItemTypes = .home
+    @Published var selectedItem: TabBarItemType = .home
     
     private let coordinator: TabBarCoordinatorProtocol
     private let useCase: TabBarUseCaseProtocol

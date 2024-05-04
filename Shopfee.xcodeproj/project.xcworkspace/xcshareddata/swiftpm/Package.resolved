@@ -1,5 +1,5 @@
 {
-  "originHash" : "263c91feb258f308b0edd790f8ec0c25e166cd8a2e76a4a218ffa94441c08f14",
+  "originHash" : "471c09ec7d2b4afe0dd1f0339d877d00ff3b28c29a7e66b7f4a90ee7d783e010",
   "pins" : [
     {
       "identity" : "foundationextensions",
@@ -25,7 +25,7 @@
       "location" : "https://github.com/ahmed-yamany/SwiftUIModifiers",
       "state" : {
         "branch" : "main",
-        "revision" : "53ed8a9aa5eaef2a4f967b2ce8db34712801f36b"
+        "revision" : "1940a4783a216d047f45ba78b3bb058fa89ad467"
       }
     }
   ],

@@ -5,18 +5,26 @@
 //  Created by Ahmed Yamany on 03/05/2024.
 //
 
-import Foundation
+import SwiftUI
 
-protocol TabBarUseCaseProtocol {
+protocol TabBarUseCaseProtocol: AnyActor {
     func getTabBarItems() async throws -> [any TabBarItem]
 }
 
-final class TabBarUseCase: TabBarUseCaseProtocol {
+final actor TabBarUseCase: TabBarUseCaseProtocol {
+    let tabBarItemFactory: TabBarItemFactory
+    
+    init(tabBarItemFactory: TabBarItemFactory) {
+        self.tabBarItemFactory = tabBarItemFactory
+    }
+    
     func getTabBarItems() async throws -> [any TabBarItem] {
-        [
-            HomeTabBarItem(),
-            HistoryTabBarItem(),
-            AccountTabBarItem()
-        ]
+        var items: [any TabBarItem] = []
+        
+        for type in TabBarItemType.allCases {
+            items.append( await tabBarItemFactory.make(for: type))
+        }
+        
+        return items
     }
 }

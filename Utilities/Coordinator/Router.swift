@@ -14,6 +14,11 @@ public class Router {
         self.navigationController = navigationController
     }
     
+    var navigationBarIsHidden: Bool {
+        get { navigationController.navigationBar.isHidden }
+        set { navigationController.navigationBar.isHidden = newValue }
+    }
+    
     func present(
         _ viewController: UIViewController,
         animated: Bool = true,

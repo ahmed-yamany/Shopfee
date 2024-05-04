@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EE088AFE2BE653A200885A35 /* TabBarItemFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE088AFD2BE653A200885A35 /* TabBarItemFactory.swift */; };
 		EE0D8C5A2BE23BAE00C4E47A /* OTPPopUpItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0D8C592BE23BAE00C4E47A /* OTPPopUpItem.swift */; };
 		EE2701DB2BE533F500B16C74 /* TabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE2701D72BE533F500B16C74 /* TabBarCoordinator.swift */; };
 		EE2701DC2BE533F500B16C74 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE2701D82BE533F500B16C74 /* TabBarView.swift */; };
@@ -127,6 +128,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EE088AFD2BE653A200885A35 /* TabBarItemFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarItemFactory.swift; sourceTree = "<group>"; };
 		EE0D8C592BE23BAE00C4E47A /* OTPPopUpItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPPopUpItem.swift; sourceTree = "<group>"; };
 		EE2701D72BE533F500B16C74 /* TabBarCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarCoordinator.swift; sourceTree = "<group>"; };
 		EE2701D82BE533F500B16C74 /* TabBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
@@ -292,6 +294,7 @@
 			isa = PBXGroup;
 			children = (
 				EE2701E22BE53B7400B16C74 /* TabBarItem.swift */,
+				EE088AFD2BE653A200885A35 /* TabBarItemFactory.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -1087,6 +1090,7 @@
 				EEE62DAA2BE3868E00937ECA /* CreatePinCoordinator.swift in Sources */,
 				EEB7B54D2BE1173D00AF684F /* OTPTextField.swift in Sources */,
 				EED68E722BDD40CD00774A4B /* RegisterCoordinator.swift in Sources */,
+				EE088AFE2BE653A200885A35 /* TabBarItemFactory.swift in Sources */,
 				EE7939112BE27431004FF13C /* SendOTPViewController.swift in Sources */,
 				EED29DF92BE16DBA00548AFE /* PopUpView.swift in Sources */,
 				EED68E822BDD782600774A4B /* TermsAndCondition.swift in Sources */,
