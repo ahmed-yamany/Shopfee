@@ -1,6 +1,24 @@
 {
-  "originHash" : "471c09ec7d2b4afe0dd1f0339d877d00ff3b28c29a7e66b7f4a90ee7d783e010",
+  "originHash" : "bbe6dcdde94a45a991698c5b96e3a7081a1821847bb55c3f30ea60063ae5b4d1",
   "pins" : [
+    {
+      "identity" : "compositionallayoutablesection",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/ahmed-yamany/CompositionalLayoutableSection",
+      "state" : {
+        "branch" : "main",
+        "revision" : "f8dc851790f69cda1f88402578d183b4d06f3fc0"
+      }
+    },
+    {
+      "identity" : "customviews",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/ahmed-yamany/CustomViews",
+      "state" : {
+        "branch" : "main",
+        "revision" : "131f8e93204fd527c736a940ca74b259cfb0ff2c"
+      }
+    },
     {
       "identity" : "foundationextensions",
       "kind" : "remoteSourceControl",

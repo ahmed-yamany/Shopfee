@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		EE088AFE2BE653A200885A35 /* TabBarItemFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE088AFD2BE653A200885A35 /* TabBarItemFactory.swift */; };
+		EE088B012BE65A8900885A35 /* CompositionalLayoutableSection in Frameworks */ = {isa = PBXBuildFile; productRef = EE088B002BE65A8900885A35 /* CompositionalLayoutableSection */; };
+		EE088B032BE65B5700885A35 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE088B022BE65B5700885A35 /* HomeView.swift */; };
+		EE088B062BE65BFF00885A35 /* CustomViews in Frameworks */ = {isa = PBXBuildFile; productRef = EE088B052BE65BFF00885A35 /* CustomViews */; };
 		EE0D8C5A2BE23BAE00C4E47A /* OTPPopUpItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0D8C592BE23BAE00C4E47A /* OTPPopUpItem.swift */; };
 		EE2701DB2BE533F500B16C74 /* TabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE2701D72BE533F500B16C74 /* TabBarCoordinator.swift */; };
 		EE2701DC2BE533F500B16C74 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE2701D82BE533F500B16C74 /* TabBarView.swift */; };
@@ -129,6 +132,7 @@
 
 /* Begin PBXFileReference section */
 		EE088AFD2BE653A200885A35 /* TabBarItemFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarItemFactory.swift; sourceTree = "<group>"; };
+		EE088B022BE65B5700885A35 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		EE0D8C592BE23BAE00C4E47A /* OTPPopUpItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPPopUpItem.swift; sourceTree = "<group>"; };
 		EE2701D72BE533F500B16C74 /* TabBarCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarCoordinator.swift; sourceTree = "<group>"; };
 		EE2701D82BE533F500B16C74 /* TabBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
@@ -237,8 +241,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE088B062BE65BFF00885A35 /* CustomViews in Frameworks */,
 				EEE8D53F2BDC36270037F668 /* SwiftUIModifiers in Frameworks */,
 				EED68E672BDD2EA800774A4B /* FoundationExtensions in Frameworks */,
+				EE088B012BE65A8900885A35 /* CompositionalLayoutableSection in Frameworks */,
 				EED68E7E2BDD52FA00774A4B /* MakeConstraints in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -568,6 +574,7 @@
 		EEDCE17D2BE3B33C003C0A24 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				EE088B022BE65B5700885A35 /* HomeView.swift */,
 				EEDCE1822BE3B34C003C0A24 /* HomeViewModel.swift */,
 				EEDCE17F2BE3B34B003C0A24 /* HomeViewController.swift */,
 				EEDCE1812BE3B34B003C0A24 /* HomeCoordinator.swift */,
@@ -869,6 +876,8 @@
 				EEE8D53E2BDC36270037F668 /* SwiftUIModifiers */,
 				EED68E662BDD2EA800774A4B /* FoundationExtensions */,
 				EED68E7D2BDD52FA00774A4B /* MakeConstraints */,
+				EE088B002BE65A8900885A35 /* CompositionalLayoutableSection */,
+				EE088B052BE65BFF00885A35 /* CustomViews */,
 			);
 			productName = Shopfee;
 			productReference = EE2DDD632BDBCB7B00361413 /* Shopfee.app */;
@@ -947,6 +956,8 @@
 				EEE8D53D2BDC36270037F668 /* XCRemoteSwiftPackageReference "SwiftUIModifiers" */,
 				EED68E652BDD2EA800774A4B /* XCRemoteSwiftPackageReference "FoundationExtensions" */,
 				EED68E7C2BDD52FA00774A4B /* XCRemoteSwiftPackageReference "MakeConstraints" */,
+				EE088AFF2BE65A8900885A35 /* XCRemoteSwiftPackageReference "CompositionalLayoutableSection" */,
+				EE088B042BE65BFF00885A35 /* XCRemoteSwiftPackageReference "CustomViews" */,
 			);
 			productRefGroup = EE2DDD642BDBCB7B00361413 /* Products */;
 			projectDirPath = "";
@@ -1031,6 +1042,7 @@
 				EE6EF9FE2BDFF4CF00E5C2E3 /* LoginView.swift in Sources */,
 				EE6EF9FF2BDFF4CF00E5C2E3 /* LoginViewModel.swift in Sources */,
 				EEE8D5312BDC0D9E0037F668 /* SplashViewController.swift in Sources */,
+				EE088B032BE65B5700885A35 /* HomeView.swift in Sources */,
 				EEDCE1722BE3AAC4003C0A24 /* EnterPinViewModel.swift in Sources */,
 				EEE8D5342BDC14DD0037F668 /* ShopFeeText.swift in Sources */,
 				EEE8D4E12BDBD8750037F668 /* ShopfeeCoordinator.swift in Sources */,
@@ -1447,6 +1459,22 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		EE088AFF2BE65A8900885A35 /* XCRemoteSwiftPackageReference "CompositionalLayoutableSection" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ahmed-yamany/CompositionalLayoutableSection";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+		EE088B042BE65BFF00885A35 /* XCRemoteSwiftPackageReference "CustomViews" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ahmed-yamany/CustomViews";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 		EED68E652BDD2EA800774A4B /* XCRemoteSwiftPackageReference "FoundationExtensions" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/ahmed-yamany/FoundationExtensions";
@@ -1474,6 +1502,16 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		EE088B002BE65A8900885A35 /* CompositionalLayoutableSection */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EE088AFF2BE65A8900885A35 /* XCRemoteSwiftPackageReference "CompositionalLayoutableSection" */;
+			productName = CompositionalLayoutableSection;
+		};
+		EE088B052BE65BFF00885A35 /* CustomViews */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EE088B042BE65BFF00885A35 /* XCRemoteSwiftPackageReference "CustomViews" */;
+			productName = CustomViews;
+		};
 		EED68E662BDD2EA800774A4B /* FoundationExtensions */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = EED68E652BDD2EA800774A4B /* XCRemoteSwiftPackageReference "FoundationExtensions" */;

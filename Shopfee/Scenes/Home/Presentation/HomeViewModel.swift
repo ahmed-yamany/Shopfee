@@ -8,16 +8,20 @@
 import SwiftUI
 
 @MainActor
-protocol HomeViewModelProtocol: ObservableObject {}
+protocol HomeViewModelProtocol: ObservableObject {
+    func notificationButtonTapped()
+}
 
 @MainActor
 final class HomeViewModel: HomeViewModelProtocol {
-    
     private let coordinator: HomeCoordinatorProtocol
     private let useCase: HomeUseCaseProtocol
-    
+
     init(coordinator: HomeCoordinatorProtocol, useCase: HomeUseCaseProtocol) {
         self.coordinator = coordinator
         self.useCase = useCase
+    }
+
+    func notificationButtonTapped() {
     }
 }
