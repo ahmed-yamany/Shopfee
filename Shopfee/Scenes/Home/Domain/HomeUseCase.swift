@@ -7,10 +7,45 @@
 
 import Foundation
 
-protocol HomeUseCaseProtocol {
-    
+protocol HomeUseCaseProtocol: AnyActor {
+    func getOffers() async throws -> [OfferCellModel]
 }
 
-final class HomeUseCase: HomeUseCaseProtocol {
-    
+final actor HomeUseCase: HomeUseCaseProtocol {
+    func getOffers() throws -> [OfferCellModel] {
+        [
+            .init(
+                background1: .brand100,
+                background2: .neutralMediam,
+                title: "Special Offer",
+                discount: "Discount 10%",
+                discountFor: "All Beverage",
+                discountType: "*No minimum purchase"
+            ),
+            .init(
+                background1: .brand100,
+                background2: .neutralMediam,
+                title: "Special Offer",
+                discount: "Discount 10%",
+                discountFor: "All Beverage",
+                discountType: "*No minimum purchase"
+            ),
+            .init(
+                background1: .brand100,
+                background2: .neutralMediam,
+                title: "Special Offer",
+                discount: "Discount 10%",
+                discountFor: "All Beverage",
+                discountType: "*No minimum purchase"
+            ),
+            .init(
+                background1: .brand100,
+                background2: .neutralMediam,
+                title: "Special Offer",
+                discount: "Discount 10%",
+                discountFor: "All Beverage",
+                discountType: "*No minimum purchase"
+            )
+        ]
+    }
 }

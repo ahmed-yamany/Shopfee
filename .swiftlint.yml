@@ -47,7 +47,7 @@ force_unwrapping: error
 force_try:
   severity: error
 
-line_length: 130
+line_length: 140
 
 type_body_length:
   - 300 # warning

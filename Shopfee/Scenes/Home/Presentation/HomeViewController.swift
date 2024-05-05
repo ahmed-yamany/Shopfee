@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class HomeViewController<ViewModel: HomeViewModelProtocol>: UIViewController {
+final class HomeViewController: UIViewController {
     private var notificationBarButton: UIBarButtonItem {
         let image = UIImage(systemName: "bell")?.withTintColor(.brand).withRenderingMode(.alwaysOriginal)
 
@@ -16,8 +16,8 @@ final class HomeViewController<ViewModel: HomeViewModelProtocol>: UIViewControll
         }))
     }
 
-    let viewModel: ViewModel
-    init(viewModel: ViewModel) {
+    let viewModel: any HomeViewModelProtocol
+    init(viewModel: any HomeViewModelProtocol) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
     }

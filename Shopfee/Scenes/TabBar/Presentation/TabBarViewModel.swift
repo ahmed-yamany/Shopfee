@@ -26,7 +26,6 @@ final class TabBarViewModel: TabBarViewModelProtocol {
     init(coordinator: TabBarCoordinatorProtocol, useCase: TabBarUseCaseProtocol) {
         self.coordinator = coordinator
         self.useCase = useCase
-        viewDidLoad()
     }
     
     func viewDidLoad() {
@@ -39,14 +38,10 @@ private extension TabBarViewModel {
         Task {
             do {
                 let items = try await useCase.getTabBarItems()
-                updateItems(with: items)
+                self.items = items
             } catch {
                 print(error.localizedDescription)
             }
         }
-    }
-    
-    func updateItems(with items: [any TabBarItem]) {
-        self.items = items
     }
 }

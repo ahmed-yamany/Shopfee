@@ -12,6 +12,11 @@
 		EE088B032BE65B5700885A35 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE088B022BE65B5700885A35 /* HomeView.swift */; };
 		EE088B062BE65BFF00885A35 /* CustomViews in Frameworks */ = {isa = PBXBuildFile; productRef = EE088B052BE65BFF00885A35 /* CustomViews */; };
 		EE0D8C5A2BE23BAE00C4E47A /* OTPPopUpItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0D8C592BE23BAE00C4E47A /* OTPPopUpItem.swift */; };
+		EE19923B2BE79E1B00FE3523 /* OfferCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1992382BE79E1B00FE3523 /* OfferCollectionViewCell.swift */; };
+		EE19923C2BE79E1B00FE3523 /* OfferSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1992392BE79E1B00FE3523 /* OfferSection.swift */; };
+		EE19923F2BE79E5A00FE3523 /* OfferCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE19923E2BE79E5A00FE3523 /* OfferCellModel.swift */; };
+		EE1992412BE7B21000FE3523 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1992402BE7B21000FE3523 /* Logger.swift */; };
+		EE1992432BE7F08200FE3523 /* PaginationSupplementaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1992422BE7F08200FE3523 /* PaginationSupplementaryView.swift */; };
 		EE2701DB2BE533F500B16C74 /* TabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE2701D72BE533F500B16C74 /* TabBarCoordinator.swift */; };
 		EE2701DC2BE533F500B16C74 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE2701D82BE533F500B16C74 /* TabBarView.swift */; };
 		EE2701DD2BE533F500B16C74 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE2701D92BE533F500B16C74 /* TabBarViewController.swift */; };
@@ -134,6 +139,11 @@
 		EE088AFD2BE653A200885A35 /* TabBarItemFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarItemFactory.swift; sourceTree = "<group>"; };
 		EE088B022BE65B5700885A35 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		EE0D8C592BE23BAE00C4E47A /* OTPPopUpItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPPopUpItem.swift; sourceTree = "<group>"; };
+		EE1992382BE79E1B00FE3523 /* OfferCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferCollectionViewCell.swift; sourceTree = "<group>"; };
+		EE1992392BE79E1B00FE3523 /* OfferSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferSection.swift; sourceTree = "<group>"; };
+		EE19923E2BE79E5A00FE3523 /* OfferCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferCellModel.swift; sourceTree = "<group>"; };
+		EE1992402BE7B21000FE3523 /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		EE1992422BE7F08200FE3523 /* PaginationSupplementaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginationSupplementaryView.swift; sourceTree = "<group>"; };
 		EE2701D72BE533F500B16C74 /* TabBarCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarCoordinator.swift; sourceTree = "<group>"; };
 		EE2701D82BE533F500B16C74 /* TabBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
 		EE2701D92BE533F500B16C74 /* TabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
@@ -266,6 +276,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EE1992362BE79E0400FE3523 /* Sections */ = {
+			isa = PBXGroup;
+			children = (
+				EE1992372BE79E0F00FE3523 /* Offer */,
+			);
+			path = Sections;
+			sourceTree = "<group>";
+		};
+		EE1992372BE79E0F00FE3523 /* Offer */ = {
+			isa = PBXGroup;
+			children = (
+				EE19923E2BE79E5A00FE3523 /* OfferCellModel.swift */,
+				EE1992382BE79E1B00FE3523 /* OfferCollectionViewCell.swift */,
+				EE1992392BE79E1B00FE3523 /* OfferSection.swift */,
+			);
+			path = Offer;
+			sourceTree = "<group>";
+		};
+		EE1992502BE80E8700FE3523 /* SupplementaryViews */ = {
+			isa = PBXGroup;
+			children = (
+				EE1992422BE7F08200FE3523 /* PaginationSupplementaryView.swift */,
+			);
+			path = SupplementaryViews;
+			sourceTree = "<group>";
+		};
 		EE1F6F512BE37DDF006D1C23 /* Pin */ = {
 			isa = PBXGroup;
 			children = (
@@ -574,6 +610,7 @@
 		EEDCE17D2BE3B33C003C0A24 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				EE1992362BE79E0400FE3523 /* Sections */,
 				EE088B022BE65B5700885A35 /* HomeView.swift */,
 				EEDCE1822BE3B34C003C0A24 /* HomeViewModel.swift */,
 				EEDCE17F2BE3B34B003C0A24 /* HomeViewController.swift */,
@@ -659,6 +696,7 @@
 		EEE8D4D72BDBD4B60037F668 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				EE1992402BE7B21000FE3523 /* Logger.swift */,
 				EEE8D53A2BDC1A0F0037F668 /* Modifiers */,
 				EEE8D5282BDC030B0037F668 /* CustomViews */,
 				EEE8D4DC2BDBD83F0037F668 /* Coordinator */,
@@ -768,6 +806,7 @@
 				EEE8D5482BDC3A870037F668 /* PaginationView */,
 				EEE8D5322BDC14CF0037F668 /* Text */,
 				EEE8D5292BDC031B0037F668 /* Buttons */,
+				EE1992502BE80E8700FE3523 /* SupplementaryViews */,
 				EE80C4E32BE25B440001A599 /* GifView.swift */,
 				EEE8D5352BDC16370037F668 /* ShopfeeLogo.swift */,
 				EE7939082BE26E79004FF13C /* ShopfeeLoadingView.swift */,
@@ -1047,6 +1086,8 @@
 				EEE8D5342BDC14DD0037F668 /* ShopFeeText.swift in Sources */,
 				EEE8D4E12BDBD8750037F668 /* ShopfeeCoordinator.swift in Sources */,
 				EED29DFB2BE1714100548AFE /* PopUpViewController.swift in Sources */,
+				EE19923B2BE79E1B00FE3523 /* OfferCollectionViewCell.swift in Sources */,
+				EE19923C2BE79E1B00FE3523 /* OfferSection.swift in Sources */,
 				EE6B4F832BDE552300E173BC /* ShopfeeTextField.swift in Sources */,
 				EEE62DA92BE3868E00937ECA /* CreatePinViewModel.swift in Sources */,
 				EE2701DB2BE533F500B16C74 /* TabBarCoordinator.swift in Sources */,
@@ -1054,6 +1095,7 @@
 				EE2701DE2BE533F500B16C74 /* TabBarViewModel.swift in Sources */,
 				EED68E6D2BDD40BB00774A4B /* RegisterView.swift in Sources */,
 				EED68E6E2BDD40BB00774A4B /* RegisterViewModel.swift in Sources */,
+				EE19923F2BE79E5A00FE3523 /* OfferCellModel.swift in Sources */,
 				EEE8D5422BDC37090037F668 /* CGFloat+Constants.swift in Sources */,
 				EEE62DCA2BE389D900937ECA /* ProcessAccountViewController.swift in Sources */,
 				EEE8D5242BDBFCAA0037F668 /* OnboardingCoordinator.swift in Sources */,
@@ -1088,6 +1130,7 @@
 				EEE8D54A2BDC3A880037F668 /* CirclePaginationStyle.swift in Sources */,
 				EEDCE1832BE3B34C003C0A24 /* HomeViewController.swift in Sources */,
 				EEDCE1742BE3AAE0003C0A24 /* EnterPinCoordinator.swift in Sources */,
+				EE1992432BE7F08200FE3523 /* PaginationSupplementaryView.swift in Sources */,
 				EE2701DC2BE533F500B16C74 /* TabBarView.swift in Sources */,
 				EE6EFA102BE008B600E5C2E3 /* OTPCoordinator.swift in Sources */,
 				EEDCE1852BE3B34C003C0A24 /* HomeCoordinator.swift in Sources */,
@@ -1101,6 +1144,7 @@
 				EEE8D5392BDC16940037F668 /* SplashCoordinator.swift in Sources */,
 				EEE62DAA2BE3868E00937ECA /* CreatePinCoordinator.swift in Sources */,
 				EEB7B54D2BE1173D00AF684F /* OTPTextField.swift in Sources */,
+				EE1992412BE7B21000FE3523 /* Logger.swift in Sources */,
 				EED68E722BDD40CD00774A4B /* RegisterCoordinator.swift in Sources */,
 				EE088AFE2BE653A200885A35 /* TabBarItemFactory.swift in Sources */,
 				EE7939112BE27431004FF13C /* SendOTPViewController.swift in Sources */,
