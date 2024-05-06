@@ -54,6 +54,9 @@
 		EE80C4E22BE245040001A599 /* PopUpTransitioningDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE80C4E12BE245040001A599 /* PopUpTransitioningDelegate.swift */; };
 		EE80C4E42BE25B440001A599 /* GifView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE80C4E32BE25B440001A599 /* GifView.swift */; };
 		EE9BFFB02BE3F05F00501777 /* ShopfeeCoordinatorCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9BFFAF2BE3F05F00501777 /* ShopfeeCoordinatorCommand.swift */; };
+		EE9D3CA22BE8D69E0098AAFF /* ProductCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9D3C9E2BE8D69E0098AAFF /* ProductCollectionViewCell.swift */; };
+		EE9D3CA32BE8D69E0098AAFF /* ProductCollectionViewSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9D3C9F2BE8D69E0098AAFF /* ProductCollectionViewSection.swift */; };
+		EE9D3CA52BE8D6FD0098AAFF /* ProductCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9D3CA42BE8D6FD0098AAFF /* ProductCellModel.swift */; };
 		EEB7B54D2BE1173D00AF684F /* OTPTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB7B54C2BE1173D00AF684F /* OTPTextField.swift */; };
 		EED29DF62BE1615B00548AFE /* ShopfeeOTPTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED29DF52BE1615A00548AFE /* ShopfeeOTPTextField.swift */; };
 		EED29DF92BE16DBA00548AFE /* PopUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED29DF82BE16DBA00548AFE /* PopUpView.swift */; };
@@ -185,6 +188,9 @@
 		EE80C4E12BE245040001A599 /* PopUpTransitioningDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpTransitioningDelegate.swift; sourceTree = "<group>"; };
 		EE80C4E32BE25B440001A599 /* GifView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifView.swift; sourceTree = "<group>"; };
 		EE9BFFAF2BE3F05F00501777 /* ShopfeeCoordinatorCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopfeeCoordinatorCommand.swift; sourceTree = "<group>"; };
+		EE9D3C9E2BE8D69E0098AAFF /* ProductCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCollectionViewCell.swift; sourceTree = "<group>"; };
+		EE9D3C9F2BE8D69E0098AAFF /* ProductCollectionViewSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCollectionViewSection.swift; sourceTree = "<group>"; };
+		EE9D3CA42BE8D6FD0098AAFF /* ProductCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCellModel.swift; sourceTree = "<group>"; };
 		EEB7B54C2BE1173D00AF684F /* OTPTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPTextField.swift; sourceTree = "<group>"; };
 		EED29DF52BE1615A00548AFE /* ShopfeeOTPTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopfeeOTPTextField.swift; sourceTree = "<group>"; };
 		EED29DF82BE16DBA00548AFE /* PopUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpView.swift; sourceTree = "<group>"; };
@@ -279,6 +285,7 @@
 		EE1992362BE79E0400FE3523 /* Sections */ = {
 			isa = PBXGroup;
 			children = (
+				EE9D3C9D2BE8D68D0098AAFF /* Product */,
 				EE1992372BE79E0F00FE3523 /* Offer */,
 			);
 			path = Sections;
@@ -514,6 +521,16 @@
 				EE7939142BE2753C004FF13C /* SendOTPUseCase.swift */,
 			);
 			path = Domain;
+			sourceTree = "<group>";
+		};
+		EE9D3C9D2BE8D68D0098AAFF /* Product */ = {
+			isa = PBXGroup;
+			children = (
+				EE9D3C9E2BE8D69E0098AAFF /* ProductCollectionViewCell.swift */,
+				EE9D3C9F2BE8D69E0098AAFF /* ProductCollectionViewSection.swift */,
+				EE9D3CA42BE8D6FD0098AAFF /* ProductCellModel.swift */,
+			);
+			path = Product;
 			sourceTree = "<group>";
 		};
 		EED29DF72BE16D7900548AFE /* PopUp */ = {
@@ -1138,9 +1155,12 @@
 				EE6EFA0B2BE0089B00E5C2E3 /* OTPView.swift in Sources */,
 				EE6EFA0C2BE0089B00E5C2E3 /* OTPViewModel.swift in Sources */,
 				EEE8D5222BDBFBEE0037F668 /* OnboardingViewController.swift in Sources */,
+				EE9D3CA22BE8D69E0098AAFF /* ProductCollectionViewCell.swift in Sources */,
+				EE9D3CA32BE8D69E0098AAFF /* ProductCollectionViewSection.swift in Sources */,
 				EEE8D5362BDC16370037F668 /* ShopfeeLogo.swift in Sources */,
 				EEE8D5262BDBFDF20037F668 /* OnboardingUseCase.swift in Sources */,
 				EEE8D5162BDBF0D70037F668 /* Font+Style.swift in Sources */,
+				EE9D3CA52BE8D6FD0098AAFF /* ProductCellModel.swift in Sources */,
 				EEE8D5392BDC16940037F668 /* SplashCoordinator.swift in Sources */,
 				EEE62DAA2BE3868E00937ECA /* CreatePinCoordinator.swift in Sources */,
 				EEB7B54D2BE1173D00AF684F /* OTPTextField.swift in Sources */,

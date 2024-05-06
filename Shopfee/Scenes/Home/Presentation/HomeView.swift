@@ -36,6 +36,7 @@ final class HomeView: UICollectionView, CompositionalLayoutProvider {
 
 private extension HomeView {
     func configureLayout() {
+        backgroundColor = .neutralLight
         delegate = compositionalDelegate
         dataSource = compositionalDataSource
         bindViewModel()

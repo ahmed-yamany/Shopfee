@@ -1,17 +1,15 @@
 {
   "images" : [
     {
-      "filename" : "ilustrasi 2.png",
+      "filename" : "unsplash_L-sm1B4L1Ns.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "ilustrasi 2@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "ilustrasi 2@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

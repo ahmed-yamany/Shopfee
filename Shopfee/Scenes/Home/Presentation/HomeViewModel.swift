@@ -25,21 +25,22 @@ final class HomeViewModel: HomeViewModelProtocol {
     private let coordinator: HomeCoordinatorProtocol
     private let useCase: HomeUseCaseProtocol
     private let offersSection = OfferCollectionViewSection()
+    private let productsSection = ProductCollectionViewSection()
     
     init(coordinator: HomeCoordinatorProtocol, useCase: HomeUseCaseProtocol) {
         self.coordinator = coordinator
         self.useCase = useCase
-        compositionalLayoutSections = [offersSection]
+        compositionalLayoutSections = [offersSection, productsSection]
         onInit()
     }
 
-    func notificationButtonTapped() {
-    }
+    func notificationButtonTapped() {}
 }
 
 private extension HomeViewModel {
     func onInit() {
         getOffers()
+        getProducts()
     }
     
     func getOffers() {
@@ -48,6 +49,18 @@ private extension HomeViewModel {
                 try await Task.sleep(for: .seconds(2))
                 let offers = try await useCase.getOffers()
                 offersSection.items = offers
+            } catch {
+                print(error.localizedDescription)
+            }
+        }
+    }
+    
+    func getProducts() {
+        Task {
+            do {
+                try await Task.sleep(for: .seconds(2))
+                let products = try await useCase.getProducts()
+                productsSection.items = products
             } catch {
                 print(error.localizedDescription)
             }

@@ -100,7 +100,7 @@ extension OfferCollectionViewSection: CompositionalLayoutableSectionLayout {
     
     var visibleItemsInvalidationHandler: NSCollectionLayoutSectionVisibleItemsInvalidationHandler {
         { [weak self] items, _, _ in
-            guard let self = self else{
+            guard let self = self else {
                 Logger.log("Self is nil", category: \.default, level: .info)
                 return
             }
