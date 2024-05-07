@@ -9,6 +9,7 @@ import Foundation
 import Domain
 
 protocol HomeCoordinatorProtocol: Coordinator {
+    func navigateToNotifications()
 }
 
 final class HomeCoordinator: HomeCoordinatorProtocol {
@@ -24,5 +25,9 @@ final class HomeCoordinator: HomeCoordinatorProtocol {
         let viewModel = HomeViewModel(coordinator: self, useCase: useCase)
         let controller = HomeViewController(viewModel: viewModel)
         router.setViewController(controller)
+    }
+    
+    func navigateToNotifications() {
+        
     }
 }

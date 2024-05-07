@@ -32,6 +32,12 @@
 		EE2DDD8A2BDBCB7E00361413 /* ShopfeeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE2DDD892BDBCB7E00361413 /* ShopfeeUITestsLaunchTests.swift */; };
 		EE2DDD992BDBCD7700361413 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = EE2DDD972BDBCD7700361413 /* .swiftlint.yml */; };
 		EE2DDD9F2BDBCE7600361413 /* Shopfee.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = EE2DDD9E2BDBCE7600361413 /* Shopfee.xcstrings */; };
+		EE660E282BEA6C6100F89868 /* ProductSectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE660E272BEA6C6100F89868 /* ProductSectionViewModel.swift */; };
+		EE660E2E2BEA7C0100F89868 /* ProductSectionUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE660E2D2BEA7C0100F89868 /* ProductSectionUseCase.swift */; };
+		EE660E302BEA9A1300F89868 /* ProductSectionFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE660E2F2BEA9A1300F89868 /* ProductSectionFactory.swift */; };
+		EE660E332BEAA1CB00F89868 /* OfferSectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE660E322BEAA1CB00F89868 /* OfferSectionViewModel.swift */; };
+		EE660E372BEAA20700F89868 /* OfferSectionFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE660E362BEAA20700F89868 /* OfferSectionFactory.swift */; };
+		EE660E392BEAA36300F89868 /* OfferSectionUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE660E382BEAA36300F89868 /* OfferSectionUseCase.swift */; };
 		EE6B4F832BDE552300E173BC /* ShopfeeTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE6B4F822BDE552300E173BC /* ShopfeeTextField.swift */; };
 		EE6EF9FE2BDFF4CF00E5C2E3 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE6EF9FC2BDFF4CF00E5C2E3 /* LoginView.swift */; };
 		EE6EF9FF2BDFF4CF00E5C2E3 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE6EF9FD2BDFF4CF00E5C2E3 /* LoginViewModel.swift */; };
@@ -167,6 +173,12 @@
 		EE2DDD892BDBCB7E00361413 /* ShopfeeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopfeeUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		EE2DDD972BDBCD7700361413 /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		EE2DDD9E2BDBCE7600361413 /* Shopfee.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Shopfee.xcstrings; sourceTree = "<group>"; };
+		EE660E272BEA6C6100F89868 /* ProductSectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductSectionViewModel.swift; sourceTree = "<group>"; };
+		EE660E2D2BEA7C0100F89868 /* ProductSectionUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductSectionUseCase.swift; sourceTree = "<group>"; };
+		EE660E2F2BEA9A1300F89868 /* ProductSectionFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductSectionFactory.swift; sourceTree = "<group>"; };
+		EE660E322BEAA1CB00F89868 /* OfferSectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferSectionViewModel.swift; sourceTree = "<group>"; };
+		EE660E362BEAA20700F89868 /* OfferSectionFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferSectionFactory.swift; sourceTree = "<group>"; };
+		EE660E382BEAA36300F89868 /* OfferSectionUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferSectionUseCase.swift; sourceTree = "<group>"; };
 		EE6B4F822BDE552300E173BC /* ShopfeeTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopfeeTextField.swift; sourceTree = "<group>"; };
 		EE6EF9FC2BDFF4CF00E5C2E3 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		EE6EF9FD2BDFF4CF00E5C2E3 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
@@ -297,9 +309,8 @@
 		EE1992372BE79E0F00FE3523 /* Offer */ = {
 			isa = PBXGroup;
 			children = (
-				EE19923E2BE79E5A00FE3523 /* OfferCellModel.swift */,
-				EE1992382BE79E1B00FE3523 /* OfferCollectionViewCell.swift */,
-				EE1992392BE79E1B00FE3523 /* OfferCollectionViewSection.swift */,
+				EE660E352BEAA1E200F89868 /* Domain */,
+				EE660E342BEAA1DB00F89868 /* Presentation */,
 			);
 			path = Offer;
 			sourceTree = "<group>";
@@ -433,6 +444,46 @@
 			path = TabBar;
 			sourceTree = "<group>";
 		};
+		EE660E292BEA7B4200F89868 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				EE660E2D2BEA7C0100F89868 /* ProductSectionUseCase.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		EE660E2A2BEA7B4500F89868 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				EE9D3CA42BE8D6FD0098AAFF /* ProductCellModel.swift */,
+				EE9D3C9E2BE8D69E0098AAFF /* ProductCollectionViewCell.swift */,
+				EE9D3C9F2BE8D69E0098AAFF /* ProductCollectionViewSection.swift */,
+				EE660E272BEA6C6100F89868 /* ProductSectionViewModel.swift */,
+				EE660E2F2BEA9A1300F89868 /* ProductSectionFactory.swift */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		EE660E342BEAA1DB00F89868 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				EE19923E2BE79E5A00FE3523 /* OfferCellModel.swift */,
+				EE1992382BE79E1B00FE3523 /* OfferCollectionViewCell.swift */,
+				EE1992392BE79E1B00FE3523 /* OfferCollectionViewSection.swift */,
+				EE660E322BEAA1CB00F89868 /* OfferSectionViewModel.swift */,
+				EE660E362BEAA20700F89868 /* OfferSectionFactory.swift */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		EE660E352BEAA1E200F89868 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				EE660E382BEAA36300F89868 /* OfferSectionUseCase.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
 		EE6B4F812BDE551300E173BC /* TextField */ = {
 			isa = PBXGroup;
 			children = (
@@ -538,9 +589,8 @@
 		EE9D3C9D2BE8D68D0098AAFF /* Product */ = {
 			isa = PBXGroup;
 			children = (
-				EE9D3CA42BE8D6FD0098AAFF /* ProductCellModel.swift */,
-				EE9D3C9E2BE8D69E0098AAFF /* ProductCollectionViewCell.swift */,
-				EE9D3C9F2BE8D69E0098AAFF /* ProductCollectionViewSection.swift */,
+				EE660E292BEA7B4200F89868 /* Domain */,
+				EE660E2A2BEA7B4500F89868 /* Presentation */,
 			);
 			path = Product;
 			sourceTree = "<group>";
@@ -1102,6 +1152,7 @@
 				EEE8D54C2BDC3A880037F668 /* PaginationView.swift in Sources */,
 				EEE8D4E52BDBD87D0037F668 /* Router.swift in Sources */,
 				EEE8D4E82BDBD9620037F668 /* Action.swift in Sources */,
+				EE660E372BEAA20700F89868 /* OfferSectionFactory.swift in Sources */,
 				EE7939092BE26E79004FF13C /* ShopfeeLoadingView.swift in Sources */,
 				EEE8D53C2BDC1A2A0037F668 /* View+PrimaryStyle.swift in Sources */,
 				EE7939152BE2753C004FF13C /* SendOTPUseCase.swift in Sources */,
@@ -1110,6 +1161,7 @@
 				EEE8D52F2BDC0D900037F668 /* SplashView.swift in Sources */,
 				EE6EF9FE2BDFF4CF00E5C2E3 /* LoginView.swift in Sources */,
 				EE6EF9FF2BDFF4CF00E5C2E3 /* LoginViewModel.swift in Sources */,
+				EE660E332BEAA1CB00F89868 /* OfferSectionViewModel.swift in Sources */,
 				EEE8D5312BDC0D9E0037F668 /* SplashViewController.swift in Sources */,
 				EE088B032BE65B5700885A35 /* HomeView.swift in Sources */,
 				EEDCE1722BE3AAC4003C0A24 /* EnterPinViewModel.swift in Sources */,
@@ -1117,14 +1169,17 @@
 				EEE8D4E12BDBD8750037F668 /* ShopfeeCoordinator.swift in Sources */,
 				EED29DFB2BE1714100548AFE /* PopUpViewController.swift in Sources */,
 				EE19923B2BE79E1B00FE3523 /* OfferCollectionViewCell.swift in Sources */,
+				EE660E2E2BEA7C0100F89868 /* ProductSectionUseCase.swift in Sources */,
 				EE19923C2BE79E1B00FE3523 /* OfferCollectionViewSection.swift in Sources */,
 				EE6B4F832BDE552300E173BC /* ShopfeeTextField.swift in Sources */,
 				EEE62DA92BE3868E00937ECA /* CreatePinViewModel.swift in Sources */,
+				EE660E392BEAA36300F89868 /* OfferSectionUseCase.swift in Sources */,
 				EE2701DB2BE533F500B16C74 /* TabBarCoordinator.swift in Sources */,
 				EED29DF62BE1615B00548AFE /* ShopfeeOTPTextField.swift in Sources */,
 				EE2701DE2BE533F500B16C74 /* TabBarViewModel.swift in Sources */,
 				EED68E6D2BDD40BB00774A4B /* RegisterView.swift in Sources */,
 				EED68E6E2BDD40BB00774A4B /* RegisterViewModel.swift in Sources */,
+				EE660E282BEA6C6100F89868 /* ProductSectionViewModel.swift in Sources */,
 				EE19923F2BE79E5A00FE3523 /* OfferCellModel.swift in Sources */,
 				EEE8D5422BDC37090037F668 /* CGFloat+Constants.swift in Sources */,
 				EEE62DCA2BE389D900937ECA /* ProcessAccountViewController.swift in Sources */,
@@ -1163,6 +1218,7 @@
 				EE1992432BE7F08200FE3523 /* PaginationSupplementaryView.swift in Sources */,
 				EE2701DC2BE533F500B16C74 /* TabBarView.swift in Sources */,
 				EE6EFA102BE008B600E5C2E3 /* OTPCoordinator.swift in Sources */,
+				EE660E302BEA9A1300F89868 /* ProductSectionFactory.swift in Sources */,
 				EEDCE1852BE3B34C003C0A24 /* HomeCoordinator.swift in Sources */,
 				EE2701E02BE533FA00B16C74 /* TabBarUseCase.swift in Sources */,
 				EE6EFA0B2BE0089B00E5C2E3 /* OTPView.swift in Sources */,

@@ -9,30 +9,23 @@ import UIKit
 import FoundationExtensions
 import CompositionalLayoutableSection
 
-protocol ProductCollectionViewSectionDelegate: AnyObject {
-    func productCollectionViewSectionDelegate(_ section: ProductCollectionViewSection, prefetchProducts products: [ProductCellModel])
-}
-
 // MARK: - A custom section for displaying Product in a collection view.
 class ProductCollectionViewSection: CompositionalLayoutableSection {
-    typealias ItemsType = ProductCellModel
     typealias CellType = ProductCollectionViewCell
     typealias TopSupplementaryViewType = PaginationSupplementaryView
     
-    @MainActor var items: [ItemsType] = [] {
-        didSet {
-            reloadData()
-        }
-    }
-    
-    weak var sectionDelegate: (any ProductCollectionViewSectionDelegate)?
-    
-    override init() {
+    let viewModel: any ProductSectionViewModelProtocol
+    init(viewModel: any ProductSectionViewModelProtocol) {
+        self.viewModel = viewModel
         super.init()
         delegate = self
         dataSource = self
         sectionLayout = self
         prefetchDataSource = self
+        
+        viewModel.reloadData = { [weak self] in
+            self?.reloadData()
+        }
     }
 }
 
@@ -40,14 +33,14 @@ class ProductCollectionViewSection: CompositionalLayoutableSection {
 extension ProductCollectionViewSection: UICompositionalLayoutableSectionDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return items.count
+        return viewModel.itemsCount()
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(CellType.self, for: indexPath)
-        if let product = items[safe: indexPath.item] {
+        if let product = viewModel.item(at: indexPath) {
             cell.configure(with: product)
-            sectionDelegate?.productCollectionViewSectionDelegate(self, prefetchProducts: [product])
+            viewModel.prefetchItems(at: [indexPath])
         } else {
             Logger.log("Failed to get product at \(indexPath.description)", category: \.default, level: .error)
         }
@@ -58,12 +51,7 @@ extension ProductCollectionViewSection: UICompositionalLayoutableSectionDataSour
 // MARK: - Product CollectionView Section Data Source Prefetching
 extension ProductCollectionViewSection: UICompositionalLayoutableSectionDataSourcePrefetching {
     func collectionView(_ collectionView: UICollectionView, prefetchItemsAt indexPaths: [IndexPath]) {
-        guard let sectionDelegate else {
-            Logger.log("sectionDelegate is nil", category: \.default, level: .error)
-            return
-        }
-        let products = indexPaths.map { self.items[$0.item] }
-        sectionDelegate.productCollectionViewSectionDelegate(self, prefetchProducts: products)
+        viewModel.prefetchItems(at: indexPaths)
     }
 }
 

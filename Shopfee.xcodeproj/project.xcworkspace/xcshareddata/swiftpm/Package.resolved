@@ -1,5 +1,5 @@
 {
-  "originHash" : "bbe6dcdde94a45a991698c5b96e3a7081a1821847bb55c3f30ea60063ae5b4d1",
+  "originHash" : "e88141723c646d2142f69349ff998c0662bb13151b1688c16c6b0232bed0b16d",
   "pins" : [
     {
       "identity" : "compositionallayoutablesection",
@@ -7,7 +7,7 @@
       "location" : "https://github.com/ahmed-yamany/CompositionalLayoutableSection",
       "state" : {
         "branch" : "main",
-        "revision" : "236d777ee461b7c301f7059fc79358f7ef5e88c5"
+        "revision" : "479e3171a12598b709e6c9f11148a525e3ad1c75"
       }
     },
     {

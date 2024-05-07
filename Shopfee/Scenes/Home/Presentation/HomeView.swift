@@ -18,6 +18,7 @@ final class HomeView: UICollectionView, CompositionalLayoutProvider {
     lazy var compositionalDelegate = CompositionalLayoutDelegate(provider: self)
     lazy var compositionalDataSource = CompositionalLayoutDataSource(provider: self)
     lazy var compositionalDataSourcePrefetching = CompositionalLayoutDataSourcePrefetching(provider: self)
+    let compositionalLayoutConfigurations = UICollectionViewCompositionalLayoutConfiguration()
     
     let viewModel: any HomeViewModelProtocol
     init(viewModel: any HomeViewModelProtocol) {
@@ -52,7 +53,7 @@ private extension HomeView {
         viewModel.compositionalLayoutSectionsPublisher.sink {[weak self] sections in
             guard let self = self else { return }
             compositionalLayoutSections = sections
-            updateCompositionalLayout(for: self)
+            updateCompositionalLayout(for: self, configurations: compositionalLayoutConfigurations)
         }
         .store(in: &cancellable)
     }

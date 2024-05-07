@@ -18,17 +18,16 @@ final class OfferCollectionViewSection: CompositionalLayoutableSection {
     
     var supplementaryView: SupplementaryViewType?
     
-    @MainActor var items: [ItemsType] = [] {
-        didSet {
-            self.reloadData()
-        }
-    }
-    
-    override init() {
+    let viewModel: any OfferSectionViewModelProtocol
+    init(viewModel: any OfferSectionViewModelProtocol) {
+        self.viewModel = viewModel
         super.init()
         delegate = self
         dataSource = self
         sectionLayout = self
+        viewModel.reloadData = { [weak self] in
+            self?.reloadData()
+        }
     }
 }
 
@@ -37,12 +36,12 @@ final class OfferCollectionViewSection: CompositionalLayoutableSection {
 extension OfferCollectionViewSection: UICompositionalLayoutableSectionDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return items.count
+        return viewModel.itemsCount()
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(CellType.self, for: indexPath)
-        if let offer = items[safe: indexPath.item] {
+        if let offer = viewModel.item(at: indexPath) {
             cell.configure(with: offer)
         } else {
             Logger.log("Failed to get offer at indexPath \(indexPath.description)", category: \.default, level: .fault)
@@ -57,7 +56,7 @@ extension OfferCollectionViewSection: UICompositionalLayoutableSectionDataSource
                                                                                 ofKind: SupplementaryViewType.identifier,
                                                                                 for: indexPath)
         self.supplementaryView = supplementaryView
-        supplementaryView.setCount(items.count)
+        supplementaryView.setCount(viewModel.itemsCount())
         return supplementaryView
     }
 }
