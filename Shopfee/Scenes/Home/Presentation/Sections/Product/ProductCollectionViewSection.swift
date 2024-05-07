@@ -9,28 +9,36 @@ import UIKit
 import FoundationExtensions
 import CompositionalLayoutableSection
 
+protocol ProductCollectionViewSectionDelegate: AnyObject {
+    func productCollectionViewSectionDelegate(_ section: ProductCollectionViewSection, prefetchProducts products: [ProductCellModel])
+}
+
 // MARK: - A custom section for displaying Product in a collection view.
 class ProductCollectionViewSection: CompositionalLayoutableSection {
     typealias ItemsType = ProductCellModel
     typealias CellType = ProductCollectionViewCell
-    // typealias TopSupplementaryViewType = UICollectionReusableView
-    // typealias DecorationViewType = UICollectionReusableView
+    typealias TopSupplementaryViewType = PaginationSupplementaryView
     
-    var items: [ItemsType] = [] {
+    @MainActor var items: [ItemsType] = [] {
         didSet {
             reloadData()
         }
     }
+    
+    weak var sectionDelegate: (any ProductCollectionViewSectionDelegate)?
     
     override init() {
         super.init()
         delegate = self
         dataSource = self
         sectionLayout = self
+        prefetchDataSource = self
     }
 }
+
 // MARK: - Product CollectionView Section Data Source
-extension ProductCollectionViewSection: CompositionalLayoutableSectionDataSource {
+extension ProductCollectionViewSection: UICompositionalLayoutableSectionDataSource {
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return items.count
     }
@@ -39,27 +47,28 @@ extension ProductCollectionViewSection: CompositionalLayoutableSectionDataSource
         let cell = collectionView.dequeueReusableCell(CellType.self, for: indexPath)
         if let product = items[safe: indexPath.item] {
             cell.configure(with: product)
+            sectionDelegate?.productCollectionViewSectionDelegate(self, prefetchProducts: [product])
         } else {
             Logger.log("Failed to get product at \(indexPath.description)", category: \.default, level: .error)
         }
         return cell
     }
-    
-    /*
-     // view For Supplementary Element Of Kind
-     func collectionView(_ collectionView: UICollectionView,
-     viewForSupplementaryElementOfKind kind: String,
-     at indexPath: IndexPath) -> UICollectionReusableView {
-     let view = collectionView.dequeueReusableSupplementaryView(TopSupplementaryViewType.self,
-     ofKind: TopSupplementaryViewType.identifier,
-     for: indexPath)
-     <#code#>
-     return view
-     }
-     */
 }
+
+// MARK: - Product CollectionView Section Data Source Prefetching
+extension ProductCollectionViewSection: UICompositionalLayoutableSectionDataSourcePrefetching {
+    func collectionView(_ collectionView: UICollectionView, prefetchItemsAt indexPaths: [IndexPath]) {
+        guard let sectionDelegate else {
+            Logger.log("sectionDelegate is nil", category: \.default, level: .error)
+            return
+        }
+        let products = indexPaths.map { self.items[$0.item] }
+        sectionDelegate.productCollectionViewSectionDelegate(self, prefetchProducts: products)
+    }
+}
+
 // MARK: - Product CollectionView Section Layout
-extension ProductCollectionViewSection: CompositionalLayoutableSectionLayout {
+extension ProductCollectionViewSection: UICompositionalLayoutableSectionLayout {
     
     var configuration: UICollectionLayoutListConfiguration {
         var configuration = UICollectionLayoutListConfiguration(appearance: .sidebarPlain)
@@ -70,52 +79,19 @@ extension ProductCollectionViewSection: CompositionalLayoutableSectionLayout {
     
     func sectionLayout(at index: Int, layoutEnvironment: NSCollectionLayoutEnvironment) -> NSCollectionLayoutSection {
         let section = NSCollectionLayoutSection.list(using: configuration, layoutEnvironment: layoutEnvironment)
-        
-        // section.boundarySupplementaryItems = [topSupplementaryItem]
-        // let decorationItem = NSCollectionLayoutDecorationItem.background(elementKind: DecorationViewType.identifier)
-        // section.decorationItems = [decorationItem]
+        section.boundarySupplementaryItems = []
         return section
     }
 }
+
 // MARK: - Product CollectionView Section Delegate
-extension ProductCollectionViewSection: CompositionalLayoutableSectionDelegate {
+extension ProductCollectionViewSection: UICompositionalLayoutableSectionDelegate {
     
     func registerCell(in collectionView: UICollectionView) {
         collectionView.register(CellType.self)
     }
     
-    /*
-     /**
-      Registers the supplementary view types
-      - Note: you can register here more supplementary views for the section by changing 'supplementaryViewOfKind'
-      */
-     func registerSupplementaryView(_ collectionView: UICollectionView) {
-     collectionView.register(TopSupplementaryViewType.self, supplementaryViewOfKind: TopSupplementaryViewType.identifier)
-     }
-     */
-    
-    /*
-     /// Registers the Decoration view for the secition
-     func registerDecorationView(_ layout: UICollectionViewCompositionalLayout) {
-     layout.register(DecorationViewType.self, forDecorationViewOfKind: DecorationViewType.identifier)
-     }
-     */
-    
-    /*
-     ///
-     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-     }
-     */
-}
+    func registerSupplementaryView(in collectionView: UICollectionView) {
 
-// MARK: - Private Handelers
-extension ProductCollectionViewSection {
-    /*
-     private var topSupplementaryItem: NSCollectionLayoutBoundarySupplementaryItem {
-     let supplementarySize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .absolute(44))
-     return  NSCollectionLayoutBoundarySupplementaryItem(layoutSize: supplementarySize,
-     elementKind: TopSupplementaryViewType.identifier,
-     alignment: .top)
-     }
-     */
+    }
 }

@@ -17,6 +17,7 @@ final class HomeView: UICollectionView, CompositionalLayoutProvider {
     
     lazy var compositionalDelegate = CompositionalLayoutDelegate(provider: self)
     lazy var compositionalDataSource = CompositionalLayoutDataSource(provider: self)
+    lazy var compositionalDataSourcePrefetching = CompositionalLayoutDataSourcePrefetching(provider: self)
     
     let viewModel: any HomeViewModelProtocol
     init(viewModel: any HomeViewModelProtocol) {
@@ -39,6 +40,7 @@ private extension HomeView {
         backgroundColor = .neutralLight
         delegate = compositionalDelegate
         dataSource = compositionalDataSource
+        prefetchDataSource = compositionalDataSourcePrefetching
         bindViewModel()
     }
     

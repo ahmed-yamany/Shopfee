@@ -37,30 +37,38 @@ final class HomeViewModel: HomeViewModelProtocol {
     func notificationButtonTapped() {}
 }
 
+// MARK: - Private Methods
 private extension HomeViewModel {
     func onInit() {
-        getOffers()
-        getProducts()
+        productsSection.sectionDelegate = self
+        fetchData()
     }
     
-    func getOffers() {
+    func fetchData() {
         Task {
             do {
                 try await Task.sleep(for: .seconds(2))
                 let offers = try await useCase.getOffers()
+                let products = try await useCase.getProducts()
                 offersSection.items = offers
+                productsSection.items = products
             } catch {
                 print(error.localizedDescription)
             }
         }
     }
-    
-    func getProducts() {
+
+}
+
+// MARK: - ProductCollectionViewSectionDelegate
+extension HomeViewModel: ProductCollectionViewSectionDelegate {
+    func productCollectionViewSectionDelegate(_ section: ProductCollectionViewSection, prefetchProducts products: [ProductCellModel]) {
         Task {
             do {
-                try await Task.sleep(for: .seconds(2))
-                let products = try await useCase.getProducts()
-                productsSection.items = products
+                for product in products {
+                    let image = try await useCase.fetchImage(from: product.imageUrl)
+                    product.updateImage(image)
+                }
             } catch {
                 print(error.localizedDescription)
             }

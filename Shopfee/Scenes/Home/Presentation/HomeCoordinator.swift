@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Domain
 
 protocol HomeCoordinatorProtocol: Coordinator {
 }
@@ -18,7 +19,8 @@ final class HomeCoordinator: HomeCoordinatorProtocol {
     }
     
     func start() {
-        let useCase = HomeUseCase()
+        let imageUseCase = ImageUseCase()
+        let useCase = HomeUseCase(imageUseCase: imageUseCase)
         let viewModel = HomeViewModel(coordinator: self, useCase: useCase)
         let controller = HomeViewController(viewModel: viewModel)
         router.setViewController(controller)

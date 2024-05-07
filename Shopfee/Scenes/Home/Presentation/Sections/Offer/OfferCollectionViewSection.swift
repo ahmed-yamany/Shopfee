@@ -14,9 +14,9 @@ final class OfferCollectionViewSection: CompositionalLayoutableSection {
     typealias ItemsType = OfferCellModel
     typealias CellType = OfferCollectionViewCell
     typealias DecorationViewType = PaginationSupplementaryView
-    typealias TopSupplementaryViewType = PaginationSupplementaryView
+    typealias SupplementaryViewType = PaginationSupplementaryView
     
-    var supplementaryView: TopSupplementaryViewType?
+    var supplementaryView: SupplementaryViewType?
     
     @MainActor var items: [ItemsType] = [] {
         didSet {
@@ -34,7 +34,8 @@ final class OfferCollectionViewSection: CompositionalLayoutableSection {
 
 // MARK: - Offer CollectionView Section Data Source
 
-extension OfferCollectionViewSection: CompositionalLayoutableSectionDataSource {
+extension OfferCollectionViewSection: UICompositionalLayoutableSectionDataSource {
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return items.count
     }
@@ -49,12 +50,11 @@ extension OfferCollectionViewSection: CompositionalLayoutableSectionDataSource {
         return cell
     }
     
-    // view For Supplementary Element Of Kind
     func collectionView(_ collectionView: UICollectionView,
                         viewForSupplementaryElementOfKind kind: String,
                         at indexPath: IndexPath) -> UICollectionReusableView {
-        let supplementaryView = collectionView.dequeueReusableSupplementaryView(TopSupplementaryViewType.self,
-                                                                                ofKind: TopSupplementaryViewType.identifier,
+        let supplementaryView = collectionView.dequeueReusableSupplementaryView(SupplementaryViewType.self,
+                                                                                ofKind: SupplementaryViewType.identifier,
                                                                                 for: indexPath)
         self.supplementaryView = supplementaryView
         supplementaryView.setCount(items.count)
@@ -64,7 +64,7 @@ extension OfferCollectionViewSection: CompositionalLayoutableSectionDataSource {
 
 // MARK: - Offer CollectionView Section Layout
 
-extension OfferCollectionViewSection: CompositionalLayoutableSectionLayout {
+extension OfferCollectionViewSection: UICompositionalLayoutableSectionLayout {
     var height: CGFloat { 140 } // group height
     
     var itemLayoutInGroup: NSCollectionLayoutItem {
@@ -84,7 +84,7 @@ extension OfferCollectionViewSection: CompositionalLayoutableSectionLayout {
         let size = NSCollectionLayoutSize(widthDimension: .estimated(1), heightDimension: .absolute(40))
         return NSCollectionLayoutBoundarySupplementaryItem(
             layoutSize: size,
-            elementKind: TopSupplementaryViewType.identifier,
+            elementKind: SupplementaryViewType.identifier,
             containerAnchor: .init(edges: [.bottom])
         )
     }
@@ -117,13 +117,13 @@ extension OfferCollectionViewSection: CompositionalLayoutableSectionLayout {
 
 // MARK: - Offer CollectionView Section Delegate
 
-extension OfferCollectionViewSection: CompositionalLayoutableSectionDelegate {
+extension OfferCollectionViewSection: UICompositionalLayoutableSectionDelegate {
     func registerCell(in collectionView: UICollectionView) {
         collectionView.register(CellType.self)
     }
     
     func registerSupplementaryView(in collectionView: UICollectionView) {
-        collectionView.register(TopSupplementaryViewType.self, supplementaryViewOfKind: TopSupplementaryViewType.identifier)
+        collectionView.register(SupplementaryViewType.self, supplementaryViewOfKind: SupplementaryViewType.identifier)
     }
     
     func registerDecorationView(in layout: UICollectionViewCompositionalLayout) {
