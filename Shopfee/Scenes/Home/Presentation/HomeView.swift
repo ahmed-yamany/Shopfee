@@ -42,6 +42,7 @@ private extension HomeView {
         delegate = compositionalDelegate
         dataSource = compositionalDataSource
         prefetchDataSource = compositionalDataSourcePrefetching
+        compositionalLayoutConfigurations.interSectionSpacing = 16
         bindViewModel()
     }
     

@@ -7,7 +7,6 @@
 
 import Foundation
 
-
 struct OfferSectionFactory {
     @MainActor
     static func make() -> OfferCollectionViewSection {

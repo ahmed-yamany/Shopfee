@@ -64,22 +64,22 @@ extension OfferCollectionViewSection: UICompositionalLayoutableSectionDataSource
 // MARK: - Offer CollectionView Section Layout
 
 extension OfferCollectionViewSection: UICompositionalLayoutableSectionLayout {
-    var height: CGFloat { 140 } // group height
+    private var height: CGFloat { 140 } // group height
     
-    var itemLayoutInGroup: NSCollectionLayoutItem {
+    private var itemLayoutInGroup: NSCollectionLayoutItem {
         let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(1))
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
         return item
     }
     
-    var groupLayoutInSection: NSCollectionLayoutGroup {
+   private var groupLayoutInSection: NSCollectionLayoutGroup {
         let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .absolute(height))
         let group = NSCollectionLayoutGroup.vertical(layoutSize: groupSize, subitems: [itemLayoutInGroup])
         group.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 20)
         return group
     }
     
-    var paginationSupplementaryItem: NSCollectionLayoutBoundarySupplementaryItem {
+    private var paginationSupplementaryItem: NSCollectionLayoutBoundarySupplementaryItem {
         let size = NSCollectionLayoutSize(widthDimension: .estimated(1), heightDimension: .absolute(40))
         return NSCollectionLayoutBoundarySupplementaryItem(
             layoutSize: size,
@@ -97,7 +97,7 @@ extension OfferCollectionViewSection: UICompositionalLayoutableSectionLayout {
         return section
     }
     
-    var visibleItemsInvalidationHandler: NSCollectionLayoutSectionVisibleItemsInvalidationHandler {
+    private var visibleItemsInvalidationHandler: NSCollectionLayoutSectionVisibleItemsInvalidationHandler {
         { [weak self] items, _, _ in
             guard let self = self else {
                 Logger.log("Self is nil", category: \.default, level: .info)

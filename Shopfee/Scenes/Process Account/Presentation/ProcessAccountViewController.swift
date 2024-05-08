@@ -7,9 +7,7 @@
 
 import SwiftUI
 
-// swiftlint: disable line_length
 final class ProcessAccountViewController<ViewModel: ProcessAccountViewModelProtocol>: UIHostingController<ProcessAccountView<ViewModel>> {
-    // swiftlint: enable line_length
     init(viewModel: ViewModel) {
         super.init(rootView: ProcessAccountView(viewModel: viewModel))
     }

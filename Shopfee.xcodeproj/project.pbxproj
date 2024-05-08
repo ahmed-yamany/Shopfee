@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EE04ED522BEB8D2400711887 /* ProductSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE04ED512BEB8D2400711887 /* ProductSectionHeader.swift */; };
 		EE088AFE2BE653A200885A35 /* TabBarItemFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE088AFD2BE653A200885A35 /* TabBarItemFactory.swift */; };
 		EE088B012BE65A8900885A35 /* CompositionalLayoutableSection in Frameworks */ = {isa = PBXBuildFile; productRef = EE088B002BE65A8900885A35 /* CompositionalLayoutableSection */; };
 		EE088B032BE65B5700885A35 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE088B022BE65B5700885A35 /* HomeView.swift */; };
@@ -146,6 +147,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EE04ED512BEB8D2400711887 /* ProductSectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductSectionHeader.swift; sourceTree = "<group>"; };
 		EE088AFD2BE653A200885A35 /* TabBarItemFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarItemFactory.swift; sourceTree = "<group>"; };
 		EE088B022BE65B5700885A35 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		EE0D8C592BE23BAE00C4E47A /* OTPPopUpItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPPopUpItem.swift; sourceTree = "<group>"; };
@@ -297,6 +299,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EE04ED502BEB8C6000711887 /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				EE04ED512BEB8D2400711887 /* ProductSectionHeader.swift */,
+			);
+			path = Header;
+			sourceTree = "<group>";
+		};
 		EE1992362BE79E0400FE3523 /* Sections */ = {
 			isa = PBXGroup;
 			children = (
@@ -455,6 +465,7 @@
 		EE660E2A2BEA7B4500F89868 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				EE04ED502BEB8C6000711887 /* Header */,
 				EE9D3CA42BE8D6FD0098AAFF /* ProductCellModel.swift */,
 				EE9D3C9E2BE8D69E0098AAFF /* ProductCollectionViewCell.swift */,
 				EE9D3C9F2BE8D69E0098AAFF /* ProductCollectionViewSection.swift */,
@@ -1221,6 +1232,7 @@
 				EE660E302BEA9A1300F89868 /* ProductSectionFactory.swift in Sources */,
 				EEDCE1852BE3B34C003C0A24 /* HomeCoordinator.swift in Sources */,
 				EE2701E02BE533FA00B16C74 /* TabBarUseCase.swift in Sources */,
+				EE04ED522BEB8D2400711887 /* ProductSectionHeader.swift in Sources */,
 				EE6EFA0B2BE0089B00E5C2E3 /* OTPView.swift in Sources */,
 				EE6EFA0C2BE0089B00E5C2E3 /* OTPViewModel.swift in Sources */,
 				EEE8D5222BDBFBEE0037F668 /* OnboardingViewController.swift in Sources */,

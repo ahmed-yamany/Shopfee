@@ -12,9 +12,9 @@ import CompositionalLayoutableSection
 // MARK: - A custom section for displaying Product in a collection view.
 class ProductCollectionViewSection: CompositionalLayoutableSection {
     typealias CellType = ProductCollectionViewCell
-    typealias TopSupplementaryViewType = PaginationSupplementaryView
+    typealias HeaderViewType = ProductSectionHeader
     
-    let viewModel: any ProductSectionViewModelProtocol
+    private let viewModel: any ProductSectionViewModelProtocol
     init(viewModel: any ProductSectionViewModelProtocol) {
         self.viewModel = viewModel
         super.init()
@@ -46,6 +46,14 @@ extension ProductCollectionViewSection: UICompositionalLayoutableSectionDataSour
         }
         return cell
     }
+    
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String,
+                        at indexPath: IndexPath) -> UICollectionReusableView {
+        let supplementaryView = collectionView.dequeueReusableSupplementaryView(HeaderViewType.self, ofKind: HeaderViewType.identifier,
+                                                                                for: indexPath)
+        supplementaryView.configure(with: viewModel)
+        return supplementaryView
+    }
 }
 
 // MARK: - Product CollectionView Section Data Source Prefetching
@@ -58,17 +66,29 @@ extension ProductCollectionViewSection: UICompositionalLayoutableSectionDataSour
 // MARK: - Product CollectionView Section Layout
 extension ProductCollectionViewSection: UICompositionalLayoutableSectionLayout {
     
-    var configuration: UICollectionLayoutListConfiguration {
-        var configuration = UICollectionLayoutListConfiguration(appearance: .sidebarPlain)
-        configuration.showsSeparators = false
-        configuration.backgroundColor = .neutralLight
-        return configuration
+    private var itemLayoutInGroup: NSCollectionLayoutItem {
+        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(1))
+        return NSCollectionLayoutItem(layoutSize: itemSize)
+    }
+    
+    private var groupLayoutInSection: NSCollectionLayoutGroup {
+        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .absolute(85))
+        return NSCollectionLayoutGroup.vertical(layoutSize: groupSize, subitems: [itemLayoutInGroup])
     }
     
     func sectionLayout(at index: Int, layoutEnvironment: NSCollectionLayoutEnvironment) -> NSCollectionLayoutSection {
-        let section = NSCollectionLayoutSection.list(using: configuration, layoutEnvironment: layoutEnvironment)
-        section.boundarySupplementaryItems = []
+        let section = NSCollectionLayoutSection(group: groupLayoutInSection)
+        section.boundarySupplementaryItems = [headerSupplementaryItem]
+        section.interGroupSpacing = 8
+        section.contentInsets = .init(top: 0, leading: .safeAreaPadding, bottom: 0, trailing: .safeAreaPadding)
         return section
+    }
+    
+    private var headerSupplementaryItem: NSCollectionLayoutBoundarySupplementaryItem {
+        let size = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .estimated(1))
+        let item =  NSCollectionLayoutBoundarySupplementaryItem(layoutSize: size, elementKind: HeaderViewType.identifier, alignment: .top)
+        item.pinToVisibleBounds = true
+        return item
     }
 }
 
@@ -80,6 +100,6 @@ extension ProductCollectionViewSection: UICompositionalLayoutableSectionDelegate
     }
     
     func registerSupplementaryView(in collectionView: UICollectionView) {
-
+        collectionView.register(HeaderViewType.self, supplementaryViewOfKind: HeaderViewType.identifier)
     }
 }

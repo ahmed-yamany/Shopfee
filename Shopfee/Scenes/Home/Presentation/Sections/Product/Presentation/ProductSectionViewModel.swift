@@ -16,12 +16,22 @@ protocol CompositionalLayoutableSectionViewModel: ObservableObject {
     func item(at indexPath: IndexPath) -> ItemType?
 }
 
-protocol ProductSectionViewModelProtocol: CompositionalLayoutableSectionViewModel where ItemType == ProductCellModel {
+// swiftlint: disable line_length
+protocol ProductSectionViewModelProtocol: CompositionalLayoutableSectionViewModel, ProductSectionHeaderProtocol where ItemType == ProductCellModel {
     var reloadData: Action { get set }
     func prefetchItems(at indexPaths: [IndexPath])
 }
+// swiftlint: enable line_length
+
+protocol ProductSectionHeaderProtocol: ObservableObject {
+    var drinkTypes: [String] { get set }
+    var selectedDrinkType: String { get set }
+}
 
 final class ProductSectionViewModel: ProductSectionViewModelProtocol {
+    @Published var drinkTypes: [String] = ["Coffee", "Non Coffee", "Pastry"]
+    @Published var selectedDrinkType: String = "Coffee"
+    
     @MainActor 
     var items: [ItemType] = [] {
         didSet {
