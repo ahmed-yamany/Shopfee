@@ -21,6 +21,7 @@
 		EE238CD62BECFD6D008E67B0 /* FilterPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE238CD52BECFD6D008E67B0 /* FilterPicker.swift */; };
 		EE238CD82BECFDA1008E67B0 /* FilterPickerItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE238CD72BECFDA1008E67B0 /* FilterPickerItem.swift */; };
 		EE238CDB2BECFDC8008E67B0 /* DrinkTypePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE238CDA2BECFDC8008E67B0 /* DrinkTypePicker.swift */; };
+		EE238CDD2BED1774008E67B0 /* SearchSupplementaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE238CDC2BED1774008E67B0 /* SearchSupplementaryView.swift */; };
 		EE2701DB2BE533F500B16C74 /* TabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE2701D72BE533F500B16C74 /* TabBarCoordinator.swift */; };
 		EE2701DC2BE533F500B16C74 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE2701D82BE533F500B16C74 /* TabBarView.swift */; };
 		EE2701DD2BE533F500B16C74 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE2701D92BE533F500B16C74 /* TabBarViewController.swift */; };
@@ -162,6 +163,7 @@
 		EE238CD52BECFD6D008E67B0 /* FilterPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterPicker.swift; sourceTree = "<group>"; };
 		EE238CD72BECFDA1008E67B0 /* FilterPickerItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterPickerItem.swift; sourceTree = "<group>"; };
 		EE238CDA2BECFDC8008E67B0 /* DrinkTypePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkTypePicker.swift; sourceTree = "<group>"; };
+		EE238CDC2BED1774008E67B0 /* SearchSupplementaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchSupplementaryView.swift; sourceTree = "<group>"; };
 		EE2701D72BE533F500B16C74 /* TabBarCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarCoordinator.swift; sourceTree = "<group>"; };
 		EE2701D82BE533F500B16C74 /* TabBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
 		EE2701D92BE533F500B16C74 /* TabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
@@ -325,8 +327,11 @@
 		EE1992372BE79E0F00FE3523 /* Offer */ = {
 			isa = PBXGroup;
 			children = (
-				EE660E352BEAA1E200F89868 /* Domain */,
-				EE660E342BEAA1DB00F89868 /* Presentation */,
+				EE19923E2BE79E5A00FE3523 /* OfferCellModel.swift */,
+				EE1992382BE79E1B00FE3523 /* OfferCollectionViewCell.swift */,
+				EE1992392BE79E1B00FE3523 /* OfferCollectionViewSection.swift */,
+				EE660E322BEAA1CB00F89868 /* OfferSectionViewModel.swift */,
+				EE660E362BEAA20700F89868 /* OfferSectionFactory.swift */,
 			);
 			path = Offer;
 			sourceTree = "<group>";
@@ -335,6 +340,7 @@
 			isa = PBXGroup;
 			children = (
 				EE1992422BE7F08200FE3523 /* PaginationSupplementaryView.swift */,
+				EE238CDC2BED1774008E67B0 /* SearchSupplementaryView.swift */,
 			);
 			path = SupplementaryViews;
 			sourceTree = "<group>";
@@ -477,47 +483,6 @@
 			path = TabBar;
 			sourceTree = "<group>";
 		};
-		EE660E292BEA7B4200F89868 /* Domain */ = {
-			isa = PBXGroup;
-			children = (
-				EE660E2D2BEA7C0100F89868 /* ProductSectionUseCase.swift */,
-			);
-			path = Domain;
-			sourceTree = "<group>";
-		};
-		EE660E2A2BEA7B4500F89868 /* Presentation */ = {
-			isa = PBXGroup;
-			children = (
-				EE04ED502BEB8C6000711887 /* Header */,
-				EE9D3CA42BE8D6FD0098AAFF /* ProductCellModel.swift */,
-				EE9D3C9E2BE8D69E0098AAFF /* ProductCollectionViewCell.swift */,
-				EE9D3C9F2BE8D69E0098AAFF /* ProductCollectionViewSection.swift */,
-				EE660E272BEA6C6100F89868 /* ProductSectionViewModel.swift */,
-				EE660E2F2BEA9A1300F89868 /* ProductSectionFactory.swift */,
-			);
-			path = Presentation;
-			sourceTree = "<group>";
-		};
-		EE660E342BEAA1DB00F89868 /* Presentation */ = {
-			isa = PBXGroup;
-			children = (
-				EE19923E2BE79E5A00FE3523 /* OfferCellModel.swift */,
-				EE1992382BE79E1B00FE3523 /* OfferCollectionViewCell.swift */,
-				EE1992392BE79E1B00FE3523 /* OfferCollectionViewSection.swift */,
-				EE660E322BEAA1CB00F89868 /* OfferSectionViewModel.swift */,
-				EE660E362BEAA20700F89868 /* OfferSectionFactory.swift */,
-			);
-			path = Presentation;
-			sourceTree = "<group>";
-		};
-		EE660E352BEAA1E200F89868 /* Domain */ = {
-			isa = PBXGroup;
-			children = (
-				EE660E382BEAA36300F89868 /* OfferSectionUseCase.swift */,
-			);
-			path = Domain;
-			sourceTree = "<group>";
-		};
 		EE6B4F812BDE551300E173BC /* TextField */ = {
 			isa = PBXGroup;
 			children = (
@@ -623,8 +588,12 @@
 		EE9D3C9D2BE8D68D0098AAFF /* Product */ = {
 			isa = PBXGroup;
 			children = (
-				EE660E292BEA7B4200F89868 /* Domain */,
-				EE660E2A2BEA7B4500F89868 /* Presentation */,
+				EE04ED502BEB8C6000711887 /* Header */,
+				EE9D3CA42BE8D6FD0098AAFF /* ProductCellModel.swift */,
+				EE9D3C9E2BE8D69E0098AAFF /* ProductCollectionViewCell.swift */,
+				EE9D3C9F2BE8D69E0098AAFF /* ProductCollectionViewSection.swift */,
+				EE660E272BEA6C6100F89868 /* ProductSectionViewModel.swift */,
+				EE660E2F2BEA9A1300F89868 /* ProductSectionFactory.swift */,
 			);
 			path = Product;
 			sourceTree = "<group>";
@@ -735,6 +704,8 @@
 		EEDCE17E2BE3B342003C0A24 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				EE660E382BEAA36300F89868 /* OfferSectionUseCase.swift */,
+				EE660E2D2BEA7C0100F89868 /* ProductSectionUseCase.swift */,
 				EEDCE1872BE3B351003C0A24 /* HomeUseCase.swift */,
 			);
 			path = Domain;
@@ -1217,6 +1188,7 @@
 				EED68E6E2BDD40BB00774A4B /* RegisterViewModel.swift in Sources */,
 				EE660E282BEA6C6100F89868 /* ProductSectionViewModel.swift in Sources */,
 				EE19923F2BE79E5A00FE3523 /* OfferCellModel.swift in Sources */,
+				EE238CDD2BED1774008E67B0 /* SearchSupplementaryView.swift in Sources */,
 				EEE8D5422BDC37090037F668 /* CGFloat+Constants.swift in Sources */,
 				EEE62DCA2BE389D900937ECA /* ProcessAccountViewController.swift in Sources */,
 				EEE8D5242BDBFCAA0037F668 /* OnboardingCoordinator.swift in Sources */,

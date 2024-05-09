@@ -8,7 +8,7 @@
 import CompositionalLayoutableSection
 import CustomViews
 import Combine
-import UIKit
+import SwiftUI
 
 final class HomeView: UICollectionView, CompositionalLayoutProvider {
     
@@ -16,7 +16,7 @@ final class HomeView: UICollectionView, CompositionalLayoutProvider {
     var cancellable: Set<AnyCancellable> = []
     
     lazy var compositionalDelegate = CompositionalLayoutDelegate(provider: self)
-    lazy var compositionalDataSource = CompositionalLayoutDataSource(provider: self)
+    lazy var compositionalDataSource = CompositionalLayoutDataSource(provider: self, configuration: self)
     lazy var compositionalDataSourcePrefetching = CompositionalLayoutDataSourcePrefetching(provider: self)
     let compositionalLayoutConfigurations = UICollectionViewCompositionalLayoutConfiguration()
     
@@ -37,13 +37,28 @@ final class HomeView: UICollectionView, CompositionalLayoutProvider {
 }
 
 private extension HomeView {
+    private var headerSupplementaryItem: NSCollectionLayoutBoundarySupplementaryItem {
+        let size = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .estimated(1))
+        let item =  NSCollectionLayoutBoundarySupplementaryItem(layoutSize: size,
+                                                                elementKind: SearchSupplementaryView.identifier,
+                                                                alignment: .top)
+        item.pinToVisibleBounds = true
+        return item
+    }
+    
     func configureLayout() {
         backgroundColor = .neutralLight
         delegate = compositionalDelegate
         dataSource = compositionalDataSource
         prefetchDataSource = compositionalDataSourcePrefetching
-        compositionalLayoutConfigurations.interSectionSpacing = 16
+        updateConfigurations()
         bindViewModel()
+    }
+    
+    func updateConfigurations() {
+        register(SearchSupplementaryView.self, supplementaryViewOfKind: SearchSupplementaryView.identifier)
+        compositionalLayoutConfigurations.interSectionSpacing = 16
+        compositionalLayoutConfigurations.boundarySupplementaryItems = [headerSupplementaryItem]
     }
     
     func bindViewModel() {
@@ -57,5 +72,23 @@ private extension HomeView {
             updateCompositionalLayout(for: self, configurations: compositionalLayoutConfigurations)
         }
         .store(in: &cancellable)
+    }
+}
+
+extension HomeView: CompositionalLayoutDataSourceConfiguration {
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String,
+                        at indexPath: IndexPath) -> UICollectionReusableView {
+        let supplementaryView = collectionView.dequeueReusableSupplementaryView(SearchSupplementaryView.self,
+                                                                                ofKind: SearchSupplementaryView.identifier,
+                                                                                for: indexPath)
+        supplementaryView.configure(with: searchTextBinding, placeholder: viewModel.searchPlaceholder)
+        return supplementaryView
+    }
+    
+    var searchTextBinding: Binding<String> {
+        Binding(
+            get: { [weak self] in self?.viewModel.searchText ?? "" },
+            set: { [weak self] in self?.viewModel.searchText = $0 }
+        )
     }
 }
