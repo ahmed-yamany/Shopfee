@@ -18,6 +18,9 @@
 		EE19923F2BE79E5A00FE3523 /* OfferCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE19923E2BE79E5A00FE3523 /* OfferCellModel.swift */; };
 		EE1992412BE7B21000FE3523 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1992402BE7B21000FE3523 /* Logger.swift */; };
 		EE1992432BE7F08200FE3523 /* PaginationSupplementaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1992422BE7F08200FE3523 /* PaginationSupplementaryView.swift */; };
+		EE238CD62BECFD6D008E67B0 /* FilterPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE238CD52BECFD6D008E67B0 /* FilterPicker.swift */; };
+		EE238CD82BECFDA1008E67B0 /* FilterPickerItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE238CD72BECFDA1008E67B0 /* FilterPickerItem.swift */; };
+		EE238CDB2BECFDC8008E67B0 /* DrinkTypePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE238CDA2BECFDC8008E67B0 /* DrinkTypePicker.swift */; };
 		EE2701DB2BE533F500B16C74 /* TabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE2701D72BE533F500B16C74 /* TabBarCoordinator.swift */; };
 		EE2701DC2BE533F500B16C74 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE2701D82BE533F500B16C74 /* TabBarView.swift */; };
 		EE2701DD2BE533F500B16C74 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE2701D92BE533F500B16C74 /* TabBarViewController.swift */; };
@@ -156,6 +159,9 @@
 		EE19923E2BE79E5A00FE3523 /* OfferCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferCellModel.swift; sourceTree = "<group>"; };
 		EE1992402BE7B21000FE3523 /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		EE1992422BE7F08200FE3523 /* PaginationSupplementaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginationSupplementaryView.swift; sourceTree = "<group>"; };
+		EE238CD52BECFD6D008E67B0 /* FilterPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterPicker.swift; sourceTree = "<group>"; };
+		EE238CD72BECFDA1008E67B0 /* FilterPickerItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterPickerItem.swift; sourceTree = "<group>"; };
+		EE238CDA2BECFDC8008E67B0 /* DrinkTypePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkTypePicker.swift; sourceTree = "<group>"; };
 		EE2701D72BE533F500B16C74 /* TabBarCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarCoordinator.swift; sourceTree = "<group>"; };
 		EE2701D82BE533F500B16C74 /* TabBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
 		EE2701D92BE533F500B16C74 /* TabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
@@ -341,6 +347,23 @@
 				EEE62DA42BE3868E00937ECA /* PinViewController.swift */,
 			);
 			path = Pin;
+			sourceTree = "<group>";
+		};
+		EE238CD42BECFD57008E67B0 /* FilterPicker */ = {
+			isa = PBXGroup;
+			children = (
+				EE238CD52BECFD6D008E67B0 /* FilterPicker.swift */,
+				EE238CD72BECFDA1008E67B0 /* FilterPickerItem.swift */,
+			);
+			path = FilterPicker;
+			sourceTree = "<group>";
+		};
+		EE238CD92BECFDC1008E67B0 /* DrinkTypePicker */ = {
+			isa = PBXGroup;
+			children = (
+				EE238CDA2BECFDC8008E67B0 /* DrinkTypePicker.swift */,
+			);
+			path = DrinkTypePicker;
 			sourceTree = "<group>";
 		};
 		EE2701D52BE533E400B16C74 /* Presentation */ = {
@@ -890,6 +913,8 @@
 		EEE8D5282BDC030B0037F668 /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
+				EE238CD92BECFDC1008E67B0 /* DrinkTypePicker */,
+				EE238CD42BECFD57008E67B0 /* FilterPicker */,
 				EE1F6F512BE37DDF006D1C23 /* Pin */,
 				EED29DF72BE16D7900548AFE /* PopUp */,
 				EE6B4F812BDE551300E173BC /* TextField */,
@@ -1220,6 +1245,7 @@
 				EE7939132BE274F5004FF13C /* SendOTPCoordinator.swift in Sources */,
 				EEE62DA82BE3868E00937ECA /* PinViewController.swift in Sources */,
 				EE6EFA142BE0189D00E5C2E3 /* View+navigationTitle.swift in Sources */,
+				EE238CD82BECFDA1008E67B0 /* FilterPickerItem.swift in Sources */,
 				EE6EFA0E2BE008A900E5C2E3 /* OTPViewController.swift in Sources */,
 				EEE8D54B2BDC3A880037F668 /* PaginationStyle.swift in Sources */,
 				EE9BFFB02BE3F05F00501777 /* ShopfeeCoordinatorCommand.swift in Sources */,
@@ -1244,6 +1270,7 @@
 				EE9D3CA52BE8D6FD0098AAFF /* ProductCellModel.swift in Sources */,
 				EEE8D5392BDC16940037F668 /* SplashCoordinator.swift in Sources */,
 				EEE62DAA2BE3868E00937ECA /* CreatePinCoordinator.swift in Sources */,
+				EE238CD62BECFD6D008E67B0 /* FilterPicker.swift in Sources */,
 				EEB7B54D2BE1173D00AF684F /* OTPTextField.swift in Sources */,
 				EE1992412BE7B21000FE3523 /* Logger.swift in Sources */,
 				EED68E722BDD40CD00774A4B /* RegisterCoordinator.swift in Sources */,
@@ -1258,6 +1285,7 @@
 				EEE8D52B2BDC03700037F668 /* PrimaryButton.swift in Sources */,
 				EEE62DC82BE389D900937ECA /* ProcessAccountCoordinator.swift in Sources */,
 				EEDCE1862BE3B34C003C0A24 /* HomeViewModel.swift in Sources */,
+				EE238CDB2BECFDC8008E67B0 /* DrinkTypePicker.swift in Sources */,
 				EE2DDD692BDBCB7B00361413 /* SceneDelegate.swift in Sources */,
 				EEE62DAD2BE3869700937ECA /* CreatePinUseCase.swift in Sources */,
 				EEE62DC92BE389D900937ECA /* ProcessAccountView.swift in Sources */,

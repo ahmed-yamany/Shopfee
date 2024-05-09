@@ -26,11 +26,15 @@ protocol ProductSectionViewModelProtocol: CompositionalLayoutableSectionViewMode
 protocol ProductSectionHeaderProtocol: ObservableObject {
     var drinkTypes: [String] { get set }
     var selectedDrinkType: String { get set }
+    var filterItems: [FilterPickerItem] { get set }
+    var selectedFilterTypes: [FilterPickerItem] { get set }
 }
 
 final class ProductSectionViewModel: ProductSectionViewModelProtocol {
-    @Published var drinkTypes: [String] = ["Coffee", "Non Coffee", "Pastry"]
+    @Published var drinkTypes: [String] = []
     @Published var selectedDrinkType: String = "Coffee"
+    @Published var filterItems: [FilterPickerItem] = []
+    @Published var selectedFilterTypes: [FilterPickerItem] = []
     
     @MainActor 
     var items: [ItemType] = [] {
@@ -60,6 +64,8 @@ final class ProductSectionViewModel: ProductSectionViewModelProtocol {
             do {
                 try await Task.sleep(for: .seconds(2))
                 items = try await useCase.getProducts()
+                drinkTypes = try await useCase.getDrinkTypes()
+                filterItems = try await useCase.getFilterPickerItems()
             } catch {
                 print(error.localizedDescription)
             }

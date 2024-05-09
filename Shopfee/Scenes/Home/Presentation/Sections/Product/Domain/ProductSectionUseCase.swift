@@ -7,10 +7,13 @@
 
 import UIKit
 import Domain
+import SwiftUI
 
 protocol ProductSectionUseCaseProtocol: AnyActor {
     func fetchImage(from urlString: String) async throws -> UIImage
     func getProducts() async throws -> [ProductCellModel]
+    func getDrinkTypes() async throws -> [String]
+    func getFilterPickerItems() async throws -> [FilterPickerItem]
 }
 
 final actor ProductSectionUseCase: ProductSectionUseCaseProtocol {
@@ -159,4 +162,28 @@ final actor ProductSectionUseCase: ProductSectionUseCaseProtocol {
         // swiftlint: enable all
     }
   
+    func getDrinkTypes() async throws -> [String] {
+        ["Coffee", "Non Coffee", "Pastry"]
+    }
+    
+    func getFilterPickerItems() async throws -> [FilterPickerItem] {
+        [
+            .init(
+                image: Image(systemName: "line.3.horizontal.decrease.circle"),
+                title: "Filter"
+            ),
+            .init(
+                image: Image(systemName: "star"),
+                title: "Rating 4.5+"
+            ),
+            .init(
+                image: Image(systemName: "dollarsign"),
+                title: "Price"
+            ),
+            .init(
+                image: Image(systemName: "percent"),
+                title: "Promo"
+            )
+        ]
+    }
 }
