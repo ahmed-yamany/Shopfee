@@ -25,6 +25,7 @@ struct SearchView: View {
         HStack {
             TextField(placeholder, text: $text)
                 .frame(maxWidth: .infinity)
+                .font(.custom(size: 12, weight: .regular))
             
             Image(systemName: "magnifyingglass")
                 .resizable()

@@ -46,19 +46,24 @@ struct BarItemView<ViewModel: TabBarViewModelProtocol>: View {
             viewModel.selectedItem = item.type
         } label: {
             VStack {
-                VStack {
+                VStack(spacing: 4) {
                     if isSelected {
                         item.onSelectedImage
                             .resizable()
                             .aspectRatio(contentMode: .fit)
+                            .frame(width: 24, height: 24)
+
                     } else {
-                        
                         item.image
                             .resizable()
                             .aspectRatio(contentMode: .fit)
+                            .frame(width: 24, height: 24)
+
                     }
+                    
+                    Text(item.title)
+                        .font(.custom(size: 10, weight: .medium))
                 }
-                .frame(width: 24, height: 24)
             }
             .padding(.vertical)
             .frame(maxWidth: .infinity)

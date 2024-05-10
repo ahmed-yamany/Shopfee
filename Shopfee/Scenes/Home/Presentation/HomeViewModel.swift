@@ -27,7 +27,7 @@ final class HomeViewModel: HomeViewModelProtocol {
     }
     
     // you can sink on searchText to show another view controller that shows search results
-    // or send to productsSection or its viewModels to updates its items based on search 
+    // or send to productsSection or its viewModel to updates its items based on search 
     @Published var searchText: String = ""
     @Published var searchPlaceholder: String = "What would you like to drink today?"
     

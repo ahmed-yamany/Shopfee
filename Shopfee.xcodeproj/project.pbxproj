@@ -210,12 +210,12 @@
 		EE7939142BE2753C004FF13C /* SendOTPUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendOTPUseCase.swift; sourceTree = "<group>"; };
 		EE80C4E12BE245040001A599 /* PopUpTransitioningDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpTransitioningDelegate.swift; sourceTree = "<group>"; };
 		EE80C4E32BE25B440001A599 /* GifView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifView.swift; sourceTree = "<group>"; };
-		EE8AFAE92BEA4CA9001006F8 /* Domain */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Domain; path = ../Domain; sourceTree = "<group>"; };
 		EE9BFFAF2BE3F05F00501777 /* ShopfeeCoordinatorCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopfeeCoordinatorCommand.swift; sourceTree = "<group>"; };
 		EE9D3C9E2BE8D69E0098AAFF /* ProductCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCollectionViewCell.swift; sourceTree = "<group>"; };
 		EE9D3C9F2BE8D69E0098AAFF /* ProductCollectionViewSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCollectionViewSection.swift; sourceTree = "<group>"; };
 		EE9D3CA42BE8D6FD0098AAFF /* ProductCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCellModel.swift; sourceTree = "<group>"; };
 		EEB7B54C2BE1173D00AF684F /* OTPTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPTextField.swift; sourceTree = "<group>"; };
+		EECE7E792BEE7E73000F7F41 /* Domain */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Domain; sourceTree = "<group>"; };
 		EED29DF52BE1615A00548AFE /* ShopfeeOTPTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopfeeOTPTextField.swift; sourceTree = "<group>"; };
 		EED29DF82BE16DBA00548AFE /* PopUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpView.swift; sourceTree = "<group>"; };
 		EED29DFA2BE1714100548AFE /* PopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpViewController.swift; sourceTree = "<group>"; };
@@ -404,7 +404,7 @@
 		EE2DDD5A2BDBCB7B00361413 = {
 			isa = PBXGroup;
 			children = (
-				EE8AFAE92BEA4CA9001006F8 /* Domain */,
+				EECE7E792BEE7E73000F7F41 /* Domain */,
 				EE2DDD972BDBCD7700361413 /* .swiftlint.yml */,
 				EE2DDD652BDBCB7B00361413 /* Shopfee */,
 				EEE8D4D72BDBD4B60037F668 /* Utilities */,
