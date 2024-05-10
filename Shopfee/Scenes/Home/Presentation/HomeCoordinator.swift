@@ -10,6 +10,7 @@ import Domain
 
 protocol HomeCoordinatorProtocol: Coordinator {
     func navigateToNotifications()
+    func productsSectionViewModel() -> ProductSectionViewModel
 }
 
 final class HomeCoordinator: HomeCoordinatorProtocol {
@@ -29,5 +30,9 @@ final class HomeCoordinator: HomeCoordinatorProtocol {
     
     func navigateToNotifications() {
         
+    }
+    
+    func productsSectionViewModel() -> ProductSectionViewModel {
+        ProductSectionCoordinator(router: router).getViewModel()
     }
 }

@@ -27,22 +27,26 @@ final class HomeViewModel: HomeViewModelProtocol {
     }
     
     // you can sink on searchText to show another view controller that shows search results
-    // or send to productsSection or its viewModel to updates its items based on search 
+    // or send to productsSection or its viewModel to updates its items based on search
     @Published var searchText: String = ""
     @Published var searchPlaceholder: String = "What would you like to drink today?"
     
     private let offersSection = OfferSectionFactory.make()
-    private let productsSection = ProductSectionFactory.make()
+    private var productsSection: ProductCollectionViewSection {
+        ProductCollectionViewSection(viewModel: productsSectionViewModel)
+    }
     
     private let coordinator: HomeCoordinatorProtocol
     private let useCase: HomeUseCaseProtocol
-    
+    @ObservedObject private var productsSectionViewModel: ProductSectionViewModel
+
     init(coordinator: HomeCoordinatorProtocol, useCase: HomeUseCaseProtocol) {
         self.coordinator = coordinator
         self.useCase = useCase
+        self.productsSectionViewModel = coordinator.productsSectionViewModel()
         compositionalLayoutSections = [offersSection, productsSection]
     }
-
+    
     func notificationButtonTapped() {
         coordinator.navigateToNotifications()
     }

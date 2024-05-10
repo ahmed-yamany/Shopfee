@@ -104,4 +104,8 @@ extension ProductCollectionViewSection: UICompositionalLayoutableSectionDelegate
     func registerSupplementaryView(in collectionView: UICollectionView) {
         collectionView.register(HeaderViewType.self, supplementaryViewOfKind: HeaderViewType.identifier)
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        viewModel.didSelectItemAt(indexPath)
+    }
 }

@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import FoundationExtensions
 
 @MainActor
 protocol CompositionalLayoutableSectionViewModel: ObservableObject {
@@ -16,19 +17,20 @@ protocol CompositionalLayoutableSectionViewModel: ObservableObject {
     func item(at indexPath: IndexPath) -> ItemType?
 }
 
-// swiftlint: disable line_length
-protocol ProductSectionViewModelProtocol: CompositionalLayoutableSectionViewModel, ProductSectionHeaderProtocol where ItemType == ProductCellModel {
-    var reloadData: Action { get set }
-    func prefetchItems(at indexPaths: [IndexPath])
-}
-// swiftlint: enable line_length
-
 protocol ProductSectionHeaderProtocol: ObservableObject {
     var drinkTypes: [String] { get set }
     var selectedDrinkType: String { get set }
     var filterItems: [FilterPickerItem] { get set }
     var selectedFilterTypes: [FilterPickerItem] { get set }
 }
+
+// swiftlint: disable line_length
+protocol ProductSectionViewModelProtocol: CompositionalLayoutableSectionViewModel, ProductSectionHeaderProtocol where ItemType == ProductCellModel {
+    var reloadData: Action { get set }
+    func prefetchItems(at indexPaths: [IndexPath])
+    func didSelectItemAt(_ indexPath: IndexPath)
+}
+// swiftlint: enable line_length
 
 final class ProductSectionViewModel: ProductSectionViewModelProtocol {
     @Published var drinkTypes: [String] = []
@@ -45,9 +47,12 @@ final class ProductSectionViewModel: ProductSectionViewModelProtocol {
     
     var reloadData: Action = {}
     
+    let coordinator: ProductSectionCoordinatorProtocol
     let useCase: ProductSectionUseCaseProtocol
-    init(useCase: ProductSectionUseCaseProtocol) {
+    
+    init(coordinator: ProductSectionCoordinatorProtocol, useCase: ProductSectionUseCaseProtocol) {
         self.useCase = useCase
+        self.coordinator = coordinator
         fetchData()
     }
     
@@ -85,5 +90,13 @@ final class ProductSectionViewModel: ProductSectionViewModelProtocol {
                 print(error.localizedDescription)
             }
         }
+    }
+    
+    func didSelectItemAt(_ indexPath: IndexPath) {
+        guard let product = items[safe: indexPath.item] else {
+            Logger.log("Failed to get item at \(indexPath)", category: \.default, level: .error)
+            return
+        }
+        coordinator.showDetails(for: product)
     }
 }
