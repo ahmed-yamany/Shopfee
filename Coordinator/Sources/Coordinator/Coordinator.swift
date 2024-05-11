@@ -7,12 +7,12 @@
 import Foundation
 
 @MainActor
-protocol Coordinator: AnyObject {
-    var router: Router { get }    
+public protocol Coordinator: AnyObject {
+    var router: Router { get }
     func start()
 }
 
-extension Coordinator {
+public extension Coordinator {
     func navigationTitle(_ title: String) {
         router.navigationTitle(title)
     }
@@ -21,3 +21,5 @@ extension Coordinator {
         router.dismiss(animated: animated, completion: completion)
     }
 }
+
+public typealias Action = () -> Void

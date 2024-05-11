@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Coordinator
 
 protocol OTPCoordinatorProtocol: Coordinator {
     func resend()

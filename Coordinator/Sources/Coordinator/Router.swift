@@ -7,19 +7,19 @@
 import UIKit
 
 @MainActor
-public class Router {
-    let navigationController: UINavigationController
+open class Router {
+    public let navigationController: UINavigationController
     
-    init(navigationController: UINavigationController) {
+    public init(navigationController: UINavigationController) {
         self.navigationController = navigationController
     }
-    
-    var navigationBarIsHidden: Bool {
+
+    open var navigationBarIsHidden: Bool {
         get { navigationController.navigationBar.isHidden }
         set { navigationController.navigationBar.isHidden = newValue }
     }
     
-    func present(
+    open func present(
         _ viewController: UIViewController,
         animated: Bool = true,
         presentationStyle: UIModalPresentationStyle = .automatic,
@@ -31,7 +31,7 @@ public class Router {
         navigationController.present(viewController, animated: animated, completion: completion)
     }
     
-    func present(
+    open func present(
         _ viewController: UIViewController,
         transitioningDelegate: UIViewControllerTransitioningDelegate,
         completion: @escaping () -> Void = {}
@@ -40,7 +40,7 @@ public class Router {
         present(viewController, animated: true, presentationStyle: .overFullScreen)
     }
     
-    func dismiss(animated: Bool = true, completion: @escaping () -> Void = {}) {
+    open func dismiss(animated: Bool = true, completion: @escaping () -> Void = {}) {
         if navigationController.presentedViewController != nil {
             navigationController.dismiss(animated: animated, completion: completion)
         } else {
@@ -49,37 +49,37 @@ public class Router {
         }
     }
     
-    func push(_ viewController: UIViewController, animated: Bool = true, completion: @escaping () -> Void = {}) {
+    open func push(_ viewController: UIViewController, animated: Bool = true, completion: @escaping () -> Void = {}) {
         navigationController.dismiss(animated: false)
         navigationController.pushViewController(viewController, animated: animated)
         completion()
     }
     
-    func reset(completion: @escaping () -> Void = {}) {
+    open func reset(completion: @escaping () -> Void = {}) {
         navigationController.dismiss(animated: false)
         navigationController.viewControllers.removeAll()
     }
     
-    func popToViewController(_ viewController: UIViewController, animated: Bool = true, completion: @escaping () -> Void = {}) {
+    open func popToViewController(_ viewController: UIViewController, animated: Bool = true, completion: @escaping () -> Void = {}) {
         navigationController.popToViewController(viewController, animated: animated)
         completion()
     }
     
-    func popToRoot(animated: Bool = true, completion: @escaping () -> Void = {}) {
+    open func popToRoot(animated: Bool = true, completion: @escaping () -> Void = {}) {
         navigationController.popToRootViewController(animated: animated)
         completion()
     }
     
-    func navigationTitle(_ title: String) {
+    open func navigationTitle(_ title: String) {
         navigationController.visibleViewController?.navigationItem.title = title
     }
     
-    func setViewControllers(_ viewControllers: [UIViewController], animated: Bool = true) {
+    open func setViewControllers(_ viewControllers: [UIViewController], animated: Bool = true) {
         navigationController.dismiss(animated: false)
         navigationController.setViewControllers(viewControllers, animated: animated)
     }
     
-    func setViewController(_ viewController: UIViewController, animated: Bool = true) {
+    open func setViewController(_ viewController: UIViewController, animated: Bool = true) {
         self.setViewControllers([viewController], animated: animated)
     }
 }

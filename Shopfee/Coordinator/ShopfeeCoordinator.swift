@@ -5,6 +5,7 @@
 //  Created by Ahmed Yamany on 26/04/2024.
 
 import UIKit
+import Coordinator
 
 protocol ShopfeeCoordinatorProtocol: Coordinator {
     func showOnboarding()
@@ -30,7 +31,8 @@ final class ShopfeeCoordinator: ShopfeeCoordinatorProtocol {
     }
     
     func start() {
-        showTabBar()
+//        showTabBar()
+        showOnboarding()
     }
     
     func showOnboarding() {

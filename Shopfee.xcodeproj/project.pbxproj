@@ -87,6 +87,7 @@
 		EED68E7E2BDD52FA00774A4B /* MakeConstraints in Frameworks */ = {isa = PBXBuildFile; productRef = EED68E7D2BDD52FA00774A4B /* MakeConstraints */; };
 		EED68E802BDD6FFD00774A4B /* OpenFromCenterPresentAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED68E7F2BDD6FFD00774A4B /* OpenFromCenterPresentAnimator.swift */; };
 		EED68E822BDD782600774A4B /* TermsAndCondition.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED68E812BDD782600774A4B /* TermsAndCondition.swift */; };
+		EED952102BEF82D400F983D1 /* Coordinator in Frameworks */ = {isa = PBXBuildFile; productRef = EED9520F2BEF82D400F983D1 /* Coordinator */; };
 		EEDCE16B2BE3932C003C0A24 /* ShopfeePinTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDCE16A2BE3932C003C0A24 /* ShopfeePinTextField.swift */; };
 		EEDCE1722BE3AAC4003C0A24 /* EnterPinViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDCE1712BE3AAC4003C0A24 /* EnterPinViewModel.swift */; };
 		EEDCE1742BE3AAE0003C0A24 /* EnterPinCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDCE1732BE3AAE0003C0A24 /* EnterPinCoordinator.swift */; };
@@ -107,10 +108,8 @@
 		EEE62DCC2BE389DE00937ECA /* ProcessAccountUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE62DCB2BE389DE00937ECA /* ProcessAccountUseCase.swift */; };
 		EEE8D4D02BDBCF780037F668 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EEE8D4CF2BDBCF780037F668 /* Colors.xcassets */; };
 		EEE8D4DB2BDBD4FA0037F668 /* String+localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE8D4DA2BDBD4FA0037F668 /* String+localized.swift */; };
-		EEE8D4E02BDBD8750037F668 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE8D4DE2BDBD8750037F668 /* Coordinator.swift */; };
 		EEE8D4E12BDBD8750037F668 /* ShopfeeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE8D4DF2BDBD8750037F668 /* ShopfeeCoordinator.swift */; };
 		EEE8D4E42BDBD87D0037F668 /* ShopfeeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE8D4E22BDBD87D0037F668 /* ShopfeeRouter.swift */; };
-		EEE8D4E52BDBD87D0037F668 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE8D4E32BDBD87D0037F668 /* Router.swift */; };
 		EEE8D4E82BDBD9620037F668 /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE8D4E72BDBD9620037F668 /* Action.swift */; };
 		EEE8D5042BDBF0780037F668 /* Poppins-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EEE8D4F12BDBF0770037F668 /* Poppins-Medium.ttf */; };
 		EEE8D5072BDBF0780037F668 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EEE8D4F42BDBF0770037F668 /* Poppins-Regular.ttf */; };
@@ -236,6 +235,7 @@
 		EED68E732BDD41E800774A4B /* RegisterUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUseCase.swift; sourceTree = "<group>"; };
 		EED68E7F2BDD6FFD00774A4B /* OpenFromCenterPresentAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenFromCenterPresentAnimator.swift; sourceTree = "<group>"; };
 		EED68E812BDD782600774A4B /* TermsAndCondition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsAndCondition.swift; sourceTree = "<group>"; };
+		EED9520D2BEF82AC00F983D1 /* Coordinator */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Coordinator; sourceTree = "<group>"; };
 		EEDCE16A2BE3932C003C0A24 /* ShopfeePinTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopfeePinTextField.swift; sourceTree = "<group>"; };
 		EEDCE1712BE3AAC4003C0A24 /* EnterPinViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterPinViewModel.swift; sourceTree = "<group>"; };
 		EEDCE1732BE3AAE0003C0A24 /* EnterPinCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterPinCoordinator.swift; sourceTree = "<group>"; };
@@ -256,10 +256,8 @@
 		EEE62DCB2BE389DE00937ECA /* ProcessAccountUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProcessAccountUseCase.swift; sourceTree = "<group>"; };
 		EEE8D4CF2BDBCF780037F668 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		EEE8D4DA2BDBD4FA0037F668 /* String+localized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+localized.swift"; sourceTree = "<group>"; };
-		EEE8D4DE2BDBD8750037F668 /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		EEE8D4DF2BDBD8750037F668 /* ShopfeeCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopfeeCoordinator.swift; sourceTree = "<group>"; };
 		EEE8D4E22BDBD87D0037F668 /* ShopfeeRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopfeeRouter.swift; sourceTree = "<group>"; };
-		EEE8D4E32BDBD87D0037F668 /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		EEE8D4E72BDBD9620037F668 /* Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Action.swift; sourceTree = "<group>"; };
 		EEE8D4F12BDBF0770037F668 /* Poppins-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Medium.ttf"; sourceTree = "<group>"; };
 		EEE8D4F42BDBF0770037F668 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
@@ -292,6 +290,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EE8AFAEC2BEA507B001006F8 /* Domain in Frameworks */,
+				EED952102BEF82D400F983D1 /* Coordinator in Frameworks */,
 				EE088B062BE65BFF00885A35 /* CustomViews in Frameworks */,
 				EEE8D53F2BDC36270037F668 /* SwiftUIModifiers in Frameworks */,
 				EED68E672BDD2EA800774A4B /* FoundationExtensions in Frameworks */,
@@ -414,6 +413,7 @@
 		EE2DDD5A2BDBCB7B00361413 = {
 			isa = PBXGroup;
 			children = (
+				EED9520D2BEF82AC00F983D1 /* Coordinator */,
 				EECE7E792BEE7E73000F7F41 /* Domain */,
 				EE2DDD972BDBCD7700361413 /* .swiftlint.yml */,
 				EE2DDD652BDBCB7B00361413 /* Shopfee */,
@@ -422,7 +422,7 @@
 				EE2DDD7C2BDBCB7E00361413 /* ShopfeeTests */,
 				EE2DDD862BDBCB7E00361413 /* ShopfeeUITests */,
 				EE2DDD642BDBCB7B00361413 /* Products */,
-				EE8AFAEA2BEA507B001006F8 /* Frameworks */,
+				EED9520E2BEF82D400F983D1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -588,13 +588,6 @@
 			path = Domain;
 			sourceTree = "<group>";
 		};
-		EE8AFAEA2BEA507B001006F8 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		EE9D3C9D2BE8D68D0098AAFF /* Product */ = {
 			isa = PBXGroup;
 			children = (
@@ -672,6 +665,13 @@
 				EED68E732BDD41E800774A4B /* RegisterUseCase.swift */,
 			);
 			path = Domain;
+			sourceTree = "<group>";
+		};
+		EED9520E2BEF82D400F983D1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		EEDCE16C2BE3A5EC003C0A24 /* CreatePin */ = {
@@ -821,7 +821,6 @@
 				EE1992402BE7B21000FE3523 /* Logger.swift */,
 				EEE8D53A2BDC1A0F0037F668 /* Modifiers */,
 				EEE8D5282BDC030B0037F668 /* CustomViews */,
-				EEE8D4DC2BDBD83F0037F668 /* Coordinator */,
 				EEE8D4D82BDBD4D60037F668 /* Extensionts */,
 				EEE8D4E62BDBD9530037F668 /* TypeAliases */,
 			);
@@ -843,15 +842,6 @@
 				EEE8D4DA2BDBD4FA0037F668 /* String+localized.swift */,
 			);
 			path = String;
-			sourceTree = "<group>";
-		};
-		EEE8D4DC2BDBD83F0037F668 /* Coordinator */ = {
-			isa = PBXGroup;
-			children = (
-				EEE8D4E32BDBD87D0037F668 /* Router.swift */,
-				EEE8D4DE2BDBD8750037F668 /* Coordinator.swift */,
-			);
-			path = Coordinator;
 			sourceTree = "<group>";
 		};
 		EEE8D4E62BDBD9530037F668 /* TypeAliases */ = {
@@ -1043,6 +1033,7 @@
 				EE088B002BE65A8900885A35 /* CompositionalLayoutableSection */,
 				EE088B052BE65BFF00885A35 /* CustomViews */,
 				EE8AFAEB2BEA507B001006F8 /* Domain */,
+				EED9520F2BEF82D400F983D1 /* Coordinator */,
 			);
 			productName = Shopfee;
 			productReference = EE2DDD632BDBCB7B00361413 /* Shopfee.app */;
@@ -1197,7 +1188,6 @@
 			files = (
 				EECE7E872BEE8909000F7F41 /* ProductDetailsView.swift in Sources */,
 				EEE8D54C2BDC3A880037F668 /* PaginationView.swift in Sources */,
-				EEE8D4E52BDBD87D0037F668 /* Router.swift in Sources */,
 				EEE8D4E82BDBD9620037F668 /* Action.swift in Sources */,
 				EE660E372BEAA20700F89868 /* OfferSectionFactory.swift in Sources */,
 				EECE7E8C2BEE8910000F7F41 /* ProductDetailsUseCase.swift in Sources */,
@@ -1242,7 +1232,6 @@
 				EE79390E2BE272E2004FF13C /* SendOTPView.swift in Sources */,
 				EE79390F2BE272E2004FF13C /* SendOTPViewModel.swift in Sources */,
 				EEE62DC72BE389D900937ECA /* ProcessAccountViewModel.swift in Sources */,
-				EEE8D4E02BDBD8750037F668 /* Coordinator.swift in Sources */,
 				EEE8D5172BDBF0D70037F668 /* UIFont+Style.swift in Sources */,
 				EEE8D54F2BDC445B0037F668 /* OnboardingTabViewModel.swift in Sources */,
 				EEE62DCC2BE389DE00937ECA /* ProcessAccountUseCase.swift in Sources */,
@@ -1714,6 +1703,10 @@
 			isa = XCSwiftPackageProductDependency;
 			package = EED68E7C2BDD52FA00774A4B /* XCRemoteSwiftPackageReference "MakeConstraints" */;
 			productName = MakeConstraints;
+		};
+		EED9520F2BEF82D400F983D1 /* Coordinator */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Coordinator;
 		};
 		EEE8D53E2BDC36270037F668 /* SwiftUIModifiers */ = {
 			isa = XCSwiftPackageProductDependency;

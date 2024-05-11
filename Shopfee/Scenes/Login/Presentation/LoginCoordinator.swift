@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Coordinator
 
 protocol LoginCoordinatorProtocol: Coordinator {
     func showRegister()

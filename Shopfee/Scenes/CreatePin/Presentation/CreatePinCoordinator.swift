@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Coordinator
 
 protocol CreatePinCoordinatorProtocol: Coordinator {
     func navigateToLogin()

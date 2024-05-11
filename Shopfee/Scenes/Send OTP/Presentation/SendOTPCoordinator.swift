@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Coordinator
 
 protocol SendOTPCoordinatorProtocol: Coordinator {
     func showEnterOtp(for phoneNumber: String)

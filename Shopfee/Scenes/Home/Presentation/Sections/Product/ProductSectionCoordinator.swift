@@ -7,6 +7,7 @@
 
 import Foundation
 import Domain
+import Coordinator
 
 protocol ProductSectionCoordinatorProtocol: Coordinator {
     func getViewModel() -> ProductSectionViewModel
