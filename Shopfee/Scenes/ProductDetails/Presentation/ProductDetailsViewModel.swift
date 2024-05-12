@@ -8,7 +8,9 @@
 import SwiftUI
 
 @MainActor
-protocol ProductDetailsViewModelProtocol: ObservableObject {}
+protocol ProductDetailsViewModelProtocol: ObservableObject {
+    func viewWillAppear()
+}
 
 @MainActor
 final class ProductDetailsViewModel: ProductDetailsViewModelProtocol {
@@ -19,5 +21,9 @@ final class ProductDetailsViewModel: ProductDetailsViewModelProtocol {
     init(coordinator: ProductDetailsCoordinatorProtocol, useCase: ProductDetailsUseCaseProtocol) {
         self.coordinator = coordinator
         self.useCase = useCase
+    }
+    
+    func viewWillAppear() {
+        coordinator.viewWillAppear()
     }
 }

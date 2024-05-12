@@ -11,8 +11,14 @@ struct ProductDetailsView<ViewModel: ProductDetailsViewModelProtocol>: View {
     @ObservedObject var viewModel: ViewModel
     
     var body: some View {
-        VStack {
-            Text("Hello World!")
+        ScrollView {
+            VStack {
+                Text("Hello World!")
+            }
         }
+        .navigationTitle("Customize Order")
+        .frame(maxWidth: .infinity)
+        .background(.brand200)
+        .applyPrimaryStyle()
     }
 }

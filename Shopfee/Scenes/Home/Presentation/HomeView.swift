@@ -38,7 +38,7 @@ final class HomeView: UICollectionView, CompositionalLayoutProvider {
 
 private extension HomeView {
     private var headerSupplementaryItem: NSCollectionLayoutBoundarySupplementaryItem {
-        let size = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .estimated(1))
+        let size = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .absolute(56))
         let item =  NSCollectionLayoutBoundarySupplementaryItem(layoutSize: size,
                                                                 elementKind: SearchSupplementaryView.identifier,
                                                                 alignment: .top)

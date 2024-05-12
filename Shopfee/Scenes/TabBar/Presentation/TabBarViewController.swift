@@ -20,8 +20,18 @@ final class TabBarViewController<ViewModel: TabBarViewModelProtocol>: UIHostingC
         fatalError("init(coder:) has not been implemented")
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        viewModel.viewWillAppear()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel.viewDidLoad()
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        viewModel.viewDidDisAppear()
     }
 }

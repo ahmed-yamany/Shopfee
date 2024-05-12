@@ -14,10 +14,12 @@ protocol TabBarItemAbstractFactory {
 }
 
 struct HomeTabBarItemFactory: TabBarItemAbstractFactory {
+    let tabBarCoordinator: TabBarCoordinatorProtocol
+    
     func make() -> any TabBarItem {
         let navigationController = UINavigationController()
         let router = ShopfeeRouter(navigationController: navigationController)
-        let coordinator = HomeCoordinator(router: router)
+        let coordinator = HomeCoordinator(router: router, tabBarCoordinator: tabBarCoordinator)
         coordinator.start()
         let view = navigationController.toSwiftUI().ignoresSafeArea().eraseToAnyView()
         return HomeTabBarItem(view: view)
@@ -38,10 +40,12 @@ struct AccountTabBarItemFactory: TabBarItemAbstractFactory {
 
 @MainActor
 struct TabBarItemFactory {
+    let tabBarCoordinator: TabBarCoordinatorProtocol
+        
     func make(for type: TabBarItemType) -> any TabBarItem {
         switch type {
             case .home:
-                HomeTabBarItemFactory().make()
+                HomeTabBarItemFactory(tabBarCoordinator: tabBarCoordinator).make()
             case .history:
                 HistoryTabBarItemFactory().make()
             case .account:

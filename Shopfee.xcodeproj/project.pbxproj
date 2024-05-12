@@ -613,10 +613,10 @@
 		EECE7E812BEE88F7000F7F41 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				EECE7E852BEE8909000F7F41 /* ProductDetailsCoordinator.swift */,
 				EECE7E832BEE8909000F7F41 /* ProductDetailsView.swift */,
-				EECE7E862BEE8909000F7F41 /* ProductDetailsViewController.swift */,
 				EECE7E842BEE8909000F7F41 /* ProductDetailsViewModel.swift */,
+				EECE7E862BEE8909000F7F41 /* ProductDetailsViewController.swift */,
+				EECE7E852BEE8909000F7F41 /* ProductDetailsCoordinator.swift */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";

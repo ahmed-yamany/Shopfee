@@ -11,14 +11,19 @@ import Coordinator
 
 protocol HomeCoordinatorProtocol: Coordinator {
     func navigateToNotifications()
+    func viewWillAppear()
+    func showTabBar()
+    func hideTabBar()
     func productsSectionViewModel() -> ProductSectionViewModel
 }
 
 final class HomeCoordinator: HomeCoordinatorProtocol {
     let router: Router
+    let tabBarCoordinator: TabBarCoordinatorProtocol
     
-    init(router: Router) {
+    init(router: Router, tabBarCoordinator: TabBarCoordinatorProtocol) {
         self.router = router
+        self.tabBarCoordinator = tabBarCoordinator
     }
     
     func start() {
@@ -33,7 +38,21 @@ final class HomeCoordinator: HomeCoordinatorProtocol {
         
     }
     
+    func showTabBar() {
+        tabBarCoordinator.showTabBar()
+    }
+    
+    func hideTabBar() {
+        tabBarCoordinator.hideTabBar()
+    }
+    
+    func viewWillAppear() {
+        showTabBar()
+    }
+    
     func productsSectionViewModel() -> ProductSectionViewModel {
-        ProductSectionCoordinator(router: router).getViewModel()
+        ProductSectionCoordinator(router: router, onShowDetails: { [weak self] in
+            self?.hideTabBar()
+        }).getViewModel()
     }
 }

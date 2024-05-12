@@ -80,7 +80,7 @@ extension ProductCollectionViewSection: UICompositionalLayoutableSectionLayout {
     }
     
     private var headerSupplementaryItem: NSCollectionLayoutBoundarySupplementaryItem {
-        let size = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .estimated(1))
+        let size = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .absolute(90))
         let item =  NSCollectionLayoutBoundarySupplementaryItem(layoutSize: size, elementKind: HeaderViewType.identifier, alignment: .top)
         item.pinToVisibleBounds = true
         return item

@@ -7,32 +7,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "FB7D86A0-7A9A-475F-B1DC-09D00E3EB7F8"
+            uuid = "953C4B27-1097-4377-BC39-532ECE4A0CD8"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "../../Library/Developer/Xcode/DerivedData/Shopfee-amonevcfpwaqhmhiksoxaaqmxgdz/SourcePackages/checkouts/CompositionalLayoutableSection/Sources/CompositionalLayoutableSection/CompositionalLayoutDataSource.swift"
+            filePath = "Shopfee/Scenes/Home/Presentation/Sections/Product/ProductSectionCoordinator.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "44"
-            endingLineNumber = "44"
-            landmarkName = "collectionView(_:viewForSupplementaryElementOfKind:at:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "A470A963-9AE1-4E11-91DC-2F838371D5E8"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "../../Library/Developer/Xcode/DerivedData/Shopfee-amonevcfpwaqhmhiksoxaaqmxgdz/SourcePackages/checkouts/CompositionalLayoutableSection/Sources/CompositionalLayoutableSection/CompositionalLayoutDataSource.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "42"
-            endingLineNumber = "42"
-            landmarkName = "collectionView(_:viewForSupplementaryElementOfKind:at:)"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
+            landmarkName = "showDetails(for:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

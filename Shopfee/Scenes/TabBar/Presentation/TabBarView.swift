@@ -18,8 +18,15 @@ struct TabBarView<ViewModel: TabBarViewModelProtocol>: View {
                 }
             }
             
-            BarView(viewModel: viewModel)
+            if viewModel.showTabBar {
+                BarView(viewModel: viewModel)
+                    .transition(.move(edge: .bottom))
+            }
         }
+        .onAppear {
+            UITabBar.appearance().isHidden = true
+        }
+        .animation(.easeInOut, value: viewModel.showTabBar)
     }
 }
 
@@ -70,12 +77,4 @@ struct BarItemView<ViewModel: TabBarViewModelProtocol>: View {
             .foregroundStyle(isSelected ? .brand : .textDisabled)
         }
     }
-}
-
-#Preview {
-    let router = ShopfeeRouter(navigationController: .init())
-    let coordinator = TabBarCoordinator(router: router)
-    let useCase = TabBarUseCase(tabBarItemFactory: .init())
-    let viewModel = TabBarViewModel(coordinator: coordinator, useCase: useCase)
-    return TabBarView(viewModel: viewModel)
 }

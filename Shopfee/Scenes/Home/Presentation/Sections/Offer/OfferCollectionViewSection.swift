@@ -80,7 +80,7 @@ extension OfferCollectionViewSection: UICompositionalLayoutableSectionLayout {
     }
     
     private var paginationSupplementaryItem: NSCollectionLayoutBoundarySupplementaryItem {
-        let size = NSCollectionLayoutSize(widthDimension: .estimated(1), heightDimension: .absolute(40))
+        let size = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.5), heightDimension: .absolute(40))
         return NSCollectionLayoutBoundarySupplementaryItem(
             layoutSize: size,
             elementKind: SupplementaryViewType.identifier,

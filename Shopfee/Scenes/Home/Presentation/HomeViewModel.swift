@@ -17,6 +17,7 @@ protocol HomeViewModelProtocol: ObservableObject {
     var searchPlaceholder: String { get set }
     
     func notificationButtonTapped()
+    func viewWillAppear()
 }
 
 @MainActor
@@ -49,5 +50,9 @@ final class HomeViewModel: HomeViewModelProtocol {
     
     func notificationButtonTapped() {
         coordinator.navigateToNotifications()
+    }
+    
+    func viewWillAppear() {
+        coordinator.viewWillAppear()
     }
 }

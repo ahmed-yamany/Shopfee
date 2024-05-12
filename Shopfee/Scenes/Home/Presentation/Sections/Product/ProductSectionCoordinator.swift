@@ -16,10 +16,12 @@ protocol ProductSectionCoordinatorProtocol: Coordinator {
 
 final class ProductSectionCoordinator: ProductSectionCoordinatorProtocol {
     let router: Router
+    let onShowDetails: Action
     var viewModel: ProductSectionViewModel!
     
-    init(router: Router) {
+    init(router: Router, onShowDetails: @escaping Action) {
         self.router = router
+        self.onShowDetails = onShowDetails
         self.viewModel = createViewModel()
     }
     
@@ -32,7 +34,9 @@ final class ProductSectionCoordinator: ProductSectionCoordinatorProtocol {
     }
     
     func showDetails(for product: ProductCellModel) {
-        ProductDetailsCoordinator(router: router, product: product).start()
+        ProductDetailsCoordinator(router: router, product: product, onAppear: { [weak self] in
+            self?.onShowDetails()
+        }).start()
     }
     
     private func createViewModel() -> ProductSectionViewModel {
