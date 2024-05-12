@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SwiftUIViews
 
 private class Pagination: ObservableObject {
     @Published var count: Int = 0

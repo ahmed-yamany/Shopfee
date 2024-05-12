@@ -63,7 +63,6 @@
 		EE7939132BE274F5004FF13C /* SendOTPCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7939122BE274F5004FF13C /* SendOTPCoordinator.swift */; };
 		EE7939152BE2753C004FF13C /* SendOTPUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7939142BE2753C004FF13C /* SendOTPUseCase.swift */; };
 		EE80C4E22BE245040001A599 /* PopUpTransitioningDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE80C4E12BE245040001A599 /* PopUpTransitioningDelegate.swift */; };
-		EE80C4E42BE25B440001A599 /* GifView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE80C4E32BE25B440001A599 /* GifView.swift */; };
 		EE8AFAEC2BEA507B001006F8 /* Domain in Frameworks */ = {isa = PBXBuildFile; productRef = EE8AFAEB2BEA507B001006F8 /* Domain */; };
 		EE9BFFB02BE3F05F00501777 /* ShopfeeCoordinatorCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9BFFAF2BE3F05F00501777 /* ShopfeeCoordinatorCommand.swift */; };
 		EE9D3CA22BE8D69E0098AAFF /* ProductCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9D3C9E2BE8D69E0098AAFF /* ProductCollectionViewCell.swift */; };
@@ -130,10 +129,6 @@
 		EEE8D53C2BDC1A2A0037F668 /* View+PrimaryStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE8D53B2BDC1A2A0037F668 /* View+PrimaryStyle.swift */; };
 		EEE8D53F2BDC36270037F668 /* SwiftUIModifiers in Frameworks */ = {isa = PBXBuildFile; productRef = EEE8D53E2BDC36270037F668 /* SwiftUIModifiers */; };
 		EEE8D5422BDC37090037F668 /* CGFloat+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE8D5412BDC37090037F668 /* CGFloat+Constants.swift */; };
-		EEE8D5492BDC3A880037F668 /* CapsulePaginationStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE8D5432BDC3A870037F668 /* CapsulePaginationStyle.swift */; };
-		EEE8D54A2BDC3A880037F668 /* CirclePaginationStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE8D5442BDC3A870037F668 /* CirclePaginationStyle.swift */; };
-		EEE8D54B2BDC3A880037F668 /* PaginationStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE8D5462BDC3A870037F668 /* PaginationStyle.swift */; };
-		EEE8D54C2BDC3A880037F668 /* PaginationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE8D5472BDC3A870037F668 /* PaginationView.swift */; };
 		EEE8D54F2BDC445B0037F668 /* OnboardingTabViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE8D54E2BDC445B0037F668 /* OnboardingTabViewModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -212,7 +207,6 @@
 		EE7939122BE274F5004FF13C /* SendOTPCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendOTPCoordinator.swift; sourceTree = "<group>"; };
 		EE7939142BE2753C004FF13C /* SendOTPUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendOTPUseCase.swift; sourceTree = "<group>"; };
 		EE80C4E12BE245040001A599 /* PopUpTransitioningDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpTransitioningDelegate.swift; sourceTree = "<group>"; };
-		EE80C4E32BE25B440001A599 /* GifView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifView.swift; sourceTree = "<group>"; };
 		EE9BFFAF2BE3F05F00501777 /* ShopfeeCoordinatorCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopfeeCoordinatorCommand.swift; sourceTree = "<group>"; };
 		EE9D3C9E2BE8D69E0098AAFF /* ProductCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCollectionViewCell.swift; sourceTree = "<group>"; };
 		EE9D3C9F2BE8D69E0098AAFF /* ProductCollectionViewSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCollectionViewSection.swift; sourceTree = "<group>"; };
@@ -276,10 +270,6 @@
 		EEE8D5382BDC16940037F668 /* SplashCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashCoordinator.swift; sourceTree = "<group>"; };
 		EEE8D53B2BDC1A2A0037F668 /* View+PrimaryStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+PrimaryStyle.swift"; sourceTree = "<group>"; };
 		EEE8D5412BDC37090037F668 /* CGFloat+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+Constants.swift"; sourceTree = "<group>"; };
-		EEE8D5432BDC3A870037F668 /* CapsulePaginationStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CapsulePaginationStyle.swift; sourceTree = "<group>"; };
-		EEE8D5442BDC3A870037F668 /* CirclePaginationStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CirclePaginationStyle.swift; sourceTree = "<group>"; };
-		EEE8D5462BDC3A870037F668 /* PaginationStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaginationStyle.swift; sourceTree = "<group>"; };
-		EEE8D5472BDC3A870037F668 /* PaginationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaginationView.swift; sourceTree = "<group>"; };
 		EEE8D54E2BDC445B0037F668 /* OnboardingTabViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingTabViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -917,11 +907,9 @@
 				EE1F6F512BE37DDF006D1C23 /* Pin */,
 				EED29DF72BE16D7900548AFE /* PopUp */,
 				EE6B4F812BDE551300E173BC /* TextField */,
-				EEE8D5482BDC3A870037F668 /* PaginationView */,
 				EEE8D5322BDC14CF0037F668 /* Text */,
 				EEE8D5292BDC031B0037F668 /* Buttons */,
 				EE1992502BE80E8700FE3523 /* SupplementaryViews */,
-				EE80C4E32BE25B440001A599 /* GifView.swift */,
 				EEE8D5352BDC16370037F668 /* ShopfeeLogo.swift */,
 				EE7939082BE26E79004FF13C /* ShopfeeLoadingView.swift */,
 			);
@@ -978,25 +966,6 @@
 				EEE8D5412BDC37090037F668 /* CGFloat+Constants.swift */,
 			);
 			path = CGFloat;
-			sourceTree = "<group>";
-		};
-		EEE8D5452BDC3A870037F668 /* Pagination Styles */ = {
-			isa = PBXGroup;
-			children = (
-				EEE8D5432BDC3A870037F668 /* CapsulePaginationStyle.swift */,
-				EEE8D5442BDC3A870037F668 /* CirclePaginationStyle.swift */,
-			);
-			path = "Pagination Styles";
-			sourceTree = "<group>";
-		};
-		EEE8D5482BDC3A870037F668 /* PaginationView */ = {
-			isa = PBXGroup;
-			children = (
-				EEE8D5452BDC3A870037F668 /* Pagination Styles */,
-				EEE8D5462BDC3A870037F668 /* PaginationStyle.swift */,
-				EEE8D5472BDC3A870037F668 /* PaginationView.swift */,
-			);
-			path = PaginationView;
 			sourceTree = "<group>";
 		};
 		EEE8D54D2BDC43CC0037F668 /* ViewModel */ = {
@@ -1188,7 +1157,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				EECE7E872BEE8909000F7F41 /* ProductDetailsView.swift in Sources */,
-				EEE8D54C2BDC3A880037F668 /* PaginationView.swift in Sources */,
 				EEE8D4E82BDBD9620037F668 /* Action.swift in Sources */,
 				EE660E372BEAA20700F89868 /* OfferSectionFactory.swift in Sources */,
 				EECE7E8C2BEE8910000F7F41 /* ProductDetailsUseCase.swift in Sources */,
@@ -1228,7 +1196,6 @@
 				EEE62DCA2BE389D900937ECA /* ProcessAccountViewController.swift in Sources */,
 				EEE8D5242BDBFCAA0037F668 /* OnboardingCoordinator.swift in Sources */,
 				EED68E802BDD6FFD00774A4B /* OpenFromCenterPresentAnimator.swift in Sources */,
-				EE80C4E42BE25B440001A599 /* GifView.swift in Sources */,
 				EE2DDD672BDBCB7B00361413 /* AppDelegate.swift in Sources */,
 				EE79390E2BE272E2004FF13C /* SendOTPView.swift in Sources */,
 				EE79390F2BE272E2004FF13C /* SendOTPViewModel.swift in Sources */,
@@ -1241,7 +1208,6 @@
 				EEE8D51D2BDBFB5C0037F668 /* OnboardingView.swift in Sources */,
 				EE6EFA032BDFF64500E5C2E3 /* LoginCoordinator.swift in Sources */,
 				EEE8D51E2BDBFB5C0037F668 /* OnboardingViewModel.swift in Sources */,
-				EEE8D5492BDC3A880037F668 /* CapsulePaginationStyle.swift in Sources */,
 				EE2701E32BE53B7400B16C74 /* TabBarItem.swift in Sources */,
 				EE6EFA122BE00A7E00E5C2E3 /* OTPUseCase.swift in Sources */,
 				EEDCE16B2BE3932C003C0A24 /* ShopfeePinTextField.swift in Sources */,
@@ -1253,9 +1219,7 @@
 				EE6EFA142BE0189D00E5C2E3 /* View+navigationTitle.swift in Sources */,
 				EE238CD82BECFDA1008E67B0 /* FilterPickerItem.swift in Sources */,
 				EE6EFA0E2BE008A900E5C2E3 /* OTPViewController.swift in Sources */,
-				EEE8D54B2BDC3A880037F668 /* PaginationStyle.swift in Sources */,
 				EE9BFFB02BE3F05F00501777 /* ShopfeeCoordinatorCommand.swift in Sources */,
-				EEE8D54A2BDC3A880037F668 /* CirclePaginationStyle.swift in Sources */,
 				EEDCE1832BE3B34C003C0A24 /* HomeViewController.swift in Sources */,
 				EEDCE1742BE3AAE0003C0A24 /* EnterPinCoordinator.swift in Sources */,
 				EE1992432BE7F08200FE3523 /* PaginationSupplementaryView.swift in Sources */,

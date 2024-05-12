@@ -7,6 +7,7 @@
 
 import SwiftUI
 import FoundationExtensions
+import SwiftUIViews
 
 struct OnboardingView<ViewModel: OnboardingViewModelProtocol>: View {
     @ObservedObject var viewModel: ViewModel

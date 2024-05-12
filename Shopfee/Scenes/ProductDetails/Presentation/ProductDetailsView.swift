@@ -27,7 +27,6 @@ struct ProductDetailsView<ViewModel: ProductDetailsViewModelProtocol>: View {
     }
 }
 
-
 #Preview {
     let router = ShopfeeRouter(navigationController: .init())
     let coordinator = ProductDetailsCoordinator(router: router,

@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SwiftUIViews
 
 struct ShopfeeLoadingView: View {
     let title: String

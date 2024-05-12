@@ -32,6 +32,7 @@ final class ShopfeeCoordinator: ShopfeeCoordinatorProtocol {
     
     func start() {
         showTabBar()
+//        showOnboarding()
     }
     
     func showOnboarding() {
