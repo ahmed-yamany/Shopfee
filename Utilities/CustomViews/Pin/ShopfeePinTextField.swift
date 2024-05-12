@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SwiftUIViews
 
 struct ShopfeePinTextField: View {
     @Binding var pin: String

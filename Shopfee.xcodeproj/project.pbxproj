@@ -37,6 +37,7 @@
 		EE2DDD8A2BDBCB7E00361413 /* ShopfeeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE2DDD892BDBCB7E00361413 /* ShopfeeUITestsLaunchTests.swift */; };
 		EE2DDD992BDBCD7700361413 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = EE2DDD972BDBCD7700361413 /* .swiftlint.yml */; };
 		EE2DDD9F2BDBCE7600361413 /* Shopfee.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = EE2DDD9E2BDBCE7600361413 /* Shopfee.xcstrings */; };
+		EE49E6B92BF13CE7002160D8 /* SwiftUIViews in Frameworks */ = {isa = PBXBuildFile; productRef = EE49E6B82BF13CE7002160D8 /* SwiftUIViews */; };
 		EE660E282BEA6C6100F89868 /* ProductSectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE660E272BEA6C6100F89868 /* ProductSectionViewModel.swift */; };
 		EE660E2E2BEA7C0100F89868 /* ProductSectionUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE660E2D2BEA7C0100F89868 /* ProductSectionUseCase.swift */; };
 		EE660E332BEAA1CB00F89868 /* OfferSectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE660E322BEAA1CB00F89868 /* OfferSectionViewModel.swift */; };
@@ -68,7 +69,6 @@
 		EE9D3CA22BE8D69E0098AAFF /* ProductCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9D3C9E2BE8D69E0098AAFF /* ProductCollectionViewCell.swift */; };
 		EE9D3CA32BE8D69E0098AAFF /* ProductCollectionViewSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9D3C9F2BE8D69E0098AAFF /* ProductCollectionViewSection.swift */; };
 		EE9D3CA52BE8D6FD0098AAFF /* ProductCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9D3CA42BE8D6FD0098AAFF /* ProductCellModel.swift */; };
-		EEB7B54D2BE1173D00AF684F /* OTPTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB7B54C2BE1173D00AF684F /* OTPTextField.swift */; };
 		EECE7E7B2BEE838D000F7F41 /* ProductSectionCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EECE7E7A2BEE838D000F7F41 /* ProductSectionCoordinator.swift */; };
 		EECE7E872BEE8909000F7F41 /* ProductDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EECE7E832BEE8909000F7F41 /* ProductDetailsView.swift */; };
 		EECE7E882BEE8909000F7F41 /* ProductDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EECE7E842BEE8909000F7F41 /* ProductDetailsViewModel.swift */; };
@@ -217,7 +217,6 @@
 		EE9D3C9E2BE8D69E0098AAFF /* ProductCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCollectionViewCell.swift; sourceTree = "<group>"; };
 		EE9D3C9F2BE8D69E0098AAFF /* ProductCollectionViewSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCollectionViewSection.swift; sourceTree = "<group>"; };
 		EE9D3CA42BE8D6FD0098AAFF /* ProductCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCellModel.swift; sourceTree = "<group>"; };
-		EEB7B54C2BE1173D00AF684F /* OTPTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPTextField.swift; sourceTree = "<group>"; };
 		EECE7E792BEE7E73000F7F41 /* Domain */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Domain; sourceTree = "<group>"; };
 		EECE7E7A2BEE838D000F7F41 /* ProductSectionCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductSectionCoordinator.swift; sourceTree = "<group>"; };
 		EECE7E832BEE8909000F7F41 /* ProductDetailsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductDetailsView.swift; sourceTree = "<group>"; };
@@ -294,6 +293,7 @@
 				EE088B062BE65BFF00885A35 /* CustomViews in Frameworks */,
 				EEE8D53F2BDC36270037F668 /* SwiftUIModifiers in Frameworks */,
 				EED68E672BDD2EA800774A4B /* FoundationExtensions in Frameworks */,
+				EE49E6B92BF13CE7002160D8 /* SwiftUIViews in Frameworks */,
 				EE088B012BE65A8900885A35 /* CompositionalLayoutableSection in Frameworks */,
 				EED68E7E2BDD52FA00774A4B /* MakeConstraints in Frameworks */,
 			);
@@ -497,7 +497,6 @@
 			isa = PBXGroup;
 			children = (
 				EE6B4F822BDE552300E173BC /* ShopfeeTextField.swift */,
-				EEB7B54C2BE1173D00AF684F /* OTPTextField.swift */,
 				EED29DF52BE1615A00548AFE /* ShopfeeOTPTextField.swift */,
 			);
 			path = TextField;
@@ -1034,6 +1033,7 @@
 				EE088B052BE65BFF00885A35 /* CustomViews */,
 				EE8AFAEB2BEA507B001006F8 /* Domain */,
 				EED9520F2BEF82D400F983D1 /* Coordinator */,
+				EE49E6B82BF13CE7002160D8 /* SwiftUIViews */,
 			);
 			productName = Shopfee;
 			productReference = EE2DDD632BDBCB7B00361413 /* Shopfee.app */;
@@ -1114,6 +1114,7 @@
 				EED68E7C2BDD52FA00774A4B /* XCRemoteSwiftPackageReference "MakeConstraints" */,
 				EE088AFF2BE65A8900885A35 /* XCRemoteSwiftPackageReference "CompositionalLayoutableSection" */,
 				EE088B042BE65BFF00885A35 /* XCRemoteSwiftPackageReference "CustomViews" */,
+				EE49E6B72BF13CE7002160D8 /* XCRemoteSwiftPackageReference "SwiftUIViews" */,
 			);
 			productRefGroup = EE2DDD642BDBCB7B00361413 /* Products */;
 			projectDirPath = "";
@@ -1275,7 +1276,6 @@
 				EEE8D5392BDC16940037F668 /* SplashCoordinator.swift in Sources */,
 				EEE62DAA2BE3868E00937ECA /* CreatePinCoordinator.swift in Sources */,
 				EE238CD62BECFD6D008E67B0 /* FilterPicker.swift in Sources */,
-				EEB7B54D2BE1173D00AF684F /* OTPTextField.swift in Sources */,
 				EE1992412BE7B21000FE3523 /* Logger.swift in Sources */,
 				EED68E722BDD40CD00774A4B /* RegisterCoordinator.swift in Sources */,
 				EECE7E7B2BEE838D000F7F41 /* ProductSectionCoordinator.swift in Sources */,
@@ -1653,6 +1653,14 @@
 				kind = branch;
 			};
 		};
+		EE49E6B72BF13CE7002160D8 /* XCRemoteSwiftPackageReference "SwiftUIViews" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ahmed-yamany/SwiftUIViews";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 		EED68E652BDD2EA800774A4B /* XCRemoteSwiftPackageReference "FoundationExtensions" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/ahmed-yamany/FoundationExtensions";
@@ -1689,6 +1697,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = EE088B042BE65BFF00885A35 /* XCRemoteSwiftPackageReference "CustomViews" */;
 			productName = CustomViews;
+		};
+		EE49E6B82BF13CE7002160D8 /* SwiftUIViews */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EE49E6B72BF13CE7002160D8 /* XCRemoteSwiftPackageReference "SwiftUIViews" */;
+			productName = SwiftUIViews;
 		};
 		EE8AFAEB2BEA507B001006F8 /* Domain */ = {
 			isa = XCSwiftPackageProductDependency;

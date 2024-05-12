@@ -6,19 +6,39 @@
 //
 
 import SwiftUI
+import SwiftUIViews
 
 struct ProductDetailsView<ViewModel: ProductDetailsViewModelProtocol>: View {
     @ObservedObject var viewModel: ViewModel
+    @State var offset: CGPoint = .zero
     
     var body: some View {
-        ScrollView {
-            VStack {
-                Text("Hello World!")
+        TrackableScrollView(offset: $offset) {
+            LazyVStack {
+                ForEach(0..<1000, id: \.self) { int in
+                    Text("Hello World! \(int)")
+                }
             }
         }
         .navigationTitle("Customize Order")
         .frame(maxWidth: .infinity)
-        .background(.brand200)
+        .background(.brand50)
         .applyPrimaryStyle()
     }
+}
+
+
+#Preview {
+    let router = ShopfeeRouter(navigationController: .init())
+    let coordinator = ProductDetailsCoordinator(router: router,
+                                                product: .sample,
+                                                onAppear: {})
+    let useCase = ProductDetailsUseCase()
+    let viewModel = ProductDetailsViewModel(
+        coordinator: coordinator,
+        useCase: useCase
+    )
+    let controller = ProductDetailsViewController(viewModel: viewModel)
+    router.setViewController(controller)
+    return router.navigationController.toSwiftUI().ignoresSafeArea().eraseToAnyView()
 }

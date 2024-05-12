@@ -1,5 +1,5 @@
 {
-  "originHash" : "e88141723c646d2142f69349ff998c0662bb13151b1688c16c6b0232bed0b16d",
+  "originHash" : "95d92409a0e78c20351b64076042f77d1aa393f9737c1283a575696de8c4c409",
   "pins" : [
     {
       "identity" : "compositionallayoutablesection",
@@ -44,6 +44,15 @@
       "state" : {
         "branch" : "main",
         "revision" : "1940a4783a216d047f45ba78b3bb058fa89ad467"
+      }
+    },
+    {
+      "identity" : "swiftuiviews",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/ahmed-yamany/SwiftUIViews",
+      "state" : {
+        "branch" : "main",
+        "revision" : "3893a045abdea9ea9037b3aa0853f39e12fe2e6f"
       }
     }
   ],

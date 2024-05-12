@@ -41,3 +41,14 @@ class ProductCellModel: Identifiable, ObservableObject {
         self.image = image
     }
 }
+
+extension ProductCellModel {
+    static var sample = ProductCellModel(
+        id: UUID().uuidString,
+        name: "Coffee Milk",
+        ingredients: "Ice americano + fresh milk",
+        price: "Rp25.000",
+        discountPrice: "",
+        imageUrl: "https://drive.google.com/uc?export=view&id=1d3mHmFdXSZuaDysomix4p6YF3PivqJ0M"
+    )
+}
