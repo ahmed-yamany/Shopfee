@@ -18,6 +18,9 @@ final class OfferCollectionViewSection: CompositionalLayoutableSection {
     
     var supplementaryView: SupplementaryViewType?
     
+    var visibleCellIndex: Int = 0
+    var scrollTimer: Timer?
+    
     let viewModel: any OfferSectionViewModelProtocol
     init(viewModel: any OfferSectionViewModelProtocol) {
         self.viewModel = viewModel
@@ -25,8 +28,34 @@ final class OfferCollectionViewSection: CompositionalLayoutableSection {
         delegate = self
         dataSource = self
         sectionLayout = self
+        
         viewModel.reloadData = { [weak self] in
             self?.reloadData()
+        }
+        
+        scrollTimer = Timer.scheduledTimer(
+            timeInterval: 5,
+            target: self,
+            selector: #selector(scrollToNextCell),
+            userInfo: nil,
+            repeats: true
+        )
+    }
+    
+    deinit {
+        scrollTimer?.invalidate()
+    }
+    
+    @MainActor
+    @objc func scrollToNextCell() {
+        visibleCellIndex += 1
+        if visibleCellIndex >= viewModel.itemsCount() {
+            visibleCellIndex = 0
+        }
+        
+        if let sectionIndex = index {
+            let indexPath = IndexPath(item: visibleCellIndex, section: sectionIndex)
+            collectionView?.scrollToItem(at: indexPath, at: .right, animated: true)
         }
     }
 }
@@ -108,8 +137,9 @@ extension OfferCollectionViewSection: UICompositionalLayoutableSectionLayout {
                 Logger.log("supplementaryView is nil", category: \.default, level: .error)
                 return
             }
-            
-            supplementaryView.updateIndex(to: items.last?.indexPath.item ?? 0)
+            let visibleCellIndex = items.last?.indexPath.item ?? 0
+            supplementaryView.updateIndex(to: visibleCellIndex)
+            self.visibleCellIndex = visibleCellIndex
         }
     }
 }
