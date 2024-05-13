@@ -24,7 +24,7 @@ final class ProductDetailsCoordinator: ProductDetailsCoordinatorProtocol {
     }
     
     func start() {
-        let useCase = ProductDetailsUseCase()
+        let useCase = ProductDetailsUseCase(product: product)
         let viewModel = ProductDetailsViewModel(coordinator: self, useCase: useCase)
         let controller = ProductDetailsViewController(viewModel: viewModel)
         router.push(controller)

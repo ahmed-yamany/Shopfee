@@ -6,20 +6,14 @@
 //
 
 import SwiftUI
-import SwiftUIViews
 
 struct ShopfeeLoadingView: View {
     let title: String
     let subtitle: String
     
-    // swiftlint: disable all
-    let url = Bundle.main.url(forResource: "loading", withExtension: "gif")!
-    // swiftlint: enable all
-    
     var body: some View {
         VStack {
-            GifView(url)
-                .frame(width: 400, height: 120)
+            ShopFeeActivityIndicator()
             
             VStack(spacing: 0) {
                 Text(title)

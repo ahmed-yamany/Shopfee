@@ -9,11 +9,14 @@ import SwiftUI
 
 @MainActor
 protocol ProductDetailsViewModelProtocol: ObservableObject {
+    var entity: ProductDetailsEntity? { get set }
     func viewWillAppear()
+    func ratingAndReviewsTapped()
 }
 
 @MainActor
 final class ProductDetailsViewModel: ProductDetailsViewModelProtocol {
+    @Published var entity: ProductDetailsEntity?
     
     private let coordinator: ProductDetailsCoordinatorProtocol
     private let useCase: ProductDetailsUseCaseProtocol
@@ -25,5 +28,22 @@ final class ProductDetailsViewModel: ProductDetailsViewModelProtocol {
     
     func viewWillAppear() {
         coordinator.viewWillAppear()
+        getDetails()
+    }
+    
+    func ratingAndReviewsTapped() {
+        
+    }
+}
+
+private extension ProductDetailsViewModel {
+    func getDetails() {
+        Task {
+            do {
+                entity = try await useCase.getDetails()
+            } catch {
+                print(error.localizedDescription)
+            }
+        }
     }
 }
