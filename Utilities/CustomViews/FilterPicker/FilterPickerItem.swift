@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct FilterPickerItem: Identifiable, Equatable {
-    var id = UUID()
-    let image: Image
+    let id: String
+    var image: Image?
     let title: String
 }

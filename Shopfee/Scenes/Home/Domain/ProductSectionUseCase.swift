@@ -169,18 +169,22 @@ final actor ProductSectionUseCase: ProductSectionUseCaseProtocol {
     func getFilterPickerItems() async throws -> [FilterPickerItem] {
         [
             .init(
+                id: UUID().uuidString,
                 image: Image(systemName: "line.3.horizontal.decrease.circle"),
                 title: "Filter"
             ),
             .init(
+                id: UUID().uuidString,
                 image: Image(systemName: "star"),
                 title: "Rating 4.5+"
             ),
             .init(
+                id: UUID().uuidString,
                 image: Image(systemName: "dollarsign"),
                 title: "Price"
             ),
             .init(
+                id: UUID().uuidString,
                 image: Image(systemName: "percent"),
                 title: "Promo"
             )

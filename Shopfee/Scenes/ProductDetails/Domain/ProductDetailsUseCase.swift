@@ -26,7 +26,38 @@ final class ProductDetailsUseCase: ProductDetailsUseCaseProtocol {
             price: "Rp25.000",
             ingredients: "Ice americano + fresh milk ",
             rating: "4.9",
-            ratingCount: "23"
+            ratingCount: "23",
+            customize: [
+                .init(
+                    title: "Variant",
+                    pickerItems: [
+                        .init(id: UUID().uuidString, title: "Ice"),
+                        .init(id: UUID().uuidString, title: "Hot")
+                    ]
+                ),
+                .init(
+                    title: "Size",
+                    pickerItems: [
+                        .init(id: UUID().uuidString, title: "Regular"),
+                        .init(id: UUID().uuidString, title: "Medium"),
+                        .init(id: UUID().uuidString, title: "Large")
+                    ]
+                ),
+                .init(
+                    title: "Sugar",
+                    pickerItems: [
+                        .init(id: UUID().uuidString, title: "Normal"),
+                        .init(id: UUID().uuidString, title: "Less")
+                    ]
+                ),
+                .init(
+                    title: "Ice",
+                    pickerItems: [
+                        .init(id: UUID().uuidString, title: "Normal"),
+                        .init(id: UUID().uuidString, title: "Less")
+                    ]
+                )
+            ]
         )
     }
 }

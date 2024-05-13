@@ -10,6 +10,7 @@ import SwiftUI
 @MainActor
 protocol ProductDetailsViewModelProtocol: ObservableObject {
     var entity: ProductDetailsEntity? { get set }
+    var customizeItems: [FilterPickerItem] { get set }
     func viewWillAppear()
     func ratingAndReviewsTapped()
 }
@@ -17,6 +18,7 @@ protocol ProductDetailsViewModelProtocol: ObservableObject {
 @MainActor
 final class ProductDetailsViewModel: ProductDetailsViewModelProtocol {
     @Published var entity: ProductDetailsEntity?
+    @Published var customizeItems: [FilterPickerItem] = []
     
     private let coordinator: ProductDetailsCoordinatorProtocol
     private let useCase: ProductDetailsUseCaseProtocol

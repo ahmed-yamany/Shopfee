@@ -15,4 +15,5 @@ struct ProductDetailsEntity: Identifiable {
     let ingredients: String
     let rating: String
     let ratingCount: String
+    let customize: [ProductCustomizeEntity]
 }

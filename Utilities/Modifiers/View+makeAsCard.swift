@@ -12,7 +12,7 @@ extension View {
     func makeAsCard() -> some View {
         foregroundStyle(.textHeading)
         .frame(maxWidth: .infinity)
-        .padding(8)
+        .padding(16)
         .background(.neutralLight)
         .mask(RoundedRectangle(cornerRadius: 8))
         .shadow(color: .textHeading.opacity(0.3), radius: 3)

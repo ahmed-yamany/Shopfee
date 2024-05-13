@@ -127,6 +127,28 @@ private struct CustomizeView<ViewModel: ProductDetailsViewModelProtocol>: View {
     
     var body: some View {
         VStack {
+            Text("Customize")
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .font(.custom(size: 14, weight: .bold))
+            
+            Grid {
+                ForEach(entity.customize) { item in
+                    GridRow {
+                        Text(item.title)
+                            .font(.custom(size: 14, weight: .regular))
+                            .gridColumnAlignment(.leading)
+                        
+                        Spacer()
+                        
+                        FilterPicker(
+                            items: item.pickerItems,
+                            selectedItems: $viewModel.customizeItems,
+                            multiSelect: false
+                        )
+                        .gridColumnAlignment(.trailing)
+                    }
+                }
+            }
             
         }
         .makeAsCard()
