@@ -13,7 +13,6 @@ import UIKit
 final class OfferCollectionViewSection: CompositionalLayoutableSection {
     typealias ItemsType = OfferCellModel
     typealias CellType = OfferCollectionViewCell
-    typealias DecorationViewType = PaginationSupplementaryView
     typealias SupplementaryViewType = PaginationSupplementaryView
     
     var supplementaryView: SupplementaryViewType?
@@ -153,10 +152,6 @@ extension OfferCollectionViewSection: UICompositionalLayoutableSectionDelegate {
     
     func registerSupplementaryView(in collectionView: UICollectionView) {
         collectionView.register(SupplementaryViewType.self, supplementaryViewOfKind: SupplementaryViewType.identifier)
-    }
-    
-    func registerDecorationView(in layout: UICollectionViewCompositionalLayout) {
-        layout.register(DecorationViewType.self, forDecorationViewOfKind: DecorationViewType.identifier)
     }
 }
 

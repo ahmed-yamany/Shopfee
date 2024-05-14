@@ -26,14 +26,17 @@ struct ProductDetailsView<ViewModel: ProductDetailsViewModelProtocol>: View {
                 productImage
             }
             .navigationTitle("Customize Order")
-            .frame(maxWidth: .infinity)
             .applyPrimaryStyle()
+            .overlay(alignment: .bottom) {
+                CheckOutView(viewModel: viewModel, entity: entity)
+            }
+            
         } else {
             ShopFeeActivityIndicator()
         }
     }
     
-    var imageHeight: CGFloat {
+    private var imageHeight: CGFloat {
         let height = 240 + offset.y
         let minValue = 240 * 0.75
         return height < minValue ? minValue : height
@@ -75,7 +78,7 @@ private struct DetailsView<ViewModel: ProductDetailsViewModelProtocol>: View {
                 
                 Spacer()
                 
-                Text(entity.price)
+                Text("\(entity.currency)\(entity.price)")
             }
             .font(.custom(size: 18, weight: .medium))
             
@@ -152,6 +155,41 @@ private struct CustomizeView<ViewModel: ProductDetailsViewModelProtocol>: View {
             
         }
         .makeAsCard()
+    }
+}
+
+private struct CheckOutView<ViewModel: ProductDetailsViewModelProtocol>: View {
+    @ObservedObject var viewModel: ViewModel
+    let entity: ProductDetailsEntity
+    
+    var body: some View {
+        HStack {
+            VStack(alignment: .leading) {
+                Text("Total")
+                    .foregroundStyle(.textParagraph)
+                    .font(.custom(size: 14, weight: .medium))
+                
+                Text("\(entity.currency). \(viewModel.totalPrice())")
+                    .foregroundStyle(.textHeading)
+                    .font(.custom(size: 18, weight: .bold))
+            }
+            
+            Spacer()
+            
+            Button("Add Order") {
+                viewModel.addOrder()
+            }
+            .buttonStyle(.primary())
+            .frame(width: 132)
+        }
+        .frame(height: 66)
+        .frame(maxWidth: .infinity)
+        .padding(.horizontal, .safeAreaPadding)
+        .background {
+            Color.neutralLight
+                .shadow(color: .textHeading.opacity(0.5), radius: 3)
+                .ignoresSafeArea()
+        }
     }
 }
 

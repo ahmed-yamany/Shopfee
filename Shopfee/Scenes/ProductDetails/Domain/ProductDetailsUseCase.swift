@@ -23,10 +23,11 @@ final class ProductDetailsUseCase: ProductDetailsUseCaseProtocol {
             id: UUID().uuidString,
             type: "Coffee",
             name: "Coffee milk",
-            price: "Rp25.000",
+            price: 25.000,
+            currency: "RP",
             ingredients: "Ice americano + fresh milk ",
             rating: "4.9",
-            ratingCount: "23",
+            ratingCount: 23,
             customize: [
                 .init(
                     title: "Variant",
