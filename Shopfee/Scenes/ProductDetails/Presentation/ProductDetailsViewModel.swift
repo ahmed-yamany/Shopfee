@@ -6,14 +6,18 @@
 //
 
 import SwiftUI
+import Combine
 
 @MainActor
 protocol ProductDetailsViewModelProtocol: ObservableObject {
     var entity: ProductDetailsEntity? { get set }
     var customizeItems: [FilterPickerItem] { get set }
+    var extraItems: [ProductExtraEntity] { get set }
     func totalPrice() -> Double
+    
     func viewWillAppear()
     func ratingAndReviewsTapped()
+    func addOrDeleteExtra(_ extra: ProductExtraEntity)
     func addOrder()
 }
 
@@ -21,7 +25,8 @@ protocol ProductDetailsViewModelProtocol: ObservableObject {
 final class ProductDetailsViewModel: ProductDetailsViewModelProtocol {
     @Published var entity: ProductDetailsEntity?
     @Published var customizeItems: [FilterPickerItem] = []
-    
+    @Published var extraItems: [ProductExtraEntity] = []
+
     private let coordinator: ProductDetailsCoordinatorProtocol
     private let useCase: ProductDetailsUseCaseProtocol
     
@@ -31,8 +36,7 @@ final class ProductDetailsViewModel: ProductDetailsViewModelProtocol {
     }
     
     func totalPrice() -> Double {
-        // calculate total price here
-        25.00
+        (entity?.price ?? 0) + extraItems.map { $0.price }.reduce(0, +)
     }
     
     func viewWillAppear() {
@@ -42,6 +46,14 @@ final class ProductDetailsViewModel: ProductDetailsViewModelProtocol {
     
     func ratingAndReviewsTapped() {
         
+    }
+    
+    func addOrDeleteExtra(_ extra: ProductExtraEntity) {
+        if extraItems.contains(where: {$0 == extra}) {
+            extraItems.removeAll(where: {$0 == extra})
+        } else {
+            extraItems.append(extra)
+        }
     }
     
     func addOrder() {

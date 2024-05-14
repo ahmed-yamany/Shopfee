@@ -58,6 +58,32 @@ final class ProductDetailsUseCase: ProductDetailsUseCaseProtocol {
                         .init(id: UUID().uuidString, title: "Less")
                     ]
                 )
+            ],
+            extras: [
+                .init(
+                    id: UUID().uuidString,
+                    title: "Extra Espresso",
+                    price: 5.00,
+                    currency: "RP"
+                ),
+                .init(
+                    id: UUID().uuidString,
+                    title: "Cincau",
+                    price: 6.00,
+                    currency: "RP"
+                ),
+                .init(
+                    id: UUID().uuidString,
+                    title: "Coffe Jelly",
+                    price: 3.00,
+                    currency: "RP"
+                ),
+                .init(
+                    id: UUID().uuidString,
+                    title: "Chocolate Ice Creame",
+                    price: 7.00,
+                    currency: "RP"
+                )
             ]
         )
     }

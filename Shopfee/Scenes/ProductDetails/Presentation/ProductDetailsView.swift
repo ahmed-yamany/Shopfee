@@ -21,6 +21,7 @@ struct ProductDetailsView<ViewModel: ProductDetailsViewModelProtocol>: View {
                     
                     content(entity: entity)
                 }
+                .padding(.bottom, 76)
             }
             .background(alignment: .top) {
                 productImage
@@ -57,6 +58,8 @@ struct ProductDetailsView<ViewModel: ProductDetailsViewModelProtocol>: View {
             DetailsView(viewModel: viewModel, entity: entity)
             
             CustomizeView(viewModel: viewModel, entity: entity)
+            
+            ToppingView(viewModel: viewModel, entity: entity)
         }
         .padding(.horizontal, .safeAreaPadding)
     }
@@ -158,6 +161,45 @@ private struct CustomizeView<ViewModel: ProductDetailsViewModelProtocol>: View {
     }
 }
 
+private struct ToppingView<ViewModel: ProductDetailsViewModelProtocol>: View {
+    @ObservedObject var viewModel: ViewModel
+    let entity: ProductDetailsEntity
+    
+    var body: some View {
+        VStack(spacing: 12) {
+            Text("Topping")
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .font(.custom(size: 14, weight: .bold))
+            
+            Grid(verticalSpacing: 12) {
+                ForEach(entity.extras) { extra in
+                    let selected = viewModel.extraItems.contains(where: { $0 == extra })
+                    GridRow {
+                        Text(extra.title)
+                            .font(.custom(size: 14, weight: .regular))
+                            .gridColumnAlignment(.leading)
+                        
+                        Spacer()
+                        
+                        HStack {
+                            Text(extra.priceString)
+                                .font(.custom(size: 14, weight: .medium))
+                            
+                            Image(systemName: selected ? "checkmark.square.fill" : "square")
+                                .foregroundStyle(selected ? .success : .textHeading)
+                        }
+                        .gridColumnAlignment(.trailing)
+                    }
+                    .onTapGesture {
+                        viewModel.addOrDeleteExtra(extra)
+                    }
+                }
+            }
+        }
+        .makeAsCard()
+    }
+}
+    
 private struct CheckOutView<ViewModel: ProductDetailsViewModelProtocol>: View {
     @ObservedObject var viewModel: ViewModel
     let entity: ProductDetailsEntity

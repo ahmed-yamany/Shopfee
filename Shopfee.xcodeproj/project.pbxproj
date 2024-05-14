@@ -63,6 +63,7 @@
 		EE7939132BE274F5004FF13C /* SendOTPCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7939122BE274F5004FF13C /* SendOTPCoordinator.swift */; };
 		EE7939152BE2753C004FF13C /* SendOTPUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7939142BE2753C004FF13C /* SendOTPUseCase.swift */; };
 		EE80C4E22BE245040001A599 /* PopUpTransitioningDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE80C4E12BE245040001A599 /* PopUpTransitioningDelegate.swift */; };
+		EE84F3E52BF3801800432704 /* ProductExtraEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE84F3E42BF3801800432704 /* ProductExtraEntity.swift */; };
 		EE8AFAEC2BEA507B001006F8 /* Domain in Frameworks */ = {isa = PBXBuildFile; productRef = EE8AFAEB2BEA507B001006F8 /* Domain */; };
 		EE8D070A2BF26D1900184169 /* ProductDetailsEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8D07092BF26D1900184169 /* ProductDetailsEntity.swift */; };
 		EE8D070C2BF26EE300184169 /* ShopFeeActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8D070B2BF26EE300184169 /* ShopFeeActivityIndicator.swift */; };
@@ -211,6 +212,7 @@
 		EE7939122BE274F5004FF13C /* SendOTPCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendOTPCoordinator.swift; sourceTree = "<group>"; };
 		EE7939142BE2753C004FF13C /* SendOTPUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendOTPUseCase.swift; sourceTree = "<group>"; };
 		EE80C4E12BE245040001A599 /* PopUpTransitioningDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpTransitioningDelegate.swift; sourceTree = "<group>"; };
+		EE84F3E42BF3801800432704 /* ProductExtraEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductExtraEntity.swift; sourceTree = "<group>"; };
 		EE8D07092BF26D1900184169 /* ProductDetailsEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailsEntity.swift; sourceTree = "<group>"; };
 		EE8D070B2BF26EE300184169 /* ShopFeeActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopFeeActivityIndicator.swift; sourceTree = "<group>"; };
 		EE8D070D2BF276C800184169 /* View+makeAsCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+makeAsCard.swift"; sourceTree = "<group>"; };
@@ -590,6 +592,7 @@
 			children = (
 				EE8D07092BF26D1900184169 /* ProductDetailsEntity.swift */,
 				EE8D070F2BF287E500184169 /* ProductCustomizeEntity.swift */,
+				EE84F3E42BF3801800432704 /* ProductExtraEntity.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -1245,6 +1248,7 @@
 				EEDCE1832BE3B34C003C0A24 /* HomeViewController.swift in Sources */,
 				EEDCE1742BE3AAE0003C0A24 /* EnterPinCoordinator.swift in Sources */,
 				EE1992432BE7F08200FE3523 /* PaginationSupplementaryView.swift in Sources */,
+				EE84F3E52BF3801800432704 /* ProductExtraEntity.swift in Sources */,
 				EE2701DC2BE533F500B16C74 /* TabBarView.swift in Sources */,
 				EE6EFA102BE008B600E5C2E3 /* OTPCoordinator.swift in Sources */,
 				EEDCE1852BE3B34C003C0A24 /* HomeCoordinator.swift in Sources */,
