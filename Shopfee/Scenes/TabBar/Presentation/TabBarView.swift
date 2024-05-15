@@ -40,34 +40,38 @@ struct TabBarView<ViewModel: TabBarViewModelProtocol>: View {
 
 private struct CardView<ViewModel: TabBarViewModelProtocol>: View {
     @ObservedObject var viewModel: ViewModel
-
+    
     var body: some View {
-        HStack {
-            VStack(alignment: .leading) {
-                Text("\(viewModel.cart.count) items")
-                    .font(.custom(size: 14, weight: .medium))
-
-                Text(viewModel.cart.last?.name ?? "")
-                    .font(.custom(size: 12, weight: .regular))
-            }
-
-            Spacer()
-
+        Button {
+            viewModel.cartTapped()
+        } label: {
             HStack {
-                Text(viewModel.cartTotalPrice())
-                Image(systemName: "bag")
+                VStack(alignment: .leading) {
+                    Text("\(viewModel.cart.count) items")
+                        .font(.custom(size: 14, weight: .medium))
+                    
+                    Text(viewModel.cart.last?.name ?? "")
+                        .font(.custom(size: 12, weight: .regular))
+                }
+                
+                Spacer()
+                
+                HStack {
+                    Text(viewModel.cartTotalPrice())
+                    Image(systemName: "bag")
+                }
+                .font(.custom(size: 16, weight: .medium))
             }
-            .font(.custom(size: 16, weight: .medium))
+            .padding(.safeAreaPadding)
+            .foregroundStyle(.neutralLight)
+            .frame(height: 56)
+            .frame(maxWidth: .infinity)
+            .background(.brand)
+            .mask {
+                RoundedRectangle(cornerRadius: 16)
+            }
+            .padding(.horizontal, .safeAreaPadding)
         }
-        .padding(.safeAreaPadding)
-        .foregroundStyle(.neutralLight)
-        .frame(height: 56)
-        .frame(maxWidth: .infinity)
-        .background(.brand)
-        .mask {
-            RoundedRectangle(cornerRadius: 16)
-        }
-        .padding(.horizontal, .safeAreaPadding)
     }
 }
 

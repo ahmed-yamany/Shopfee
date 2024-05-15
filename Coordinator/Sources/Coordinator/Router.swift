@@ -13,10 +13,9 @@ open class Router {
     public init(navigationController: UINavigationController) {
         self.navigationController = navigationController
     }
-
-    open var navigationBarIsHidden: Bool {
-        get { navigationController.navigationBar.isHidden }
-        set { navigationController.navigationBar.isHidden = newValue }
+    
+    open func setNavigationBarHidden(_ hidden: Bool, animated: Bool = true) {
+        navigationController.setNavigationBarHidden(hidden, animated: animated)
     }
     
     open func present(

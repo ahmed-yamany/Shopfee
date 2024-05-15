@@ -7,13 +7,14 @@
 
 import Combine
 import Coordinator
-import Foundation
+import UIKit
 
 protocol TabBarCoordinatorProtocol: Coordinator {
     func viewDidDisAppear()
     func viewWillAppear()
     func showTabBar()
     func hideTabBar()
+    func showCheckout()
 }
 
 final class TabBarCoordinator: TabBarCoordinatorProtocol {
@@ -37,11 +38,11 @@ final class TabBarCoordinator: TabBarCoordinatorProtocol {
     }
 
     func viewWillAppear() {
-        router.navigationBarIsHidden = true
+        router.setNavigationBarHidden(true)
     }
 
     func viewDidDisAppear() {
-        router.navigationBarIsHidden = false
+        self.router.setNavigationBarHidden(false)   
     }
 
     func showTabBar() {
@@ -50,5 +51,9 @@ final class TabBarCoordinator: TabBarCoordinatorProtocol {
 
     func hideTabBar() {
         showHideTabBar = false
+    }
+    
+    func showCheckout() {
+        CheckoutCoordinator(router: router).start()
     }
 }

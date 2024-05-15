@@ -20,6 +20,7 @@ protocol TabBarViewModelProtocol: ObservableObject {
     func viewDidLoad()
     func viewDidDisAppear()
     func cartTotalPrice() -> String
+    func cartTapped()
 }
 
 @MainActor
@@ -69,6 +70,10 @@ final class TabBarViewModel: TabBarViewModelProtocol {
         let totalPrice = cart.map { $0.totalPrice }.reduce(0, +)
 
         return "\(currency)\(totalPrice)"
+    }
+    
+    func cartTapped() {
+        coordinator.showCheckout()
     }
 }
 
