@@ -71,11 +71,11 @@ private struct ProductView: View {
     
     private var price: some View {
         VStack {
-            Text(product.price)
+            Text("\(product.currency) \(product.price)")
                 .font(.custom(size: 14, weight: .medium))
                 .foregroundStyle(.textHeading)
             
-            Text(product.discountPrice)
+            Text(product.discountPrice > 0 ? "\(product.currency) \(product.discountPrice)" : "")
                 .strikethrough()
                 .foregroundStyle(.textParagraph)
                 .font(.custom(size: 12, weight: .regular))

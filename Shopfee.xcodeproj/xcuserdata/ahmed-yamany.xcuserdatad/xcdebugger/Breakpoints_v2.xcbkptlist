@@ -7,16 +7,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "953C4B27-1097-4377-BC39-532ECE4A0CD8"
+            uuid = "56F97703-1B4C-4FEE-9AD5-32093AB6CEAE"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Shopfee/Scenes/Home/Presentation/Sections/Product/ProductSectionCoordinator.swift"
+            filePath = "Shopfee/Coordinator/ShopfeeCoordinator.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "38"
-            endingLineNumber = "38"
-            landmarkName = "showDetails(for:)"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
+            landmarkName = "addToCart(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

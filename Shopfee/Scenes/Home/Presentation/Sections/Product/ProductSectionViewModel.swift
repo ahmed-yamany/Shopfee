@@ -80,7 +80,7 @@ final class ProductSectionViewModel: ProductSectionViewModelProtocol {
     func prefetchItems(at indexPaths: [IndexPath]) {
         let products = indexPaths.map { $0.item }.map { items[$0] }
         
-        Task { @MainActor in
+        Task {
             do {
                 for product in products {
                     let image = try await useCase.fetchImage(from: product.imageUrl)

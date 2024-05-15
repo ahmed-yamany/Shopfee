@@ -10,6 +10,8 @@ import Coordinator
 
 protocol ProductDetailsCoordinatorProtocol: Coordinator {
     func viewWillAppear()
+    func showRattingAndReviews()
+    func addOrder(with customize: [FilterPickerItem], and extra: [ProductExtraEntity])
 }
 
 final class ProductDetailsCoordinator: ProductDetailsCoordinatorProtocol {
@@ -32,5 +34,15 @@ final class ProductDetailsCoordinator: ProductDetailsCoordinatorProtocol {
     
     func viewWillAppear() {
         onAppear()
+    }
+    
+    func showRattingAndReviews() {
+        
+    }
+    
+    func addOrder(with customize: [FilterPickerItem], and extra: [ProductExtraEntity]) {
+        let cartEntity = CartEntity(product: product, customize: customize, extra: extra)
+        ShopfeeCoordinator.shared.addToCart([cartEntity])
+        dismiss()
     }
 }

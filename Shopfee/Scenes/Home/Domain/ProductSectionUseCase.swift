@@ -34,130 +34,110 @@ final actor ProductSectionUseCase: ProductSectionUseCaseProtocol {
                 id: UUID().uuidString,
                 name: "Coffee Milk",
                 ingredients: "Ice americano + fresh milk",
-                price: "Rp25.000",
-                discountPrice: "",
+                price: 25.000,
+                discountPrice: 0.0,
+                currency: "RP",
                 imageUrl: "https://drive.google.com/uc?export=view&id=1d3mHmFdXSZuaDysomix4p6YF3PivqJ0M"
             ),
             .init(
                 id: UUID().uuidString,
                 name: "Caramel Latte",
                 ingredients: "Espresso, Fresh Milk and Caramel",
-                price: "Rp25.000",
-                discountPrice: "Rp28.000",
+                price: 25.000,
+                discountPrice: 28.000,
+                currency: "RP",
                 imageUrl: "https://drive.google.com/uc?export=view&id=1d3mHmFdXSZuaDysomix4p6YF3PivqJ0M"
             ),
             .init(
                 id: UUID().uuidString,
                 name: "Flat White",
                 ingredients: "Smooth ristretto shots of espresso with milk",
-                price: "Rp25.000",
-                discountPrice: "",
-                imageUrl: "https://drive.google.com/uc?export=view&id=1d3mHmFdXSZuaDysomix4p6YF3PivqJ0M"
-            ),
-            .init(
-                id: UUID().uuidString,
-                name: "Machiato",
-                ingredients: "Espresso and cream machiato",
-                price: "Rp25.000",
-                discountPrice: "",
+                price: 25.000,
+                discountPrice: 0.0,
+                currency: "RP",
                 imageUrl: "https://drive.google.com/uc?export=view&id=1d3mHmFdXSZuaDysomix4p6YF3PivqJ0M"
             ),
             .init(
                 id: UUID().uuidString,
                 name: "Coffee Milk",
                 ingredients: "Ice americano + fresh milk",
-                price: "Rp25.000",
-                discountPrice: "",
+                price: 25.000,
+                discountPrice: 0.0,
+                currency: "RP",
                 imageUrl: "https://drive.google.com/uc?export=view&id=1d3mHmFdXSZuaDysomix4p6YF3PivqJ0M"
             ),
             .init(
                 id: UUID().uuidString,
                 name: "Caramel Latte",
                 ingredients: "Espresso, Fresh Milk and Caramel",
-                price: "Rp25.000",
-                discountPrice: "Rp28.000",
+                price: 25.000,
+                discountPrice: 28.000,
+                currency: "RP",
                 imageUrl: "https://drive.google.com/uc?export=view&id=1d3mHmFdXSZuaDysomix4p6YF3PivqJ0M"
             ),
             .init(
                 id: UUID().uuidString,
                 name: "Flat White",
                 ingredients: "Smooth ristretto shots of espresso with milk",
-                price: "Rp25.000",
-                discountPrice: "",
-                imageUrl: "https://drive.google.com/uc?export=view&id=1d3mHmFdXSZuaDysomix4p6YF3PivqJ0M"
-            ),
-            .init(
-                id: UUID().uuidString,
-                name: "Machiato",
-                ingredients: "Espresso and cream machiato",
-                price: "Rp25.000",
-                discountPrice: "",
+                price: 25.000,
+                discountPrice: 0.0,
+                currency: "RP",
                 imageUrl: "https://drive.google.com/uc?export=view&id=1d3mHmFdXSZuaDysomix4p6YF3PivqJ0M"
             ),
             .init(
                 id: UUID().uuidString,
                 name: "Coffee Milk",
                 ingredients: "Ice americano + fresh milk",
-                price: "Rp25.000",
-                discountPrice: "",
+                price: 25.000,
+                discountPrice: 0.0,
+                currency: "RP",
                 imageUrl: "https://drive.google.com/uc?export=view&id=1d3mHmFdXSZuaDysomix4p6YF3PivqJ0M"
             ),
             .init(
                 id: UUID().uuidString,
                 name: "Caramel Latte",
                 ingredients: "Espresso, Fresh Milk and Caramel",
-                price: "Rp25.000",
-                discountPrice: "Rp28.000",
+                price: 25.000,
+                discountPrice: 28.000,
+                currency: "RP",
                 imageUrl: "https://drive.google.com/uc?export=view&id=1d3mHmFdXSZuaDysomix4p6YF3PivqJ0M"
             ),
             .init(
                 id: UUID().uuidString,
                 name: "Flat White",
                 ingredients: "Smooth ristretto shots of espresso with milk",
-                price: "Rp25.000",
-                discountPrice: "",
-                imageUrl: "https://drive.google.com/uc?export=view&id=1d3mHmFdXSZuaDysomix4p6YF3PivqJ0M"
-            ),
-            .init(
-                id: UUID().uuidString,
-                name: "Machiato",
-                ingredients: "Espresso and cream machiato",
-                price: "Rp25.000",
-                discountPrice: "",
+                price: 25.000,
+                discountPrice: 0.0,
+                currency: "RP",
                 imageUrl: "https://drive.google.com/uc?export=view&id=1d3mHmFdXSZuaDysomix4p6YF3PivqJ0M"
             ),
             .init(
                 id: UUID().uuidString,
                 name: "Coffee Milk",
                 ingredients: "Ice americano + fresh milk",
-                price: "Rp25.000",
-                discountPrice: "",
+                price: 25.000,
+                discountPrice: 0.0,
+                currency: "RP",
                 imageUrl: "https://drive.google.com/uc?export=view&id=1d3mHmFdXSZuaDysomix4p6YF3PivqJ0M"
             ),
             .init(
                 id: UUID().uuidString,
                 name: "Caramel Latte",
                 ingredients: "Espresso, Fresh Milk and Caramel",
-                price: "Rp25.000",
-                discountPrice: "Rp28.000",
+                price: 25.000,
+                discountPrice: 28.000,
+                currency: "RP",
                 imageUrl: "https://drive.google.com/uc?export=view&id=1d3mHmFdXSZuaDysomix4p6YF3PivqJ0M"
             ),
             .init(
                 id: UUID().uuidString,
                 name: "Flat White",
                 ingredients: "Smooth ristretto shots of espresso with milk",
-                price: "Rp25.000",
-                discountPrice: "",
+                price: 25.000,
+                discountPrice: 0.0,
+                currency: "RP",
                 imageUrl: "https://drive.google.com/uc?export=view&id=1d3mHmFdXSZuaDysomix4p6YF3PivqJ0M"
             ),
-            .init(
-                id: UUID().uuidString,
-                name: "Machiato",
-                ingredients: "Espresso and cream machiato",
-                price: "Rp25.000",
-                discountPrice: "",
-                imageUrl: "https://drive.google.com/uc?export=view&id=1d3mHmFdXSZuaDysomix4p6YF3PivqJ0M"
-            )
         ]
         // swiftlint: enable all
     }

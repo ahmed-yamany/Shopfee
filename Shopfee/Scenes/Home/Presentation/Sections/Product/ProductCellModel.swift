@@ -13,8 +13,9 @@ class ProductCellModel: Identifiable, ObservableObject {
     let id: String
     let name: String
     let ingredients: String
-    let price: String
-    let discountPrice: String
+    let price: Double
+    let discountPrice: Double
+    let currency: String
     let imageUrl: String
     
     @Published var image: UIImage
@@ -23,8 +24,9 @@ class ProductCellModel: Identifiable, ObservableObject {
         id: String,
         name: String,
         ingredients: String,
-        price: String,
-        discountPrice: String,
+        price: Double,
+        discountPrice: Double,
+        currency: String,
         imageUrl: String,
         image: UIImage = UIImage()
     ) {
@@ -35,6 +37,7 @@ class ProductCellModel: Identifiable, ObservableObject {
         self.discountPrice = discountPrice
         self.imageUrl = imageUrl
         self.image = image
+        self.currency = currency
     }
     
     func updateImage(_ image: UIImage) {
@@ -47,8 +50,9 @@ extension ProductCellModel {
         id: UUID().uuidString,
         name: "Coffee Milk",
         ingredients: "Ice americano + fresh milk",
-        price: "Rp25.000",
-        discountPrice: "",
+        price: 25.000,
+        discountPrice: 0.0,
+        currency: "RP",
         imageUrl: "https://drive.google.com/uc?export=view&id=1d3mHmFdXSZuaDysomix4p6YF3PivqJ0M"
     )
 }

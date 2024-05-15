@@ -27,6 +27,6 @@ final class EnterPinCoordinator: EnterPinCoordinatorProtocol {
     }
     
     func navigateToTabBar() {
-        TabBarCoordinator(router: router).start()
+        ShopfeeCoordinator.shared.showTabBar()
     }
 }

@@ -18,6 +18,7 @@ final class ProductDetailsUseCase: ProductDetailsUseCaseProtocol {
         self.product = product
     }
     
+    // swiftlint: disable all
     func getDetails() async throws -> ProductDetailsEntity {
         ProductDetailsEntity(
             id: UUID().uuidString,
@@ -87,4 +88,5 @@ final class ProductDetailsUseCase: ProductDetailsUseCaseProtocol {
             ]
         )
     }
+    // swiftlint: enable all
 }

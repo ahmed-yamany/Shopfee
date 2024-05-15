@@ -45,7 +45,7 @@ final class ProductDetailsViewModel: ProductDetailsViewModelProtocol {
     }
     
     func ratingAndReviewsTapped() {
-        
+        coordinator.showRattingAndReviews()
     }
     
     func addOrDeleteExtra(_ extra: ProductExtraEntity) {
@@ -57,7 +57,7 @@ final class ProductDetailsViewModel: ProductDetailsViewModelProtocol {
     }
     
     func addOrder() {
-        
+        coordinator.addOrder(with: customizeItems, and: extraItems)
     }
 }
 
