@@ -75,10 +75,11 @@
 		EE96AB2B2BF51AA700490295 /* CheckoutCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE96AB272BF51AA700490295 /* CheckoutCoordinator.swift */; };
 		EE96AB2C2BF51AA700490295 /* CheckoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE96AB282BF51AA700490295 /* CheckoutViewController.swift */; };
 		EE96AB2E2BF51AAB00490295 /* CheckoutUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE96AB2D2BF51AAB00490295 /* CheckoutUseCase.swift */; };
-		EE9BFFB02BE3F05F00501777 /* ShopfeeCoordinatorCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9BFFAF2BE3F05F00501777 /* ShopfeeCoordinatorCommand.swift */; };
 		EE9D3CA22BE8D69E0098AAFF /* ProductCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9D3C9E2BE8D69E0098AAFF /* ProductCollectionViewCell.swift */; };
 		EE9D3CA32BE8D69E0098AAFF /* ProductCollectionViewSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9D3C9F2BE8D69E0098AAFF /* ProductCollectionViewSection.swift */; };
 		EE9D3CA52BE8D6FD0098AAFF /* ProductCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9D3CA42BE8D6FD0098AAFF /* ProductCellModel.swift */; };
+		EECC698B2BF642510089B84A /* Shopfee.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EECC69892BF642510089B84A /* Shopfee.xcdatamodeld */; };
+		EECC698D2BF642760089B84A /* ShopfeePersistentContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EECC698C2BF642760089B84A /* ShopfeePersistentContainer.swift */; };
 		EECE7E7B2BEE838D000F7F41 /* ProductSectionCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EECE7E7A2BEE838D000F7F41 /* ProductSectionCoordinator.swift */; };
 		EECE7E872BEE8909000F7F41 /* ProductDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EECE7E832BEE8909000F7F41 /* ProductDetailsView.swift */; };
 		EECE7E882BEE8909000F7F41 /* ProductDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EECE7E842BEE8909000F7F41 /* ProductDetailsViewModel.swift */; };
@@ -229,11 +230,12 @@
 		EE96AB272BF51AA700490295 /* CheckoutCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckoutCoordinator.swift; sourceTree = "<group>"; };
 		EE96AB282BF51AA700490295 /* CheckoutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckoutViewController.swift; sourceTree = "<group>"; };
 		EE96AB2D2BF51AAB00490295 /* CheckoutUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckoutUseCase.swift; sourceTree = "<group>"; };
-		EE9BFFAF2BE3F05F00501777 /* ShopfeeCoordinatorCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopfeeCoordinatorCommand.swift; sourceTree = "<group>"; };
 		EE9D3C9E2BE8D69E0098AAFF /* ProductCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCollectionViewCell.swift; sourceTree = "<group>"; };
 		EE9D3C9F2BE8D69E0098AAFF /* ProductCollectionViewSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCollectionViewSection.swift; sourceTree = "<group>"; };
 		EE9D3CA42BE8D6FD0098AAFF /* ProductCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCellModel.swift; sourceTree = "<group>"; };
 		EECC69862BF634150089B84A /* CoreDataManager */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = CoreDataManager; sourceTree = "<group>"; };
+		EECC698A2BF642510089B84A /* Shopfee.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Shopfee.xcdatamodel; sourceTree = "<group>"; };
+		EECC698C2BF642760089B84A /* ShopfeePersistentContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopfeePersistentContainer.swift; sourceTree = "<group>"; };
 		EECE7E792BEE7E73000F7F41 /* Domain */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Domain; sourceTree = "<group>"; };
 		EECE7E7A2BEE838D000F7F41 /* ProductSectionCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductSectionCoordinator.swift; sourceTree = "<group>"; };
 		EECE7E832BEE8909000F7F41 /* ProductDetailsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductDetailsView.swift; sourceTree = "<group>"; };
@@ -454,6 +456,7 @@
 		EE2DDD652BDBCB7B00361413 /* Shopfee */ = {
 			isa = PBXGroup;
 			children = (
+				EECC69872BF641CC0089B84A /* Repository */,
 				EEE8D5272BDBFE7C0037F668 /* Coordinator */,
 				EEE8D4E92BDBE3800037F668 /* Scenes */,
 				EE2DDD682BDBCB7B00361413 /* SceneDelegate.swift */,
@@ -651,6 +654,23 @@
 				EECE7E7A2BEE838D000F7F41 /* ProductSectionCoordinator.swift */,
 			);
 			path = Product;
+			sourceTree = "<group>";
+		};
+		EECC69872BF641CC0089B84A /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				EECC69882BF642300089B84A /* CoreData */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		EECC69882BF642300089B84A /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				EECC69892BF642510089B84A /* Shopfee.xcdatamodeld */,
+				EECC698C2BF642760089B84A /* ShopfeePersistentContainer.swift */,
+			);
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 		EECE7E7C2BEE88DA000F7F41 /* ProductDetails */ = {
@@ -959,7 +979,6 @@
 				EEE8D4E22BDBD87D0037F668 /* ShopfeeRouter.swift */,
 				EEE8D4DF2BDBD8750037F668 /* ShopfeeCoordinator.swift */,
 				EED68E7F2BDD6FFD00774A4B /* OpenFromCenterPresentAnimator.swift */,
-				EE9BFFAF2BE3F05F00501777 /* ShopfeeCoordinatorCommand.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -1225,6 +1244,7 @@
 			files = (
 				EECE7E872BEE8909000F7F41 /* ProductDetailsView.swift in Sources */,
 				EEE8D4E82BDBD9620037F668 /* Action.swift in Sources */,
+				EECC698D2BF642760089B84A /* ShopfeePersistentContainer.swift in Sources */,
 				EE660E372BEAA20700F89868 /* OfferSectionFactory.swift in Sources */,
 				EECE7E8C2BEE8910000F7F41 /* ProductDetailsUseCase.swift in Sources */,
 				EE7939092BE26E79004FF13C /* ShopfeeLoadingView.swift in Sources */,
@@ -1274,6 +1294,7 @@
 				EEE8D5172BDBF0D70037F668 /* UIFont+Style.swift in Sources */,
 				EEE8D54F2BDC445B0037F668 /* OnboardingTabViewModel.swift in Sources */,
 				EEE62DCC2BE389DE00937ECA /* ProcessAccountUseCase.swift in Sources */,
+				EECC698B2BF642510089B84A /* Shopfee.xcdatamodeld in Sources */,
 				EEE8D4E42BDBD87D0037F668 /* ShopfeeRouter.swift in Sources */,
 				EE96AB2C2BF51AA700490295 /* CheckoutViewController.swift in Sources */,
 				EEDCE1772BE3AB08003C0A24 /* EnterPinUseCase.swift in Sources */,
@@ -1292,7 +1313,6 @@
 				EE6EFA142BE0189D00E5C2E3 /* View+navigationTitle.swift in Sources */,
 				EE238CD82BECFDA1008E67B0 /* FilterPickerItem.swift in Sources */,
 				EE6EFA0E2BE008A900E5C2E3 /* OTPViewController.swift in Sources */,
-				EE9BFFB02BE3F05F00501777 /* ShopfeeCoordinatorCommand.swift in Sources */,
 				EEDCE1832BE3B34C003C0A24 /* HomeViewController.swift in Sources */,
 				EEDCE1742BE3AAE0003C0A24 /* EnterPinCoordinator.swift in Sources */,
 				EE1992432BE7F08200FE3523 /* PaginationSupplementaryView.swift in Sources */,
@@ -1769,6 +1789,20 @@
 			productName = SwiftUIModifiers;
 		};
 /* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		EECC69892BF642510089B84A /* Shopfee.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				EECC698A2BF642510089B84A /* Shopfee.xcdatamodel */,
+			);
+			currentVersion = EECC698A2BF642510089B84A /* Shopfee.xcdatamodel */;
+			name = Shopfee.xcdatamodeld;
+			path = "/Users/ahmed-yamany/Desktop/Shopfee/Shopfee/Repository/CoreData/Shopfee.xcdatamodeld";
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = EE2DDD5B2BDBCB7B00361413 /* Project object */;
 }

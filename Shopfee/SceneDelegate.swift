@@ -22,6 +22,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         options connectionOptions: UIScene.ConnectionOptions
     ) {
         let commands: [SceneDelegateCommand] = [
+            ShopfeePersistentContainerCommand(),
             ShopfeeCoordinatorCommand(scene: scene)
         ]
         commands.forEach { $0.execute() }

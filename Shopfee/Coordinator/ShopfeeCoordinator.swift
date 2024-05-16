@@ -8,6 +8,18 @@ import Combine
 import Coordinator
 import UIKit
 
+struct ShopfeeCoordinatorCommand: SceneDelegateCommand {
+    let scene: UIScene
+    
+    func execute() {
+        guard let windowScene = (scene as? UIWindowScene) else {
+            Logger.log("Failed to get window scene", category: \.default, level: .error)
+            return
+        }
+        ShopfeeCoordinator.shared.makeWindow(from: windowScene)
+    }
+}
+
 protocol ShopfeeCoordinatorProtocol: Coordinator {
     func showOnboarding()
     func showTabBar()
