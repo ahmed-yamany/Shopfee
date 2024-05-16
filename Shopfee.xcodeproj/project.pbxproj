@@ -233,6 +233,7 @@
 		EE9D3C9E2BE8D69E0098AAFF /* ProductCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCollectionViewCell.swift; sourceTree = "<group>"; };
 		EE9D3C9F2BE8D69E0098AAFF /* ProductCollectionViewSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCollectionViewSection.swift; sourceTree = "<group>"; };
 		EE9D3CA42BE8D6FD0098AAFF /* ProductCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCellModel.swift; sourceTree = "<group>"; };
+		EECC69862BF634150089B84A /* CoreDataManager */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = CoreDataManager; sourceTree = "<group>"; };
 		EECE7E792BEE7E73000F7F41 /* Domain */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Domain; sourceTree = "<group>"; };
 		EECE7E7A2BEE838D000F7F41 /* ProductSectionCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductSectionCoordinator.swift; sourceTree = "<group>"; };
 		EECE7E832BEE8909000F7F41 /* ProductDetailsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductDetailsView.swift; sourceTree = "<group>"; };
@@ -426,6 +427,7 @@
 		EE2DDD5A2BDBCB7B00361413 = {
 			isa = PBXGroup;
 			children = (
+				EECC69862BF634150089B84A /* CoreDataManager */,
 				EED9520D2BEF82AC00F983D1 /* Coordinator */,
 				EECE7E792BEE7E73000F7F41 /* Domain */,
 				EE2DDD972BDBCD7700361413 /* .swiftlint.yml */,
