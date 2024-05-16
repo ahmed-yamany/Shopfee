@@ -57,7 +57,14 @@ final class ProductDetailsViewModel: ProductDetailsViewModelProtocol {
     }
     
     func addOrder() {
-        coordinator.addOrder(with: customizeItems, and: extraItems)
+        Task {
+            do {
+                try await useCase.addOrder(with: customizeItems, and: extraItems)
+                coordinator.dismiss()
+            } catch {
+                print(error.localizedDescription)
+            }
+        }
     }
 }
 

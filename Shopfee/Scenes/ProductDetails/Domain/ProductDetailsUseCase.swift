@@ -9,13 +9,16 @@ import Foundation
 
 protocol ProductDetailsUseCaseProtocol {
     func getDetails() async throws -> ProductDetailsEntity
+    func addOrder(with customize: [FilterPickerItem], and extra: [ProductExtraEntity]) async throws
 }
 
 final class ProductDetailsUseCase: ProductDetailsUseCaseProtocol {
     let product: ProductCellModel
+    let cartUseCase: CartUseCaseProtocol
     
-    init(product: ProductCellModel) {
+    init(product: ProductCellModel, cartUseCase: CartUseCaseProtocol) {
         self.product = product
+        self.cartUseCase = cartUseCase
     }
     
     // swiftlint: disable all
@@ -89,4 +92,9 @@ final class ProductDetailsUseCase: ProductDetailsUseCaseProtocol {
         )
     }
     // swiftlint: enable all
+    
+    func addOrder(with customize: [FilterPickerItem], and extra: [ProductExtraEntity]) async throws {
+        let cart = CartEntity(product: product, customize: customize, extra: extra)
+        try await cartUseCase.add(cart)
+    }
 }

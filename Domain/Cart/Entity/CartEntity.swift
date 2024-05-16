@@ -1,11 +1,11 @@
 //
-//  CartEntity.swift
+//  Cart.swift
 //  Shopfee
 //
-//  Created by Ahmed Yamany on 15/05/2024.
+//  Created by Ahmed Yamany on 16/05/2024.
 //
 
-import UIKit
+import Foundation
 
 struct CartEntity: Identifiable, Equatable {
     let id: String

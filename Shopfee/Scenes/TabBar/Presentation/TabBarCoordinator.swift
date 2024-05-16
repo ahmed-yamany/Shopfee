@@ -22,16 +22,16 @@ final class TabBarCoordinator: TabBarCoordinatorProtocol {
     var showTabBarPublisher: AnyPublisher<Bool, Never> { $showHideTabBar.eraseToAnyPublisher() }
 
     let router: Router
-    let cartPublisher: AnyPublisher<[CartEntity], Never>
+    let cartUseCase: CartUseCaseProtocol
 
-    init(router: Router, cartPublisher: AnyPublisher<[CartEntity], Never>) {
+    init(router: Router, cartUseCase: CartUseCaseProtocol) {
         self.router = router
-        self.cartPublisher = cartPublisher
+        self.cartUseCase = cartUseCase
     }
-
+    
     func start() {
         let tabBarItemFactory = TabBarItemFactory(tabBarCoordinator: self)
-        let useCase = TabBarUseCase(tabBarItemFactory: tabBarItemFactory, cartPublisher: cartPublisher)
+        let useCase = TabBarUseCase(tabBarItemFactory: tabBarItemFactory, cartUseCase: cartUseCase)
         let viewModel = TabBarViewModel(coordinator: self, useCase: useCase, showTabBarPublisher: showTabBarPublisher)
         let controller = TabBarViewController(viewModel: viewModel)
         router.setViewController(controller)

@@ -234,18 +234,3 @@ private struct CheckOutView<ViewModel: ProductDetailsViewModelProtocol>: View {
         }
     }
 }
-
-#Preview {
-    let router = ShopfeeRouter(navigationController: .init())
-    let coordinator = ProductDetailsCoordinator(router: router,
-                                                product: .sample,
-                                                onAppear: {})
-    let useCase = ProductDetailsUseCase(product: .sample)
-    let viewModel = ProductDetailsViewModel(
-        coordinator: coordinator,
-        useCase: useCase
-    )
-    let controller = ProductDetailsViewController(viewModel: viewModel)
-    router.setViewController(controller)
-    return router.navigationController.toSwiftUI().ignoresSafeArea().eraseToAnyView()
-}

@@ -12,6 +12,7 @@ extension LoggingCategories {
     var coreData: String { "Core Data"}
 }
 
+// you can use this from different targets
 struct ShopfeePersistentContainerCommand: SceneDelegateCommand {
     func execute() {
         ShopfeePersistentContainer.shared.loadStores()

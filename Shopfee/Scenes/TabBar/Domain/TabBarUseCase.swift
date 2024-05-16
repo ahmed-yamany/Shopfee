@@ -9,21 +9,23 @@ import Combine
 import SwiftUI
 
 protocol TabBarUseCaseProtocol {
-    var cart: PassthroughSubject<[CartEntity], Error> { get }
+    var cartPublisher: AnyPublisher<[CartEntity], Never> { get async }
     func getTabBarItems() async throws -> [any TabBarItem]
 }
 
 final class TabBarUseCase: TabBarUseCaseProtocol {
-    let cart: PassthroughSubject<[CartEntity], Error> = .init()
-    
+    var cartPublisher: AnyPublisher<[CartEntity], Never> {
+        get async {
+            await cartUseCase.cartPublisher
+        }
+    }
+
     private let tabBarItemFactory: TabBarItemFactory
-    private let cartPublisher: AnyPublisher<[CartEntity], Never>
-    private var cartCancellable: Cancellable?
+    private let cartUseCase: CartUseCaseProtocol
     
-    init(tabBarItemFactory: TabBarItemFactory, cartPublisher: AnyPublisher<[CartEntity], Never>) {
+    init(tabBarItemFactory: TabBarItemFactory, cartUseCase: CartUseCaseProtocol) {
         self.tabBarItemFactory = tabBarItemFactory
-        self.cartPublisher = cartPublisher
-        bindCartPublisher()
+        self.cartUseCase = cartUseCase
     }
 
     func getTabBarItems() async throws -> [any TabBarItem] {
@@ -34,17 +36,5 @@ final class TabBarUseCase: TabBarUseCaseProtocol {
         }
         
         return items
-    }
-}
-
-private extension TabBarUseCase {
-    func bindCartPublisher() {
-        cartCancellable = cartPublisher.receive(on: RunLoop.main).sink { [weak self] cart in
-            guard let self = self else {
-                Logger.log("self is nil", category: \.default, level: .error)
-                return
-            }
-            self.cart.send(cart)
-        }
     }
 }

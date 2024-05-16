@@ -23,17 +23,15 @@ struct ShopfeeCoordinatorCommand: SceneDelegateCommand {
 protocol ShopfeeCoordinatorProtocol: Coordinator {
     func showOnboarding()
     func showTabBar()
-    func addToCart(_ entities: [CartEntity])
 }
 
 final class ShopfeeCoordinator: ShopfeeCoordinatorProtocol {
     static var shared = ShopfeeCoordinator()
-    @Published var cart: [CartEntity] = []
-    var cartPublisher: AnyPublisher<[CartEntity], Never> { $cart.eraseToAnyPublisher() }
     
+    var cartUseCase: CartUseCaseProtocol!
     var window: UIWindow?
     let router: Router
-
+    
     private init() {
         let navigationController = UINavigationController()
         router = ShopfeeRouter(navigationController: navigationController)
@@ -58,11 +56,9 @@ final class ShopfeeCoordinator: ShopfeeCoordinatorProtocol {
     }
 
     func showTabBar() {
+        cartUseCase = CartUseCase()
         router.reset()
-        TabBarCoordinator(router: router, cartPublisher: cartPublisher).start()
+        TabBarCoordinator(router: router, cartUseCase: cartUseCase).start()
     }
-    
-    func addToCart(_ entities: [CartEntity]) {
-        cart.append(contentsOf: entities)
-    }
+
 }

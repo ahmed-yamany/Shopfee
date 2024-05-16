@@ -56,9 +56,15 @@ final class TabBarViewModel: TabBarViewModelProtocol {
     }
 
     func viewDidLoad() {
-        getItems()
         bindShowTabBar()
-        bindCartPublisher()
+        Task {
+            do {
+                await bindCartPublisher()
+                try await getItems()
+            } catch {
+                print(error.localizedDescription)
+            }
+        }
     }
 
     func viewDidDisAppear() {
@@ -78,14 +84,8 @@ final class TabBarViewModel: TabBarViewModelProtocol {
 }
 
 private extension TabBarViewModel {
-    func getItems() {
-        Task {
-            do {
-                items = try await useCase.getTabBarItems()
-            } catch {
-                print(error.localizedDescription)
-            }
-        }
+    func getItems() async throws {
+        items = try await useCase.getTabBarItems()
     }
 
     func bindShowTabBar() {
@@ -94,20 +94,9 @@ private extension TabBarViewModel {
             .assign(to: \.showTabBar, on: self)
     }
 
-    func bindCartPublisher() {
-        cartCancellable = useCase.cart.receive(on: RunLoop.main).sink { completion in
-            switch completion {
-            case .finished:
-                return
-            case let .failure(error):
-                print(error.localizedDescription)
-            }
-        } receiveValue: { [weak self] cart in
-            guard let self = self else {
-                Logger.log("self is nil", category: \.default, level: .error)
-                return
-            }
-            self.cart = cart
-        }
+    func bindCartPublisher() async {
+        cartCancellable = await useCase.cartPublisher
+            .receive(on: RunLoop.main)
+            .assign(to: \.cart, on: self)
     }
 }

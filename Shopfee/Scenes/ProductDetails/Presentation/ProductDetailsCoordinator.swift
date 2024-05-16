@@ -11,7 +11,6 @@ import Coordinator
 protocol ProductDetailsCoordinatorProtocol: Coordinator {
     func viewWillAppear()
     func showRattingAndReviews()
-    func addOrder(with customize: [FilterPickerItem], and extra: [ProductExtraEntity])
 }
 
 final class ProductDetailsCoordinator: ProductDetailsCoordinatorProtocol {
@@ -26,7 +25,7 @@ final class ProductDetailsCoordinator: ProductDetailsCoordinatorProtocol {
     }
     
     func start() {
-        let useCase = ProductDetailsUseCase(product: product)
+        let useCase = ProductDetailsUseCase(product: product, cartUseCase: ShopfeeCoordinator.shared.cartUseCase)
         let viewModel = ProductDetailsViewModel(coordinator: self, useCase: useCase)
         let controller = ProductDetailsViewController(viewModel: viewModel)
         router.push(controller)
@@ -38,11 +37,5 @@ final class ProductDetailsCoordinator: ProductDetailsCoordinatorProtocol {
     
     func showRattingAndReviews() {
         
-    }
-    
-    func addOrder(with customize: [FilterPickerItem], and extra: [ProductExtraEntity]) {
-        let cartEntity = CartEntity(product: product, customize: customize, extra: extra)
-        ShopfeeCoordinator.shared.addToCart([cartEntity])
-        dismiss()
     }
 }
