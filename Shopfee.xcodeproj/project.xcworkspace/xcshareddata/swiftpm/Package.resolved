@@ -1,5 +1,5 @@
 {
-  "originHash" : "95d92409a0e78c20351b64076042f77d1aa393f9737c1283a575696de8c4c409",
+  "originHash" : "205b406d214dfb817be1e9967f24d3dd8437caecf1e8d83a37214b9acbfd99fb",
   "pins" : [
     {
       "identity" : "compositionallayoutablesection",
@@ -25,7 +25,7 @@
       "location" : "https://github.com/ahmed-yamany/FoundationExtensions",
       "state" : {
         "branch" : "main",
-        "revision" : "b1a97680625249f67e26ac91c35c4066900a1c13"
+        "revision" : "c10317266ea8bf4e627aab3b8110f2714b6671f3"
       }
     },
     {
@@ -53,6 +53,15 @@
       "state" : {
         "branch" : "main",
         "revision" : "20a2bb1fd181f13d3a944b1d1eeecacb0edeee81"
+      }
+    },
+    {
+      "identity" : "uiextensions",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/ahmed-yamany/UIExtensions",
+      "state" : {
+        "branch" : "main",
+        "revision" : "9d6701f3b3c125e26750c42f984bdacdeb2bb0f9"
       }
     }
   ],

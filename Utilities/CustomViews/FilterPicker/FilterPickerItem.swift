@@ -12,3 +12,11 @@ struct FilterPickerItem: Identifiable, Equatable {
     var image: Image?
     let title: String
 }
+
+extension FilterPickerItem {
+    init(model: ProductCustomizeModel) {
+        id = model.id?.uuidString ?? UUID().uuidString
+        image = Image(uiImage: UIImage(data: model.image ?? Data()) ?? UIImage())
+        title = model.title ?? ""
+    }
+}

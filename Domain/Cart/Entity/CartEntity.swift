@@ -32,3 +32,15 @@ extension CartEntity {
         self.extra = extra
     }
 }
+
+extension CartEntity {
+    init(cartModel: CartModel, customize: [ProductCustomizeModel], extra: [ProductExtraModel]) {
+        self.id = cartModel.id?.uuidString ?? UUID().uuidString
+        self.name = cartModel.name ?? ""
+        self.currency = cartModel.currency ?? ""
+        self.price = cartModel.price
+        self.imageUrl = cartModel.imageUrl ?? ""
+        self.customize = customize.map { FilterPickerItem(model: $0) }
+        self.extra = extra.map { ProductExtraEntity(model: $0) }
+    }
+}

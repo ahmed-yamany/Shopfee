@@ -1,4 +1,25 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="22757" systemVersion="23D60" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithSwiftData="YES" userDefinedModelVersionIdentifier="">
-    <entity name="CartModel" representedClassName="CartModel" syncable="YES" codeGenerationType="class"/>
+    <entity name="CartModel" representedClassName="CartModel" syncable="YES" codeGenerationType="class">
+        <attribute name="currency" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="imageUrl" optional="YES" attributeType="String"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="price" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <relationship name="customize" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ProductCustomizeModel" inverseName="cart" inverseEntity="ProductCustomizeModel"/>
+        <relationship name="extra" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ProductExtraModel" inverseName="cart" inverseEntity="ProductExtraModel"/>
+    </entity>
+    <entity name="ProductCustomizeModel" representedClassName="ProductCustomizeModel" syncable="YES" codeGenerationType="class">
+        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="image" optional="YES" attributeType="Binary"/>
+        <attribute name="title" optional="YES" attributeType="String"/>
+        <relationship name="cart" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CartModel" inverseName="customize" inverseEntity="CartModel"/>
+    </entity>
+    <entity name="ProductExtraModel" representedClassName="ProductExtraModel" syncable="YES" codeGenerationType="class">
+        <attribute name="currency" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="price" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="title" optional="YES" attributeType="String"/>
+        <relationship name="cart" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CartModel" inverseName="extra" inverseEntity="CartModel"/>
+    </entity>
 </model>

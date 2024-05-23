@@ -17,3 +17,12 @@ struct ProductExtraEntity: Identifiable, Equatable {
         "+ \(currency). \(price)"
     }
 }
+
+extension ProductExtraEntity {
+    init(model: ProductExtraModel) {
+        id = model.id?.uuidString ?? UUID().uuidString
+        title = model.title ?? ""
+        price = model.price
+        currency = model.currency ?? ""
+    }
+}

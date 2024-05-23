@@ -56,9 +56,8 @@ final class ShopfeeCoordinator: ShopfeeCoordinatorProtocol {
     }
 
     func showTabBar() {
-        cartUseCase = CartUseCase()
+        cartUseCase = CartUseCaseFactory.make()
         router.reset()
         TabBarCoordinator(router: router, cartUseCase: cartUseCase).start()
     }
-
 }

@@ -56,6 +56,7 @@ final class TabBarViewModel: TabBarViewModelProtocol {
     }
 
     func viewDidLoad() {
+        coordinator.viewDidLoad()
         bindShowTabBar()
         Task {
             do {

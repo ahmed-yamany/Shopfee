@@ -10,6 +10,7 @@ import Coordinator
 import UIKit
 
 protocol TabBarCoordinatorProtocol: Coordinator {
+    func viewDidLoad()
     func viewDidDisAppear()
     func viewWillAppear()
     func showTabBar()
@@ -36,7 +37,13 @@ final class TabBarCoordinator: TabBarCoordinatorProtocol {
         let controller = TabBarViewController(viewModel: viewModel)
         router.setViewController(controller)
     }
-
+    
+    func viewDidLoad() {
+        Task {
+            try await cartUseCase.viewDidLoad()
+        }
+    }
+    
     func viewWillAppear() {
         router.setNavigationBarHidden(true)
     }

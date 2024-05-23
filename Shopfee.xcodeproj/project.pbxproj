@@ -13,6 +13,10 @@
 		EE088B032BE65B5700885A35 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE088B022BE65B5700885A35 /* HomeView.swift */; };
 		EE088B062BE65BFF00885A35 /* CustomViews in Frameworks */ = {isa = PBXBuildFile; productRef = EE088B052BE65BFF00885A35 /* CustomViews */; };
 		EE0D8C5A2BE23BAE00C4E47A /* OTPPopUpItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0D8C592BE23BAE00C4E47A /* OTPPopUpItem.swift */; };
+		EE13078D2BFF493A0007270F /* CartUseCaseFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE13078C2BFF493A0007270F /* CartUseCaseFactory.swift */; };
+		EE13078F2BFF4BB70007270F /* ProductCustomizeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE13078E2BFF4BB70007270F /* ProductCustomizeRepository.swift */; };
+		EE1307912BFF4BC30007270F /* ProductExtraRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1307902BFF4BC30007270F /* ProductExtraRepository.swift */; };
+		EE1307942BFF51540007270F /* UIExtensions in Frameworks */ = {isa = PBXBuildFile; productRef = EE1307932BFF51540007270F /* UIExtensions */; };
 		EE19923B2BE79E1B00FE3523 /* OfferCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1992382BE79E1B00FE3523 /* OfferCollectionViewCell.swift */; };
 		EE19923C2BE79E1B00FE3523 /* OfferCollectionViewSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1992392BE79E1B00FE3523 /* OfferCollectionViewSection.swift */; };
 		EE19923F2BE79E5A00FE3523 /* OfferCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE19923E2BE79E5A00FE3523 /* OfferCellModel.swift */; };
@@ -152,6 +156,9 @@
 		EE088AFD2BE653A200885A35 /* TabBarItemFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarItemFactory.swift; sourceTree = "<group>"; };
 		EE088B022BE65B5700885A35 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		EE0D8C592BE23BAE00C4E47A /* OTPPopUpItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPPopUpItem.swift; sourceTree = "<group>"; };
+		EE13078C2BFF493A0007270F /* CartUseCaseFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartUseCaseFactory.swift; sourceTree = "<group>"; };
+		EE13078E2BFF4BB70007270F /* ProductCustomizeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCustomizeRepository.swift; sourceTree = "<group>"; };
+		EE1307902BFF4BC30007270F /* ProductExtraRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductExtraRepository.swift; sourceTree = "<group>"; };
 		EE1992382BE79E1B00FE3523 /* OfferCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferCollectionViewCell.swift; sourceTree = "<group>"; };
 		EE1992392BE79E1B00FE3523 /* OfferCollectionViewSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferCollectionViewSection.swift; sourceTree = "<group>"; };
 		EE19923E2BE79E5A00FE3523 /* OfferCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferCellModel.swift; sourceTree = "<group>"; };
@@ -292,6 +299,7 @@
 				EE088B062BE65BFF00885A35 /* CustomViews in Frameworks */,
 				EEE8D53F2BDC36270037F668 /* SwiftUIModifiers in Frameworks */,
 				EED68E672BDD2EA800774A4B /* FoundationExtensions in Frameworks */,
+				EE1307942BFF51540007270F /* UIExtensions in Frameworks */,
 				EE49E6B92BF13CE7002160D8 /* SwiftUIViews in Frameworks */,
 				EE088B012BE65A8900885A35 /* CompositionalLayoutableSection in Frameworks */,
 				EED68E7E2BDD52FA00774A4B /* MakeConstraints in Frameworks */,
@@ -625,6 +633,8 @@
 				EECC69922BF646540089B84A /* Shopfee.xcdatamodeld */,
 				EECC698C2BF642760089B84A /* ShopfeePersistentContainer.swift */,
 				EEE07E602BF66E9F00ADA8C2 /* CartRepository.swift */,
+				EE13078E2BFF4BB70007270F /* ProductCustomizeRepository.swift */,
+				EE1307902BFF4BC30007270F /* ProductExtraRepository.swift */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -801,6 +811,7 @@
 			children = (
 				EE7D0E962BF6759100BE2356 /* Entity */,
 				EE7D0E972BF6759E00BE2356 /* CartUseCase.swift */,
+				EE13078C2BFF493A0007270F /* CartUseCaseFactory.swift */,
 			);
 			path = Cart;
 			sourceTree = "<group>";
@@ -1073,6 +1084,7 @@
 				EED9520F2BEF82D400F983D1 /* Coordinator */,
 				EE49E6B82BF13CE7002160D8 /* SwiftUIViews */,
 				EEE07E622BF66F3900ADA8C2 /* CoreDataManager */,
+				EE1307932BFF51540007270F /* UIExtensions */,
 			);
 			productName = Shopfee;
 			productReference = EE2DDD632BDBCB7B00361413 /* Shopfee.app */;
@@ -1110,6 +1122,7 @@
 				EE088AFF2BE65A8900885A35 /* XCRemoteSwiftPackageReference "CompositionalLayoutableSection" */,
 				EE088B042BE65BFF00885A35 /* XCRemoteSwiftPackageReference "CustomViews" */,
 				EE49E6B72BF13CE7002160D8 /* XCRemoteSwiftPackageReference "SwiftUIViews" */,
+				EE1307922BFF51540007270F /* XCRemoteSwiftPackageReference "UIExtensions" */,
 			);
 			productRefGroup = EE2DDD642BDBCB7B00361413 /* Products */;
 			projectDirPath = "";
@@ -1197,6 +1210,7 @@
 				EE660E2E2BEA7C0100F89868 /* ProductSectionUseCase.swift in Sources */,
 				EE8D070C2BF26EE300184169 /* ShopFeeActivityIndicator.swift in Sources */,
 				EE19923C2BE79E1B00FE3523 /* OfferCollectionViewSection.swift in Sources */,
+				EE1307912BFF4BC30007270F /* ProductExtraRepository.swift in Sources */,
 				EE6B4F832BDE552300E173BC /* ShopfeeTextField.swift in Sources */,
 				EEE62DA92BE3868E00937ECA /* CreatePinViewModel.swift in Sources */,
 				EE660E392BEAA36300F89868 /* OfferSectionUseCase.swift in Sources */,
@@ -1225,6 +1239,7 @@
 				EE7D0E9A2BF675DF00BE2356 /* CartEntity.swift in Sources */,
 				EEE8D4E42BDBD87D0037F668 /* ShopfeeRouter.swift in Sources */,
 				EE96AB2C2BF51AA700490295 /* CheckoutViewController.swift in Sources */,
+				EE13078F2BFF4BB70007270F /* ProductCustomizeRepository.swift in Sources */,
 				EEDCE1772BE3AB08003C0A24 /* EnterPinUseCase.swift in Sources */,
 				EEE8D51D2BDBFB5C0037F668 /* OnboardingView.swift in Sources */,
 				EE6EFA032BDFF64500E5C2E3 /* LoginCoordinator.swift in Sources */,
@@ -1261,6 +1276,7 @@
 				EEE8D5162BDBF0D70037F668 /* Font+Style.swift in Sources */,
 				EE9D3CA52BE8D6FD0098AAFF /* ProductCellModel.swift in Sources */,
 				EEE8D5392BDC16940037F668 /* SplashCoordinator.swift in Sources */,
+				EE13078D2BFF493A0007270F /* CartUseCaseFactory.swift in Sources */,
 				EE96AB2E2BF51AAB00490295 /* CheckoutUseCase.swift in Sources */,
 				EEE62DAA2BE3868E00937ECA /* CreatePinCoordinator.swift in Sources */,
 				EE238CD62BECFD6D008E67B0 /* FilterPicker.swift in Sources */,
@@ -1520,6 +1536,14 @@
 				kind = branch;
 			};
 		};
+		EE1307922BFF51540007270F /* XCRemoteSwiftPackageReference "UIExtensions" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ahmed-yamany/UIExtensions";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 		EE49E6B72BF13CE7002160D8 /* XCRemoteSwiftPackageReference "SwiftUIViews" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/ahmed-yamany/SwiftUIViews";
@@ -1564,6 +1588,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = EE088B042BE65BFF00885A35 /* XCRemoteSwiftPackageReference "CustomViews" */;
 			productName = CustomViews;
+		};
+		EE1307932BFF51540007270F /* UIExtensions */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EE1307922BFF51540007270F /* XCRemoteSwiftPackageReference "UIExtensions" */;
+			productName = UIExtensions;
 		};
 		EE49E6B82BF13CE7002160D8 /* SwiftUIViews */ = {
 			isa = XCSwiftPackageProductDependency;
