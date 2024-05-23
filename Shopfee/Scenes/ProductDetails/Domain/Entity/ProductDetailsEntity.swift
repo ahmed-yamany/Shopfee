@@ -14,6 +14,7 @@ struct ProductDetailsEntity: Identifiable {
     let price: Double
     let currency: String
     let ingredients: String
+    let availableCount: Int
     let rating: String
     let ratingCount: Int
     let customize: [ProductCustomizeEntity]

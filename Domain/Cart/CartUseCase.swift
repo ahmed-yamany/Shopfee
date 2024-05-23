@@ -67,9 +67,12 @@ extension CartUseCase {
         await repository.perform {
             cartModel.id = UUID(uuidString: entity.id)
             cartModel.name = entity.name
+            cartModel.ingredients = entity.ingredients
             cartModel.currency = entity.currency
             cartModel.price = entity.price
             cartModel.imageUrl = entity.imageUrl
+            cartModel.image = entity.image.jpegData(compressionQuality: 0.5)
+            cartModel.count = Int32(entity.count)
         }
         
         for customize in entity.customize {

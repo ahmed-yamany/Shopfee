@@ -17,6 +17,8 @@
 		EE13078F2BFF4BB70007270F /* ProductCustomizeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE13078E2BFF4BB70007270F /* ProductCustomizeRepository.swift */; };
 		EE1307912BFF4BC30007270F /* ProductExtraRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1307902BFF4BC30007270F /* ProductExtraRepository.swift */; };
 		EE1307942BFF51540007270F /* UIExtensions in Frameworks */ = {isa = PBXBuildFile; productRef = EE1307932BFF51540007270F /* UIExtensions */; };
+		EE1307962BFF9E280007270F /* CheckoutProductView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1307952BFF9E280007270F /* CheckoutProductView.swift */; };
+		EE13079A2BFFB9530007270F /* ShopFeeStepper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1307992BFFB9530007270F /* ShopFeeStepper.swift */; };
 		EE19923B2BE79E1B00FE3523 /* OfferCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1992382BE79E1B00FE3523 /* OfferCollectionViewCell.swift */; };
 		EE19923C2BE79E1B00FE3523 /* OfferCollectionViewSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1992392BE79E1B00FE3523 /* OfferCollectionViewSection.swift */; };
 		EE19923F2BE79E5A00FE3523 /* OfferCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE19923E2BE79E5A00FE3523 /* OfferCellModel.swift */; };
@@ -159,6 +161,8 @@
 		EE13078C2BFF493A0007270F /* CartUseCaseFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartUseCaseFactory.swift; sourceTree = "<group>"; };
 		EE13078E2BFF4BB70007270F /* ProductCustomizeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCustomizeRepository.swift; sourceTree = "<group>"; };
 		EE1307902BFF4BC30007270F /* ProductExtraRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductExtraRepository.swift; sourceTree = "<group>"; };
+		EE1307952BFF9E280007270F /* CheckoutProductView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutProductView.swift; sourceTree = "<group>"; };
+		EE1307992BFFB9530007270F /* ShopFeeStepper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopFeeStepper.swift; sourceTree = "<group>"; };
 		EE1992382BE79E1B00FE3523 /* OfferCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferCollectionViewCell.swift; sourceTree = "<group>"; };
 		EE1992392BE79E1B00FE3523 /* OfferCollectionViewSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferCollectionViewSection.swift; sourceTree = "<group>"; };
 		EE19923E2BE79E5A00FE3523 /* OfferCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferCellModel.swift; sourceTree = "<group>"; };
@@ -594,6 +598,7 @@
 				EE96AB262BF51AA600490295 /* CheckoutViewModel.swift */,
 				EE96AB282BF51AA700490295 /* CheckoutViewController.swift */,
 				EE96AB272BF51AA700490295 /* CheckoutCoordinator.swift */,
+				EE1307952BFF9E280007270F /* CheckoutProductView.swift */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -991,6 +996,7 @@
 				EEE8D5352BDC16370037F668 /* ShopfeeLogo.swift */,
 				EE7939082BE26E79004FF13C /* ShopfeeLoadingView.swift */,
 				EE8D070B2BF26EE300184169 /* ShopFeeActivityIndicator.swift */,
+				EE1307992BFFB9530007270F /* ShopFeeStepper.swift */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -1211,12 +1217,14 @@
 				EE8D070C2BF26EE300184169 /* ShopFeeActivityIndicator.swift in Sources */,
 				EE19923C2BE79E1B00FE3523 /* OfferCollectionViewSection.swift in Sources */,
 				EE1307912BFF4BC30007270F /* ProductExtraRepository.swift in Sources */,
+				EE1307962BFF9E280007270F /* CheckoutProductView.swift in Sources */,
 				EE6B4F832BDE552300E173BC /* ShopfeeTextField.swift in Sources */,
 				EEE62DA92BE3868E00937ECA /* CreatePinViewModel.swift in Sources */,
 				EE660E392BEAA36300F89868 /* OfferSectionUseCase.swift in Sources */,
 				EE2701DB2BE533F500B16C74 /* TabBarCoordinator.swift in Sources */,
 				EED29DF62BE1615B00548AFE /* ShopfeeOTPTextField.swift in Sources */,
 				EE2701DE2BE533F500B16C74 /* TabBarViewModel.swift in Sources */,
+				EE13079A2BFFB9530007270F /* ShopFeeStepper.swift in Sources */,
 				EED68E6D2BDD40BB00774A4B /* RegisterView.swift in Sources */,
 				EED68E6E2BDD40BB00774A4B /* RegisterViewModel.swift in Sources */,
 				EE8D070A2BF26D1900184169 /* ProductDetailsEntity.swift in Sources */,

@@ -61,6 +61,6 @@ final class TabBarCoordinator: TabBarCoordinatorProtocol {
     }
     
     func showCheckout() {
-        CheckoutCoordinator(router: router).start()
+        CheckoutCoordinator(router: router, cartUseCase: cartUseCase).start()
     }
 }

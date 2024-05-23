@@ -9,7 +9,7 @@ import Foundation
 
 protocol ProductDetailsUseCaseProtocol {
     func getDetails() async throws -> ProductDetailsEntity
-    func addOrder(with customize: [FilterPickerItem], and extra: [ProductExtraEntity]) async throws
+    func addOrder(with customize: [FilterPickerItem], and extra: [ProductExtraEntity], count: Int) async throws
 }
 
 final class ProductDetailsUseCase: ProductDetailsUseCaseProtocol {
@@ -30,6 +30,7 @@ final class ProductDetailsUseCase: ProductDetailsUseCaseProtocol {
             price: 25.000,
             currency: "RP",
             ingredients: "Ice americano + fresh milk ",
+            availableCount: 10,
             rating: "4.9",
             ratingCount: 23,
             customize: [
@@ -93,8 +94,8 @@ final class ProductDetailsUseCase: ProductDetailsUseCaseProtocol {
     }
     // swiftlint: enable all
     
-    func addOrder(with customize: [FilterPickerItem], and extra: [ProductExtraEntity]) async throws {
-        let cart = CartEntity(product: product, customize: customize, extra: extra)
+    func addOrder(with customize: [FilterPickerItem], and extra: [ProductExtraEntity], count: Int) async throws {
+        let cart = await CartEntity(product: product, customize: customize, extra: extra, count: count)
         try await cartUseCase.add(cart)
     }
 }

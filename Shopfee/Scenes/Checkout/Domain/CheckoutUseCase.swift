@@ -6,11 +6,22 @@
 //
 
 import Foundation
+import Combine
 
 protocol CheckoutUseCaseProtocol {
-    
+    @MainActor var cartPublisher: AnyPublisher<[CartEntity], Never> { get async }
 }
 
-final class CheckoutUseCase: CheckoutUseCaseProtocol {
+final actor CheckoutUseCase: CheckoutUseCaseProtocol {
+    @MainActor var cartPublisher: AnyPublisher<[CartEntity], Never> {
+        get async {
+            await cartUseCase.cartPublisher
+        }
+    }
     
+    let cartUseCase: CartUseCaseProtocol
+    
+    init(cartUseCase: CartUseCaseProtocol) {
+        self.cartUseCase = cartUseCase
+    }
 }

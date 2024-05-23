@@ -10,7 +10,7 @@ import SwiftUIViews
 
 struct ProductDetailsView<ViewModel: ProductDetailsViewModelProtocol>: View {
     @ObservedObject var viewModel: ViewModel
-    @State var offset: CGPoint = .zero
+    @State private var offset: CGPoint = .zero
     
     var body: some View {
         if let entity = viewModel.entity {
@@ -91,6 +91,9 @@ private struct DetailsView<ViewModel: ProductDetailsViewModelProtocol>: View {
                     .foregroundStyle(.textParagraph)
                 
                 Spacer()
+                
+                Stepper(value: $viewModel.count, minValue: 1, maxValue: entity.availableCount)
+                    .stepperStyle(.shopfee)
             }
             
             Button {
