@@ -5,10 +5,11 @@
 //  Created by Ahmed Yamany on 15/05/2024.
 //
 
-import Foundation
+import SwiftUI
 import Coordinator
 
 protocol CheckoutCoordinatorProtocol: Coordinator {
+    func showReceipt()
 }
 
 final class CheckoutCoordinator: CheckoutCoordinatorProtocol {
@@ -25,5 +26,9 @@ final class CheckoutCoordinator: CheckoutCoordinatorProtocol {
         let viewModel = CheckoutViewModel(coordinator: self, useCase: useCase)
         let controller = CheckoutViewController(viewModel: viewModel)
         router.push(controller)
+    }
+    
+    func showReceipt() {
+        ReciptCoordinator(router: router).start()
     }
 }

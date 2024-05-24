@@ -15,7 +15,10 @@ struct ShopFeeActivityIndicator: View {
     
     var body: some View {
         GifView(url)
-            .frame(width: 400, height: 120)
+            .frame(width: 200, height: 120)
+            .mask {
+                RoundedRectangle(cornerRadius: 16)
+            }
     }
 }
 

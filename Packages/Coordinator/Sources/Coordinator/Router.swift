@@ -54,6 +54,27 @@ open class Router {
         completion()
     }
     
+    open func replaceLast(with viewController: UIViewController, animated: Bool = true, completion: @escaping () -> Void = {}) {
+        navigationController.dismiss(animated: false)
+        var viewControllers = navigationController.viewControllers
+        viewControllers[viewControllers.endIndex - 1] = viewController
+        setViewControllers(viewControllers, animated: animated, completion: completion)
+    }
+    
+    open func replaceFirst(with viewController: UIViewController, animated: Bool = true, completion: @escaping () -> Void = {}) {
+        navigationController.dismiss(animated: false)
+        var viewControllers = navigationController.viewControllers
+        viewControllers[viewControllers.startIndex] = viewController
+        setViewControllers(viewControllers, animated: animated, completion: completion)
+    }
+    
+    open func insert(_ viewController: UIViewController, at index: Int, animated: Bool = true, completion: @escaping () -> Void = {}) {
+        navigationController.dismiss(animated: false)
+        var viewControllers = navigationController.viewControllers
+        viewControllers.insert(viewController, at: index)
+        setViewControllers(viewControllers, animated: animated, completion: completion)
+    }
+    
     open func reset(completion: @escaping () -> Void = {}) {
         navigationController.dismiss(animated: false)
         navigationController.viewControllers.removeAll()
@@ -73,12 +94,13 @@ open class Router {
         navigationController.visibleViewController?.navigationItem.title = title
     }
     
-    open func setViewControllers(_ viewControllers: [UIViewController], animated: Bool = true) {
+    open func setViewControllers(_ viewControllers: [UIViewController], animated: Bool = true, completion: @escaping () -> Void = {}) {
         navigationController.dismiss(animated: false)
         navigationController.setViewControllers(viewControllers, animated: animated)
+        completion()
     }
     
-    open func setViewController(_ viewController: UIViewController, animated: Bool = true) {
-        self.setViewControllers([viewController], animated: animated)
+    open func setViewController(_ viewController: UIViewController, animated: Bool = true, completion: @escaping () -> Void = {}) {
+        self.setViewControllers([viewController], animated: animated, completion: completion)
     }
 }

@@ -29,7 +29,11 @@ struct ProductDetailsView<ViewModel: ProductDetailsViewModelProtocol>: View {
             .navigationTitle("Customize Order")
             .applyPrimaryStyle()
             .overlay(alignment: .bottom) {
-                CheckOutView(viewModel: viewModel, entity: entity)
+                TotalPriceView(
+                    totalPrice: "\(entity.currency). \(viewModel.totalPrice())",
+                    buttonTitle: "Add Order",
+                    action: { viewModel.addOrder() }
+                )
             }
             
         } else {
@@ -200,40 +204,5 @@ private struct ToppingView<ViewModel: ProductDetailsViewModelProtocol>: View {
             }
         }
         .makeAsCard()
-    }
-}
-    
-private struct CheckOutView<ViewModel: ProductDetailsViewModelProtocol>: View {
-    @ObservedObject var viewModel: ViewModel
-    let entity: ProductDetailsEntity
-    
-    var body: some View {
-        HStack {
-            VStack(alignment: .leading) {
-                Text("Total")
-                    .foregroundStyle(.textParagraph)
-                    .font(.custom(size: 14, weight: .medium))
-                
-                Text("\(entity.currency). \(viewModel.totalPrice())")
-                    .foregroundStyle(.textHeading)
-                    .font(.custom(size: 18, weight: .bold))
-            }
-            
-            Spacer()
-            
-            Button("Add Order") {
-                viewModel.addOrder()
-            }
-            .buttonStyle(.primary())
-            .frame(width: 132)
-        }
-        .frame(height: 66)
-        .frame(maxWidth: .infinity)
-        .padding(.horizontal, .safeAreaPadding)
-        .background {
-            Color.neutralLight
-                .shadow(color: .textHeading.opacity(0.5), radius: 3)
-                .ignoresSafeArea()
-        }
     }
 }

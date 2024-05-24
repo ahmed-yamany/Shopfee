@@ -19,6 +19,12 @@
 		EE1307942BFF51540007270F /* UIExtensions in Frameworks */ = {isa = PBXBuildFile; productRef = EE1307932BFF51540007270F /* UIExtensions */; };
 		EE1307962BFF9E280007270F /* CheckoutProductView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1307952BFF9E280007270F /* CheckoutProductView.swift */; };
 		EE13079A2BFFB9530007270F /* ShopFeeStepper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1307992BFFB9530007270F /* ShopFeeStepper.swift */; };
+		EE13079C2BFFC86E0007270F /* TotalPriceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE13079B2BFFC86E0007270F /* TotalPriceView.swift */; };
+		EE1307AC2BFFD1F10007270F /* ReciptViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1307A82BFFD1F10007270F /* ReciptViewModel.swift */; };
+		EE1307AD2BFFD1F10007270F /* ReciptCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1307A92BFFD1F10007270F /* ReciptCoordinator.swift */; };
+		EE1307AE2BFFD1F10007270F /* ReciptViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1307AA2BFFD1F10007270F /* ReciptViewController.swift */; };
+		EE1307AF2BFFD1F10007270F /* ReciptView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1307AB2BFFD1F10007270F /* ReciptView.swift */; };
+		EE1307B12BFFD1F70007270F /* ReciptUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1307B02BFFD1F70007270F /* ReciptUseCase.swift */; };
 		EE19923B2BE79E1B00FE3523 /* OfferCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1992382BE79E1B00FE3523 /* OfferCollectionViewCell.swift */; };
 		EE19923C2BE79E1B00FE3523 /* OfferCollectionViewSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1992392BE79E1B00FE3523 /* OfferCollectionViewSection.swift */; };
 		EE19923F2BE79E5A00FE3523 /* OfferCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE19923E2BE79E5A00FE3523 /* OfferCellModel.swift */; };
@@ -163,6 +169,12 @@
 		EE1307902BFF4BC30007270F /* ProductExtraRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductExtraRepository.swift; sourceTree = "<group>"; };
 		EE1307952BFF9E280007270F /* CheckoutProductView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutProductView.swift; sourceTree = "<group>"; };
 		EE1307992BFFB9530007270F /* ShopFeeStepper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopFeeStepper.swift; sourceTree = "<group>"; };
+		EE13079B2BFFC86E0007270F /* TotalPriceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalPriceView.swift; sourceTree = "<group>"; };
+		EE1307A82BFFD1F10007270F /* ReciptViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReciptViewModel.swift; sourceTree = "<group>"; };
+		EE1307A92BFFD1F10007270F /* ReciptCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReciptCoordinator.swift; sourceTree = "<group>"; };
+		EE1307AA2BFFD1F10007270F /* ReciptViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReciptViewController.swift; sourceTree = "<group>"; };
+		EE1307AB2BFFD1F10007270F /* ReciptView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReciptView.swift; sourceTree = "<group>"; };
+		EE1307B02BFFD1F70007270F /* ReciptUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReciptUseCase.swift; sourceTree = "<group>"; };
 		EE1992382BE79E1B00FE3523 /* OfferCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferCollectionViewCell.swift; sourceTree = "<group>"; };
 		EE1992392BE79E1B00FE3523 /* OfferCollectionViewSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferCollectionViewSection.swift; sourceTree = "<group>"; };
 		EE19923E2BE79E5A00FE3523 /* OfferCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferCellModel.swift; sourceTree = "<group>"; };
@@ -319,6 +331,34 @@
 				EE04ED512BEB8D2400711887 /* ProductSectionHeader.swift */,
 			);
 			path = Header;
+			sourceTree = "<group>";
+		};
+		EE1307A12BFFD1840007270F /* Recipt */ = {
+			isa = PBXGroup;
+			children = (
+				EE1307A72BFFD1E70007270F /* Domain */,
+				EE1307A62BFFD19A0007270F /* Presentation */,
+			);
+			path = Recipt;
+			sourceTree = "<group>";
+		};
+		EE1307A62BFFD19A0007270F /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				EE1307AB2BFFD1F10007270F /* ReciptView.swift */,
+				EE1307A82BFFD1F10007270F /* ReciptViewModel.swift */,
+				EE1307AA2BFFD1F10007270F /* ReciptViewController.swift */,
+				EE1307A92BFFD1F10007270F /* ReciptCoordinator.swift */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		EE1307A72BFFD1E70007270F /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				EE1307B02BFFD1F70007270F /* ReciptUseCase.swift */,
+			);
+			path = Domain;
 			sourceTree = "<group>";
 		};
 		EE1992362BE79E0400FE3523 /* Sections */ = {
@@ -940,6 +980,7 @@
 				EEDCE1782BE3B321003C0A24 /* Home */,
 				EECE7E7C2BEE88DA000F7F41 /* ProductDetails */,
 				EE96AB1E2BF51A7D00490295 /* Checkout */,
+				EE1307A12BFFD1840007270F /* Recipt */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -997,6 +1038,7 @@
 				EE7939082BE26E79004FF13C /* ShopfeeLoadingView.swift */,
 				EE8D070B2BF26EE300184169 /* ShopFeeActivityIndicator.swift */,
 				EE1307992BFFB9530007270F /* ShopFeeStepper.swift */,
+				EE13079B2BFFC86E0007270F /* TotalPriceView.swift */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -1222,6 +1264,7 @@
 				EEE62DA92BE3868E00937ECA /* CreatePinViewModel.swift in Sources */,
 				EE660E392BEAA36300F89868 /* OfferSectionUseCase.swift in Sources */,
 				EE2701DB2BE533F500B16C74 /* TabBarCoordinator.swift in Sources */,
+				EE1307AF2BFFD1F10007270F /* ReciptView.swift in Sources */,
 				EED29DF62BE1615B00548AFE /* ShopfeeOTPTextField.swift in Sources */,
 				EE2701DE2BE533F500B16C74 /* TabBarViewModel.swift in Sources */,
 				EE13079A2BFFB9530007270F /* ShopFeeStepper.swift in Sources */,
@@ -1231,6 +1274,7 @@
 				EE96AB2A2BF51AA700490295 /* CheckoutViewModel.swift in Sources */,
 				EE660E282BEA6C6100F89868 /* ProductSectionViewModel.swift in Sources */,
 				EE19923F2BE79E5A00FE3523 /* OfferCellModel.swift in Sources */,
+				EE1307AC2BFFD1F10007270F /* ReciptViewModel.swift in Sources */,
 				EE238CDD2BED1774008E67B0 /* SearchSupplementaryView.swift in Sources */,
 				EEE8D5422BDC37090037F668 /* CGFloat+Constants.swift in Sources */,
 				EEE62DCA2BE389D900937ECA /* ProcessAccountViewController.swift in Sources */,
@@ -1257,12 +1301,14 @@
 				EEDCE16B2BE3932C003C0A24 /* ShopfeePinTextField.swift in Sources */,
 				EE6EFA012BDFF5B300E5C2E3 /* LoginViewController.swift in Sources */,
 				EEE8D4DB2BDBD4FA0037F668 /* String+localized.swift in Sources */,
+				EE1307AD2BFFD1F10007270F /* ReciptCoordinator.swift in Sources */,
 				EED68E702BDD40C500774A4B /* RegisterViewController.swift in Sources */,
 				EE96AB2B2BF51AA700490295 /* CheckoutCoordinator.swift in Sources */,
 				EE7939132BE274F5004FF13C /* SendOTPCoordinator.swift in Sources */,
 				EEE62DA82BE3868E00937ECA /* PinViewController.swift in Sources */,
 				EE6EFA142BE0189D00E5C2E3 /* View+navigationTitle.swift in Sources */,
 				EE238CD82BECFDA1008E67B0 /* FilterPickerItem.swift in Sources */,
+				EE1307AE2BFFD1F10007270F /* ReciptViewController.swift in Sources */,
 				EE6EFA0E2BE008A900E5C2E3 /* OTPViewController.swift in Sources */,
 				EEDCE1832BE3B34C003C0A24 /* HomeViewController.swift in Sources */,
 				EEDCE1742BE3AAE0003C0A24 /* EnterPinCoordinator.swift in Sources */,
@@ -1273,6 +1319,7 @@
 				EE6EFA102BE008B600E5C2E3 /* OTPCoordinator.swift in Sources */,
 				EEDCE1852BE3B34C003C0A24 /* HomeCoordinator.swift in Sources */,
 				EE2701E02BE533FA00B16C74 /* TabBarUseCase.swift in Sources */,
+				EE13079C2BFFC86E0007270F /* TotalPriceView.swift in Sources */,
 				EE04ED522BEB8D2400711887 /* ProductSectionHeader.swift in Sources */,
 				EE6EFA0B2BE0089B00E5C2E3 /* OTPView.swift in Sources */,
 				EE6EFA0C2BE0089B00E5C2E3 /* OTPViewModel.swift in Sources */,
@@ -1309,6 +1356,7 @@
 				EE8D070E2BF276C800184169 /* View+makeAsCard.swift in Sources */,
 				EEE62DAD2BE3869700937ECA /* CreatePinUseCase.swift in Sources */,
 				EEE62DC92BE389D900937ECA /* ProcessAccountView.swift in Sources */,
+				EE1307B12BFFD1F70007270F /* ReciptUseCase.swift in Sources */,
 				EE6EFA052BDFF6F400E5C2E3 /* LoginUseCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

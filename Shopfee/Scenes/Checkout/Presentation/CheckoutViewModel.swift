@@ -11,6 +11,9 @@ import Combine
 @MainActor
 protocol CheckoutViewModelProtocol: ObservableObject {
     var cart: [CartEntity] { get set }
+    
+    func totalPrice() -> String
+    func checkout()
 }
 
 @MainActor
@@ -25,6 +28,22 @@ final class CheckoutViewModel: CheckoutViewModelProtocol {
         self.coordinator = coordinator
         self.useCase = useCase
         bindCartPublisher()
+    }
+    
+    func totalPrice() -> String {
+        let currency = cart.first?.currency ?? ""
+        let totalPrice = cart.map {$0.totalPrice}.reduce(0.0, +)
+        
+        return "\(currency). \(totalPrice)"
+    }
+    
+    func checkout() {
+        coordinator.startLoading()
+        Task {
+            try await Task.sleep(for: .seconds(3))
+            coordinator.dismiss(animated: false)
+            coordinator.showReceipt()
+        }
     }
 }
 

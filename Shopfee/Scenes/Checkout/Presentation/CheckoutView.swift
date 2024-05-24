@@ -28,6 +28,13 @@ struct CheckoutView<ViewModel: CheckoutViewModelProtocol>: View {
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(.brand50)
         .applyPrimaryStyle()
+        .overlay(alignment: .bottom) {
+            TotalPriceView(
+                totalPrice: viewModel.totalPrice(),
+                buttonTitle: "Checkout",
+                action: { viewModel.checkout() }
+            )
+        }
     }
 }
 

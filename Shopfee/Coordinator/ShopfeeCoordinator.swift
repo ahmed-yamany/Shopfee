@@ -6,7 +6,7 @@
 
 import Combine
 import Coordinator
-import UIKit
+import SwiftUI
 
 struct ShopfeeCoordinatorCommand: SceneDelegateCommand {
     let scene: UIScene
@@ -59,5 +59,13 @@ final class ShopfeeCoordinator: ShopfeeCoordinatorProtocol {
         cartUseCase = CartUseCaseFactory.make()
         router.reset()
         TabBarCoordinator(router: router, cartUseCase: cartUseCase).start()
+    }
+}
+
+extension Coordinator {
+    func startLoading() {
+        let controller = UIHostingController(rootView: ShopFeeActivityIndicator())
+        controller.view.backgroundColor = .clear
+        router.present(controller, animated: false, presentationStyle: .overFullScreen)
     }
 }
