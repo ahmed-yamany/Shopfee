@@ -16,6 +16,7 @@ protocol CartUseCaseProtocol: AnyActor {
     
     func viewDidLoad() async throws
     func add(_ cart: CartEntity) async throws
+    func removeAll() async throws
 }
 
 final actor CartUseCase: CartUseCaseProtocol {
@@ -40,6 +41,15 @@ final actor CartUseCase: CartUseCaseProtocol {
         try await save(entity)
         await MainActor.run {
             cart.append(entity)
+        }
+    }
+    
+    func removeAll() async throws {
+        let repository: CartRepositoryProtocol = repositoryClosure()
+        try await repository.deleteAll()
+        try await repository.save()
+        await MainActor.run {
+            cart.removeAll()
         }
     }
 }

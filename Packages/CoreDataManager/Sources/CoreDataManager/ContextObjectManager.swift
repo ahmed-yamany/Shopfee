@@ -76,7 +76,7 @@ open class ContextObjectManager<Object: NSManagedObject> {
     ///   - fetchOffset: The starting index from which to fetch objects. Default is 0.
     ///   - sortAscending: A boolean value indicating whether to sort the results in ascending order. Default is true.
     /// - Returns: A fetch request instance.
-    func fetchRequest<SortType: Any>(
+    public func fetchRequest<SortType: Any>(
         sortBy sortKeyPath: KeyPath<Object, SortType>,
         fetchLimit: Int? = nil,
         fetchOffset: Int = 0,
@@ -125,7 +125,7 @@ open class ContextObjectManager<Object: NSManagedObject> {
     ///   - fetchOffset: The starting index from which to fetch objects. Default is 0.
     ///   - sortAscending: A boolean value indicating whether to sort the results in ascending order. Default is true.
     /// - Returns: An array of fetched objects.
-    public func fetchAll<SortType: Any>(
+    open func fetchAll<SortType: Any>(
         sortBy sortKeyPath: KeyPath<Object, SortType>,
         fetchLimit: Int? = nil,
         fetchOffset: Int = 0,
@@ -159,7 +159,7 @@ open class ContextObjectManager<Object: NSManagedObject> {
     ///   - sortAscending: A boolean value indicating whether to sort the results in ascending order. Default is true.
     /// - Returns: An array of fetched objects.
 
-    public func fetch<ValueType: CustomStringConvertible, SortType: Any>(
+    open func fetch<ValueType: CustomStringConvertible, SortType: Any>(
         by keyPath: KeyPath<Object, ValueType>,
         value: ValueType,
         sortBy sortKeyPath: KeyPath<Object, SortType>,
@@ -195,7 +195,7 @@ open class ContextObjectManager<Object: NSManagedObject> {
     ///   - fetchOffset: The starting index from which to fetch objects. Default is 0.
     ///   - sortAscending: A boolean value indicating whether to sort the results in ascending order. Default is true.
     /// - Returns: An array of fetched objects.
-    func fetchItems<ValueType: CustomStringConvertible, SortType: Any>(
+    open func fetchItems<ValueType: CustomStringConvertible, SortType: Any>(
         by keyPath: KeyPath<Object, ValueType>,
         value: ValueType,
         sortBy sortKeyPath: KeyPath<Object, SortType>,
@@ -224,7 +224,7 @@ open class ContextObjectManager<Object: NSManagedObject> {
     ///   - fetchOffset: The starting index from which to fetch objects. Default is 0.
     ///   - sortAscending: A boolean value indicating whether to sort the results in ascending order. Default is true.
     /// - Returns: An array of fetched objects.
-    func fetchItems<ValueType: CustomStringConvertible, SortType: Any>(
+    open func fetchItems<ValueType: CustomStringConvertible, SortType: Any>(
         by keyPath: KeyPath<Object, ValueType>,
         contains value: ValueType,
         sortBy sortKeyPath: KeyPath<Object, SortType>,
@@ -249,19 +249,24 @@ open class ContextObjectManager<Object: NSManagedObject> {
     ///   - keyPath: The key path to match against.
     ///   - value: The value to match against the key path.
     /// - Returns: The fetched object, if found.
-    func fetchItem<ValueType: CustomStringConvertible>(by keyPath: KeyPath<Object, ValueType>, value: ValueType) async throws -> Object? {
+    open func fetchItem<ValueType: CustomStringConvertible>(by keyPath: KeyPath<Object, ValueType>, value: ValueType) async throws -> Object? {
         try await fetchItems(by: keyPath, value: value, sortBy: \.objectID).first
     }
 
-    /// Deletes an object from the managed object context.
+    /// Deletes an object from the managed object context without save.
     ///
     /// - Parameter object: The object to be deleted.
-    public func delete(_ object: Object) async throws {
+    open func delete(_ object: Object) async throws {
         await perform { [weak self] in
             self?.context.delete(object)
         }
-
-        try await save()
+    }
+    
+    /// Deletes all objects from the managed object context without save
+    open func deleteAll() async throws {
+        for object in try await fetchAll(sortBy: \.objectID) {
+            try await delete(object)
+        }
     }
 }
 

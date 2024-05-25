@@ -11,12 +11,12 @@ import SwiftUI
 protocol ReciptViewModelProtocol: ObservableObject {}
 
 @MainActor
-final class ReciptViewModel: ReciptViewModelProtocol {
+final class ReceiptViewModel: ReciptViewModelProtocol {
     
-    private let coordinator: ReciptCoordinatorProtocol
+    private let coordinator: ReceiptCoordinatorProtocol
     private let useCase: ReciptUseCaseProtocol
     
-    init(coordinator: ReciptCoordinatorProtocol, useCase: ReciptUseCaseProtocol) {
+    init(coordinator: ReceiptCoordinatorProtocol, useCase: ReciptUseCaseProtocol) {
         self.coordinator = coordinator
         self.useCase = useCase
     }

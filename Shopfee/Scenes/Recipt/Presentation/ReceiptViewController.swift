@@ -7,10 +7,10 @@
 
 import SwiftUI
 
-final class ReciptViewController<ViewModel: ReciptViewModelProtocol>: UIHostingController<ReciptView<ViewModel>> {
+final class ReceiptViewController<ViewModel: ReciptViewModelProtocol>: UIHostingController<ReceiptView<ViewModel>> {
     
     init(viewModel: ViewModel) {
-        super.init(rootView: ReciptView(viewModel: viewModel))
+        super.init(rootView: ReceiptView(viewModel: viewModel))
     }
     
     @MainActor 

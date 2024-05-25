@@ -29,6 +29,6 @@ final class CheckoutCoordinator: CheckoutCoordinatorProtocol {
     }
     
     func showReceipt() {
-        ReciptCoordinator(router: router).start()
+        ReceiptCoordinator(router: router).start()
     }
 }

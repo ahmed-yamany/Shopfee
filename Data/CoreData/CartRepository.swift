@@ -29,6 +29,8 @@ protocol CartRepositoryProtocol {
         schedule: NSManagedObjectContext.ScheduledTaskType,
         _ block: @escaping () throws -> T
     ) async rethrows -> T
+    
+    func deleteAll() async throws
 }
 
 extension CartRepositoryProtocol {
@@ -65,4 +67,10 @@ extension CartRepositoryProtocol {
 final class CartRepository: ContextObjectManager<CartModel>, CartRepositoryProtocol {
     lazy var customizeRepository: any ProductCustomizeRepositoryProtocol = ProductCustomizeRepository(context: context)
     lazy var extraRepository: any ProductExtraRepositoryProtocol = ProductExtraRepository(context: context)
+    
+    override func deleteAll() async throws {
+        try await customizeRepository.deleteAll()
+        try await extraRepository.deleteAll()
+        try await super.deleteAll()
+    }
 }

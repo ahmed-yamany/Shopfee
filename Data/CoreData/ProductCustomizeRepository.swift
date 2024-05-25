@@ -13,6 +13,7 @@ protocol ProductCustomizeRepositoryProtocol {
 
     func save() async throws
     func newObject() async throws -> Object
+    func deleteAll() async throws
 }
 
 final class ProductCustomizeRepository: ContextObjectManager<ProductCustomizeModel>, ProductCustomizeRepositoryProtocol {

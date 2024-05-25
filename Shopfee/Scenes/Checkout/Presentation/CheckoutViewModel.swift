@@ -41,6 +41,7 @@ final class CheckoutViewModel: CheckoutViewModelProtocol {
         coordinator.startLoading()
         Task {
             try await Task.sleep(for: .seconds(3))
+            try await useCase.checkout()
             coordinator.dismiss(animated: false)
             coordinator.showReceipt()
         }

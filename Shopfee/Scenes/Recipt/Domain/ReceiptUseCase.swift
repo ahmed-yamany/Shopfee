@@ -11,6 +11,6 @@ protocol ReciptUseCaseProtocol {
     
 }
 
-final class ReciptUseCase: ReciptUseCaseProtocol {
+final class ReceiptUseCase: ReciptUseCaseProtocol {
     
 }

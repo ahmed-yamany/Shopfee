@@ -13,6 +13,7 @@ protocol ProductExtraRepositoryProtocol {
 
     func save() async throws
     func newObject() async throws -> Object
+    func deleteAll() async throws
 }
 
 final class ProductExtraRepository: ContextObjectManager<ProductExtraModel>, ProductExtraRepositoryProtocol {
