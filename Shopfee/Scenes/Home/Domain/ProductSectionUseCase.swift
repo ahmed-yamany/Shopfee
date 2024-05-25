@@ -46,7 +46,7 @@ final actor ProductSectionUseCase: ProductSectionUseCaseProtocol {
                 price: 25.000,
                 discountPrice: 28.000,
                 currency: "RP",
-                imageUrl: "https://drive.google.com/uc?export=view&id=1d3mHmFdXSZuaDysomix4p6YF3PivqJ0M"
+                imageUrl: "https://drive.google.com/uc?export=view&id=1t0wfXoRCPqJIBrnHyZ2Puk9li93M3yIG"
             ),
             .init(
                 id: UUID().uuidString,
@@ -55,7 +55,43 @@ final actor ProductSectionUseCase: ProductSectionUseCaseProtocol {
                 price: 25.000,
                 discountPrice: 0.0,
                 currency: "RP",
-                imageUrl: "https://drive.google.com/uc?export=view&id=1d3mHmFdXSZuaDysomix4p6YF3PivqJ0M"
+                imageUrl: "https://drive.google.com/uc?export=view&id=1HCeLk1GUNIxFzL8G_e4dj6YacV3APtDm"
+            ),
+            .init(
+                id: UUID().uuidString,
+                name: "Coffee Milk",
+                ingredients: "Ice americano + fresh milk",
+                price: 25.000,
+                discountPrice: 0.0,
+                currency: "RP",
+                imageUrl: "https://drive.google.com/uc?export=view&id=1gFLUziksmbmXWaIDYLSkVRTqqrTrW_e9"
+            ),
+            .init(
+                id: UUID().uuidString,
+                name: "Caramel Latte",
+                ingredients: "Espresso, Fresh Milk and Caramel",
+                price: 25.000,
+                discountPrice: 28.000,
+                currency: "RP",
+                imageUrl: "https://drive.google.com/uc?export=view&id=1T1ObpE2t_q0nArkVKKe20kGVXq7XSwCR"
+            ),
+            .init(
+                id: UUID().uuidString,
+                name: "Flat White",
+                ingredients: "Smooth ristretto shots of espresso with milk",
+                price: 25.000,
+                discountPrice: 0.0,
+                currency: "RP",
+                imageUrl: "https://drive.google.com/uc?export=view&id=1DPQjrJdkMlt343kdO6yB1j8llU1v2N1q"
+            ),
+            .init(
+                id: UUID().uuidString,
+                name: "Coffee Milk",
+                ingredients: "Ice americano + fresh milk",
+                price: 25.000,
+                discountPrice: 0.0,
+                currency: "RP",
+                imageUrl: "https://drive.google.com/uc?export=view&id=1cmknawqg54_dk-mVVnQYvT3CI5zNpnOu"
             ),
             .init(
                 id: UUID().uuidString,
@@ -73,7 +109,7 @@ final actor ProductSectionUseCase: ProductSectionUseCaseProtocol {
                 price: 25.000,
                 discountPrice: 28.000,
                 currency: "RP",
-                imageUrl: "https://drive.google.com/uc?export=view&id=1d3mHmFdXSZuaDysomix4p6YF3PivqJ0M"
+                imageUrl: "https://drive.google.com/uc?export=view&id=1t0wfXoRCPqJIBrnHyZ2Puk9li93M3yIG"
             ),
             .init(
                 id: UUID().uuidString,
@@ -82,7 +118,7 @@ final actor ProductSectionUseCase: ProductSectionUseCaseProtocol {
                 price: 25.000,
                 discountPrice: 0.0,
                 currency: "RP",
-                imageUrl: "https://drive.google.com/uc?export=view&id=1d3mHmFdXSZuaDysomix4p6YF3PivqJ0M"
+                imageUrl: "https://drive.google.com/uc?export=view&id=1HCeLk1GUNIxFzL8G_e4dj6YacV3APtDm"
             ),
             .init(
                 id: UUID().uuidString,
@@ -91,7 +127,7 @@ final actor ProductSectionUseCase: ProductSectionUseCaseProtocol {
                 price: 25.000,
                 discountPrice: 0.0,
                 currency: "RP",
-                imageUrl: "https://drive.google.com/uc?export=view&id=1d3mHmFdXSZuaDysomix4p6YF3PivqJ0M"
+                imageUrl: "https://drive.google.com/uc?export=view&id=1gFLUziksmbmXWaIDYLSkVRTqqrTrW_e9"
             ),
             .init(
                 id: UUID().uuidString,
@@ -100,7 +136,7 @@ final actor ProductSectionUseCase: ProductSectionUseCaseProtocol {
                 price: 25.000,
                 discountPrice: 28.000,
                 currency: "RP",
-                imageUrl: "https://drive.google.com/uc?export=view&id=1d3mHmFdXSZuaDysomix4p6YF3PivqJ0M"
+                imageUrl: "https://drive.google.com/uc?export=view&id=1T1ObpE2t_q0nArkVKKe20kGVXq7XSwCR"
             ),
             .init(
                 id: UUID().uuidString,
@@ -109,7 +145,7 @@ final actor ProductSectionUseCase: ProductSectionUseCaseProtocol {
                 price: 25.000,
                 discountPrice: 0.0,
                 currency: "RP",
-                imageUrl: "https://drive.google.com/uc?export=view&id=1d3mHmFdXSZuaDysomix4p6YF3PivqJ0M"
+                imageUrl: "https://drive.google.com/uc?export=view&id=1DPQjrJdkMlt343kdO6yB1j8llU1v2N1q"
             ),
             .init(
                 id: UUID().uuidString,
@@ -118,25 +154,7 @@ final actor ProductSectionUseCase: ProductSectionUseCaseProtocol {
                 price: 25.000,
                 discountPrice: 0.0,
                 currency: "RP",
-                imageUrl: "https://drive.google.com/uc?export=view&id=1d3mHmFdXSZuaDysomix4p6YF3PivqJ0M"
-            ),
-            .init(
-                id: UUID().uuidString,
-                name: "Caramel Latte",
-                ingredients: "Espresso, Fresh Milk and Caramel",
-                price: 25.000,
-                discountPrice: 28.000,
-                currency: "RP",
-                imageUrl: "https://drive.google.com/uc?export=view&id=1d3mHmFdXSZuaDysomix4p6YF3PivqJ0M"
-            ),
-            .init(
-                id: UUID().uuidString,
-                name: "Flat White",
-                ingredients: "Smooth ristretto shots of espresso with milk",
-                price: 25.000,
-                discountPrice: 0.0,
-                currency: "RP",
-                imageUrl: "https://drive.google.com/uc?export=view&id=1d3mHmFdXSZuaDysomix4p6YF3PivqJ0M"
+                imageUrl: "https://drive.google.com/uc?export=view&id=1cmknawqg54_dk-mVVnQYvT3CI5zNpnOu"
             ),
         ]
         // swiftlint: enable all
