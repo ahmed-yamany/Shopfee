@@ -57,14 +57,18 @@ open class Router {
     open func replaceLast(with viewController: UIViewController, animated: Bool = true, completion: @escaping () -> Void = {}) {
         navigationController.dismiss(animated: false)
         var viewControllers = navigationController.viewControllers
-        viewControllers[viewControllers.endIndex - 1] = viewController
+        if viewControllers.isEmpty {
+            viewControllers = [viewController]
+        } else {
+            viewControllers[viewControllers.count - 1] = viewController
+        }
         setViewControllers(viewControllers, animated: animated, completion: completion)
     }
     
     open func replaceFirst(with viewController: UIViewController, animated: Bool = true, completion: @escaping () -> Void = {}) {
         navigationController.dismiss(animated: false)
         var viewControllers = navigationController.viewControllers
-        viewControllers[viewControllers.startIndex] = viewController
+        viewControllers[0] = viewController
         setViewControllers(viewControllers, animated: animated, completion: completion)
     }
     

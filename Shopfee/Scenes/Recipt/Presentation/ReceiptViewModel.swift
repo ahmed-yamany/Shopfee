@@ -8,10 +8,12 @@
 import SwiftUI
 
 @MainActor
-protocol ReciptViewModelProtocol: ObservableObject {}
+protocol ReceiptViewModelProtocol: ObservableObject {
+    func done()
+}
 
 @MainActor
-final class ReceiptViewModel: ReciptViewModelProtocol {
+final class ReceiptViewModel: ReceiptViewModelProtocol {
     
     private let coordinator: ReceiptCoordinatorProtocol
     private let useCase: ReciptUseCaseProtocol
@@ -19,5 +21,9 @@ final class ReceiptViewModel: ReciptViewModelProtocol {
     init(coordinator: ReceiptCoordinatorProtocol, useCase: ReciptUseCaseProtocol) {
         self.coordinator = coordinator
         self.useCase = useCase
+    }
+    
+    func done() {
+        coordinator.dismiss()
     }
 }

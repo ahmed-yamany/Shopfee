@@ -33,17 +33,20 @@ final class CheckoutViewModel: CheckoutViewModelProtocol {
     func totalPrice() -> String {
         let currency = cart.first?.currency ?? ""
         let totalPrice = cart.map {$0.totalPrice}.reduce(0.0, +)
-        
         return "\(currency). \(totalPrice)"
     }
     
     func checkout() {
         coordinator.startLoading()
         Task {
-            try await Task.sleep(for: .seconds(3))
-            try await useCase.checkout()
-            coordinator.dismiss(animated: false)
-            coordinator.showReceipt()
+            do {
+                try await Task.sleep(for: .seconds(3))
+                try await useCase.checkout()
+                coordinator.dismiss(animated: false)
+                coordinator.showReceipt()
+            } catch {
+                print(error.localizedDescription)
+            }
         }
     }
 }

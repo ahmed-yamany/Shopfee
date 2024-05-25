@@ -47,6 +47,7 @@
 		EE2DDD992BDBCD7700361413 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = EE2DDD972BDBCD7700361413 /* .swiftlint.yml */; };
 		EE2DDD9F2BDBCE7600361413 /* Shopfee.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = EE2DDD9E2BDBCE7600361413 /* Shopfee.xcstrings */; };
 		EE49E6B92BF13CE7002160D8 /* SwiftUIViews in Frameworks */ = {isa = PBXBuildFile; productRef = EE49E6B82BF13CE7002160D8 /* SwiftUIViews */; };
+		EE55504F2C0201F200302F58 /* ReceiptEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE55504E2C0201F200302F58 /* ReceiptEntity.swift */; };
 		EE660E282BEA6C6100F89868 /* ProductSectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE660E272BEA6C6100F89868 /* ProductSectionViewModel.swift */; };
 		EE660E2E2BEA7C0100F89868 /* ProductSectionUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE660E2D2BEA7C0100F89868 /* ProductSectionUseCase.swift */; };
 		EE660E332BEAA1CB00F89868 /* OfferSectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE660E322BEAA1CB00F89868 /* OfferSectionViewModel.swift */; };
@@ -198,6 +199,7 @@
 		EE2DDD742BDBCB7D00361413 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EE2DDD972BDBCD7700361413 /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		EE2DDD9E2BDBCE7600361413 /* Shopfee.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Shopfee.xcstrings; sourceTree = "<group>"; };
+		EE55504E2C0201F200302F58 /* ReceiptEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptEntity.swift; sourceTree = "<group>"; };
 		EE660E272BEA6C6100F89868 /* ProductSectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductSectionViewModel.swift; sourceTree = "<group>"; };
 		EE660E2D2BEA7C0100F89868 /* ProductSectionUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductSectionUseCase.swift; sourceTree = "<group>"; };
 		EE660E322BEAA1CB00F89868 /* OfferSectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferSectionViewModel.swift; sourceTree = "<group>"; };
@@ -356,6 +358,7 @@
 		EE1307A72BFFD1E70007270F /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				EE55504D2C0201E500302F58 /* Entity */,
 				EE1307B02BFFD1F70007270F /* ReceiptUseCase.swift */,
 			);
 			path = Domain;
@@ -508,6 +511,14 @@
 				EE2701D52BE533E400B16C74 /* Presentation */,
 			);
 			path = TabBar;
+			sourceTree = "<group>";
+		};
+		EE55504D2C0201E500302F58 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				EE55504E2C0201F200302F58 /* ReceiptEntity.swift */,
+			);
+			path = Entity;
 			sourceTree = "<group>";
 		};
 		EE6B4F812BDE551300E173BC /* TextField */ = {
@@ -1308,6 +1319,7 @@
 				EEE62DA82BE3868E00937ECA /* PinViewController.swift in Sources */,
 				EE6EFA142BE0189D00E5C2E3 /* View+navigationTitle.swift in Sources */,
 				EE238CD82BECFDA1008E67B0 /* FilterPickerItem.swift in Sources */,
+				EE55504F2C0201F200302F58 /* ReceiptEntity.swift in Sources */,
 				EE1307AE2BFFD1F10007270F /* ReceiptViewController.swift in Sources */,
 				EE6EFA0E2BE008A900E5C2E3 /* OTPViewController.swift in Sources */,
 				EEDCE1832BE3B34C003C0A24 /* HomeViewController.swift in Sources */,
